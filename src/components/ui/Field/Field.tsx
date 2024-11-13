@@ -9,7 +9,7 @@ interface FieldProps {
 
 export const Field = ({ children, label, id, labelHidden = false }: FieldProps) => {
   return (
-    <div className="Field">
+    <div className="flex flex-col w-full">
       <label htmlFor={id} hidden={labelHidden} className="Field__label">
         {label}
       </label>

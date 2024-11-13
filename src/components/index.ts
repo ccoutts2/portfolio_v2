@@ -13,3 +13,12 @@ export { BlinkingDot } from "./BlinkingDot/BlinkingDot";
 // icon
 
 export { Icon } from "./ui/Icon/Icon";
+
+// inputs
+
+export { Input } from "./ui/inputs/Input/Input";
+export { TextArea } from "./ui/inputs/TextArea/TextArea";
+
+// input wrapper
+
+export { Field } from "./ui/Field/Field";

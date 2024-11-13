@@ -30,9 +30,9 @@ export const TransitionLink = ({
 
     const body = document.querySelector("body");
     body?.classList.add("PageTransition");
-    await sleep(800);
+    await sleep(700);
     router.push(href);
-    await sleep(800);
+    await sleep(700);
     body?.classList.remove("PageTransition");
   };
   return (
