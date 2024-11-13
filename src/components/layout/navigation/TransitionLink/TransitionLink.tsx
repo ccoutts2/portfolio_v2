@@ -1,10 +1,14 @@
 "use client";
+import styles from "./TransitionLink.module.css";
 import { useRouter } from "next/navigation";
 import Link, { LinkProps } from "next/link";
+
+import classNames from "classnames";
 
 interface TransitionLinkProps extends LinkProps {
   children: React.ReactNode;
   href: string;
+  underline?: boolean;
 }
 
 const sleep = (ms: number): Promise<void> => {
@@ -14,6 +18,7 @@ const sleep = (ms: number): Promise<void> => {
 export const TransitionLink = ({
   children,
   href,
+  underline = false,
   ...props
 }: TransitionLinkProps) => {
   const router = useRouter();
@@ -23,15 +28,19 @@ export const TransitionLink = ({
   ) => {
     e.preventDefault();
 
-    const main = document.querySelector("main");
-    main?.classList.add("PageTransition");
+    const body = document.querySelector("body");
+    body?.classList.add("PageTransition");
     await sleep(800);
     router.push(href);
     await sleep(800);
-    main?.classList.remove("PageTransition");
+    body?.classList.remove("PageTransition");
   };
   return (
-    <Link onClick={handleTransition} href={href} {...props}>
+    <Link
+      onClick={handleTransition}
+      href={href}
+      {...props}
+      className={classNames(underline ? styles.HoverAnimation : "")}>
       {children}
     </Link>
   );

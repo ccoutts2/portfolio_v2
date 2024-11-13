@@ -1,0 +1,21 @@
+.HoverAnimation {
+  position: relative;
+}
+
+.HoverAnimation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #191919;
+  transform: scaleX(0);
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom right;
+}
+
+.HoverAnimation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}

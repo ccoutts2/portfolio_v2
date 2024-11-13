@@ -1,8 +1,8 @@
 // navgigation
 
-export { NavLink } from "./layout/navigation/NavLink";
-export { NavBar } from "./layout/navigation/NavBar";
-export { TransitionLink } from "./layout/navigation/TransitionLink";
+export { NavLink } from "./layout/navigation/NavLink/NavLink";
+export { NavBar } from "./layout/navigation/NavBar/NavBar";
+export { TransitionLink } from "./layout/navigation/TransitionLink/TransitionLink";
 
 // buttons
 
@@ -12,4 +12,4 @@ export { BlinkingDot } from "./BlinkingDot/BlinkingDot";
 
 // icon
 
-export { Icon } from "./ui/buttons/icon/Icon";
+export { Icon } from "./ui/Icon/Icon";

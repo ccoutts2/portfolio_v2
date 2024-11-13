@@ -1,6 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 import { NavLink } from "@/components/";
 import { BurgerButton } from "@/components/";
 import { BlinkingDot } from "@/components/";
@@ -10,6 +12,20 @@ import { Icon } from "@/components/";
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState("closed");
+
+  const container = useRef<HTMLElement | null>(null);
+  const navbarRef = useRef<HTMLElement | null>(null);
+
+  useGSAP(
+    () => {
+      gsap.fromTo(
+        navbarRef.current,
+        { y: -100 },
+        { y: 0, duration: 1, ease: "power4.out", delay: 2 }
+      );
+    },
+    { scope: container, dependencies: [] }
+  );
 
   const toggleBurgerMenu = () => {
     if (isOpen) {
@@ -23,8 +39,10 @@ export const NavBar = () => {
     }
   };
   return (
-    <header className="w-full border-b border-solid">
-      <nav className="flex justify-between items-center w-full gap-4">
+    <header ref={container} className="w-full border-b border-solid">
+      <nav
+        ref={navbarRef}
+        className="flex justify-between items-center w-full gap-4">
         <div className="flex-[1]">
           <h1 className="p-4 md:px-8 text-5xl">
             <TransitionLink href="/">Chris Coutts</TransitionLink>
@@ -34,13 +52,19 @@ export const NavBar = () => {
         <div className="hidden md:flex justify-center gap-20 flex-[2] w-full">
           <ul className="hidden md:flex items-center justify-center gap-20 p-4 md:px-8">
             <li>
-              <TransitionLink href="/about">About</TransitionLink>
+              <TransitionLink href="/about" underline>
+                About
+              </TransitionLink>
             </li>
             <li>
-              <TransitionLink href="/work">Work</TransitionLink>
+              <TransitionLink href="/work" underline>
+                Work
+              </TransitionLink>
             </li>
             <li>
-              <TransitionLink href="/contact">Contact</TransitionLink>
+              <TransitionLink href="/contact" underline>
+                Contact
+              </TransitionLink>
             </li>
           </ul>
         </div>
