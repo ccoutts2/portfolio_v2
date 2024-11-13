@@ -9,3 +9,7 @@ export { TransitionLink } from "./layout/navigation/TransitionLink";
 export { BurgerButton } from "./ui/buttons/BurgerButton";
 export { Button } from "./ui/buttons/Button";
 export { BlinkingDot } from "./BlinkingDot/BlinkingDot";
+
+// icon
+
+export { Icon } from "./ui/buttons/icon/Icon";

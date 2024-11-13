@@ -5,7 +5,7 @@ import { NavLink } from "@/components/";
 import { BurgerButton } from "@/components/";
 import { BlinkingDot } from "@/components/";
 import { TransitionLink } from "@/components/";
-import Icon from "@/components/ui/buttons/icon/Icon";
+import { Icon } from "@/components/";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -50,7 +50,6 @@ export const NavBar = () => {
               <span>
                 <NavLink href="/">
                   <Icon>
-                    {" "}
                     <svg
                       className="h-4 w-4 hover:scale-110 hover:duration-200"
                       xmlns="http://www.w3.org/2000/svg"
