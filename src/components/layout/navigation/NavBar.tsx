@@ -1,8 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { NavLink } from "./NavLink";
-import { BurgerButton } from "@/components/ui/buttons/BurgerButton";
+import { NavLink } from "@/components/";
+import { BurgerButton } from "@/components/";
+import { BlinkingDot } from "@/components/";
+import { TransitionLink } from "@/components/";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -22,22 +24,22 @@ export const NavBar = () => {
   return (
     <header className="w-full border-b border-solid">
       <nav className="flex justify-between items-center w-full gap-4">
-        <div className="flex-[1] border-solid border-r">
-          <h1 className="p-4 md:px-8">
-            <NavLink href="/">Chris Coutts</NavLink>
+        <div className="flex-[1]">
+          <h1 className="p-4 md:px-8 text-5xl">
+            <TransitionLink href="/">Chris Coutts</TransitionLink>
           </h1>
         </div>
 
         <div className="hidden md:flex justify-center gap-20 flex-[2] w-full">
           <ul className="hidden md:flex items-center justify-center gap-20 p-4 md:px-8">
             <li>
-              <NavLink href="/">About</NavLink>
+              <TransitionLink href="/about">About</TransitionLink>
             </li>
             <li>
-              <NavLink href="/">Work</NavLink>
+              <TransitionLink href="/work">Work</TransitionLink>
             </li>
             <li>
-              <NavLink href="/">Contact</NavLink>
+              <TransitionLink href="/contact">Contact</TransitionLink>
             </li>
           </ul>
         </div>
@@ -69,11 +71,11 @@ export const NavBar = () => {
             </li>
           </ul>
           <BurgerButton status={status} onClick={toggleBurgerMenu} />
-          <p className="hidden md:block p-4 md:px-8">
-            Available for work. Get in{" "}
-            <span>
-              <NavLink href="/">touch</NavLink>
-            </span>
+          <p className="hidden md:text-sm lg:text-base md:flex items-center gap-4 p-4 md:px-8">
+            <BlinkingDot />
+            <NavLink href="mailto:chris.dcoutts@gmail.com">
+              Available for work.
+            </NavLink>
           </p>
         </div>
       </nav>

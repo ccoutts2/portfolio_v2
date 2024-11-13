@@ -11,6 +11,12 @@ body {
   padding: 0;
 }
 
+main {
+  transition-property: opacity, transform, filter, background;
+  transition-timing-function: ease-in-out;
+  transition-duration: 800ms;
+}
+
 .vh {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -19,4 +25,11 @@ body {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.PageTransition {
+  opacity: 0;
+  background: #bdc1b6;
+  transform: translateY(100vh);
+  filter: blur(12px);
 }
