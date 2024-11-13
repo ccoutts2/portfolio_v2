@@ -1,0 +1,10 @@
+.Icon svg {
+  height: 1rem;
+  width: 1rem;
+  transition: transform 200ms;
+}
+
+li:hover .Icon svg {
+  fill: white;
+  transform: scale(1.1);
+}
