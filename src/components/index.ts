@@ -22,3 +22,7 @@ export { TextArea } from "./ui/inputs/TextArea/TextArea";
 // input wrapper
 
 export { Field } from "./ui/Field/Field";
+
+// email template
+
+export { EmailTemplate } from "./EmailTemplate/EmailTemplate";
