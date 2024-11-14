@@ -4,7 +4,7 @@ import { PageHeader } from "@/components/layout/header/PageHeader/PageHeader";
 
 export default async function Page() {
   return (
-    <main>
+    <main className="min-h-screen">
       <PageHeader label="Contact Me" />
       <div className="flex p-4 px-8">
         <aside className="text-sm flex flex-col flex-[1]">

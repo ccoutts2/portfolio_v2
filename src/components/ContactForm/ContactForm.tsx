@@ -29,6 +29,7 @@ const ContactForm = () => {
   const [errorMessages, setErrorMessages] = useState({});
   const [emailError, setEmailError] = useState("");
   const [buttonLabel, setButtonLabel] = useState("Send");
+  const [buttonPending, setButtonPending] = useState(false);
   const [isToastVisible, setIsToastVisible] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -59,6 +60,7 @@ const ContactForm = () => {
     e.preventDefault();
     setErrorMessages({});
     setButtonLabel("Sending");
+    setButtonPending(true);
 
     const formData = new FormData(form.current!);
     const validatedFields = Schema.safeParse({
@@ -73,9 +75,11 @@ const ContactForm = () => {
       return;
     }
     await sendEmail(null, formData);
+
     setName("");
     setEmail("");
     setMessage("");
+    setButtonPending(false);
     setButtonLabel("Send");
     setEmailError("");
     setIsToastVisible(true);
@@ -108,10 +112,17 @@ const ContactForm = () => {
         />
       </Field>
       <div className="relative w-full pb-1 pt-4">
-        <Button type="submit">
-          <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
-          {buttonLabel}
-        </Button>
+        {buttonPending ? (
+          <Button type="submit">
+            <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#d8d82e]"></span>
+            {buttonLabel}
+          </Button>
+        ) : (
+          <Button type="submit">
+            <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
+            {buttonLabel}
+          </Button>
+        )}
         {Object.keys(errorMessages).length > 0 && (
           <p className="text-sm text-[#d82e2e]">
             Please enter all the required fields
