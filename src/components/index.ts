@@ -26,3 +26,7 @@ export { Field } from "./ui/Field/Field";
 // email template
 
 export { EmailTemplate } from "./EmailTemplate/EmailTemplate";
+
+// smooth scroll
+
+// export { SmoothScroll } from "./SmoothScroll/SmoothScroll";

@@ -51,7 +51,7 @@ export const NavBar = () => {
         </div>
 
         <div className="hidden md:flex justify-center gap-20 flex-[2] w-full">
-          <ul className="hidden md:flex items-center justify-center gap-20 p-4 md:px-8">
+          <ul className="hidden md:flex items-center justify-center gap-20 p-4">
             <li>
               <TransitionLink href="/about" underline>
                 About
@@ -69,9 +69,9 @@ export const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-[2] md:flex-[1] flex justify-end items-center border-solid">
-          <ul className="flex md:flex-col items-stretch border-r border-l border-solid">
-            <li className="p-4 border-r md:border-b md:border-r-0 border-solid hover:bg-[#435558] hover:duration-200 relative">
+        <div className="flex-[2] md:flex-[1] flex justify-end items-center md:border-solid">
+          <ul className="flex md:flex-col items-stretch md:border-r md:border-l md:border-solid">
+            <li className="p-4 md:border-b border-solid hover:bg-[#435558] hover:duration-200 relative">
               <Icon>
                 <svg
                   className="h-4 w-4 hover:scale-110 hover:duration-200"
@@ -105,10 +105,10 @@ export const NavBar = () => {
             </li>
           </ul>
           <BurgerButton status={status} onClick={toggleBurgerMenu} />
-          <p className="hidden md:text-sm lg:text-base md:flex items-center gap-4 p-4 md:px-8">
+          <p className="hidden md:text-sm lg:text-base md:flex items-center gap-2 md:px-8">
             <BlinkingDot />
             <NavLink href="mailto:chris.dcoutts@gmail.com">
-              Available for work.
+              Available for work
             </NavLink>
           </p>
         </div>

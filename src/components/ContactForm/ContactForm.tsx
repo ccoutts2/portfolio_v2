@@ -20,7 +20,11 @@ const Schema = z.object({
   message: z.string().min(1, "A message is required"),
 });
 
-const ContactForm = () => {
+interface ContactFormProps {
+  onClick?: () => void;
+}
+
+const ContactForm = ({ onClick }: ContactFormProps) => {
   const form = useRef<HTMLFormElement>(null);
 
   const [name, setName] = useState("");
@@ -89,6 +93,9 @@ const ContactForm = () => {
 
   return (
     <form ref={form} onSubmit={onSubmit} className="flex flex-col gap-8 w-full">
+      <div className="absolute top-2 right-2 md:hidden">
+        <Button onClick={onClick}>X</Button>
+      </div>
       <Field label="What's your name?" id="name">
         <Input onChange={handleInputChange} name="name" required value={name} />
       </Field>

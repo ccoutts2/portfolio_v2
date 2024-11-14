@@ -1,6 +1,7 @@
 import { NavLink } from "@/components";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import { PageHeader } from "@/components/layout/header/PageHeader/PageHeader";
+import MobileContactForm from "@/components/MobileContactForm/MobileContactForm";
 
 export default async function Page() {
   return (
@@ -16,10 +17,11 @@ export default async function Page() {
             </span>
           </p>
         </aside>
-        <div className="flex justify-end w-full flex-[2]">
+        <div className="hidden md:flex justify-end w-full flex-[2]">
           <ContactForm />
         </div>
       </div>
+      <MobileContactForm />
     </main>
   );
 }
