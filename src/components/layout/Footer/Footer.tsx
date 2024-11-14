@@ -2,11 +2,10 @@ import Link from "next/link";
 import { TransitionLink } from "../navigation/TransitionLink/TransitionLink";
 import { NavLink } from "../navigation/NavLink/NavLink";
 
-interface FooterProps {}
 const Footer = () => {
   return (
     <footer
-      className="relative h-[300px]"
+      className="relative h-[300px] z-[100]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="fixed bottom-0 h-[300px] w-full">
         <div className="flex h-full w-full flex-col justify-between bg-[#BFBCDC] px-4 py-8 md:px-12 lg:px-32">

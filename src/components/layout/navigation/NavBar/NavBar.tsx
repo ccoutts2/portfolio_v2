@@ -45,7 +45,7 @@ export const NavBar = () => {
         ref={navbarRef}
         className="flex justify-between items-center w-full gap-4">
         <div className="flex-[1]">
-          <h1 className="p-4 md:px-8 text-5xl">
+          <h1 className="p-4 md:px-8 text-3xl md:text-5xl">
             <TransitionLink href="/">Chris Coutts</TransitionLink>
           </h1>
         </div>
@@ -69,7 +69,7 @@ export const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-[2] md:flex-[1] flex justify-end items-center md:border-solid">
+        <div className="flex-[1] flex justify-end items-center md:border-solid">
           <ul className="flex md:flex-col items-stretch md:border-r md:border-l md:border-solid">
             <li className="p-4 md:border-b border-solid hover:bg-[#435558] hover:duration-200 relative">
               <Icon>
@@ -104,13 +104,15 @@ export const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <BurgerButton status={status} onClick={toggleBurgerMenu} />
-          <p className="hidden md:text-sm lg:text-base md:flex items-center gap-2 md:px-8">
-            <BlinkingDot />
-            <NavLink href="mailto:chris.dcoutts@gmail.com">
-              Available for work
-            </NavLink>
-          </p>
+          <div className="px-4">
+            <BurgerButton status={status} onClick={toggleBurgerMenu} />
+            <p className="hidden md:text-sm lg:text-base md:flex items-center gap-2 md:px-8">
+              <BlinkingDot />
+              <NavLink href="mailto:chris.dcoutts@gmail.com">
+                Available for work
+              </NavLink>
+            </p>
+          </div>
         </div>
       </nav>
     </header>

@@ -14,7 +14,7 @@ const MobileContactForm = () => {
 
   return (
     <>
-      <div className="p-4">
+      <div className="p-4 md:hidden">
         <Button onClick={onClick}>Contact Form</Button>
       </div>
 
