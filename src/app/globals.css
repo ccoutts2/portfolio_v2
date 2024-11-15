@@ -3,20 +3,15 @@
 @tailwind utilities;
 
 body {
-  /* color: var(--foreground);
-  background: var(--background); */
-  font-family: Arial, Helvetica, sans-serif;
+  background: #f6f6f6;
   box-sizing: border-box;
+  color: #191919;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f6f6f6;
-}
-
-body {
+  transition-duration: 800ms;
   transition-property: opacity, filter, background;
   transition-timing-function: ease-in-out;
-  transition-duration: 800ms;
-  color: #191919;
 }
 
 .vh {
@@ -30,7 +25,7 @@ body {
 }
 
 .PageTransition {
-  opacity: 0;
   background: #bdc1b6;
   filter: blur(12px);
+  opacity: 0;
 }

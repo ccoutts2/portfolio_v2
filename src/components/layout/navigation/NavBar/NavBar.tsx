@@ -104,7 +104,7 @@ export const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <div className="px-4">
+          <div className="pr-4">
             <BurgerButton status={status} onClick={toggleBurgerMenu} />
             <p className="hidden md:text-sm lg:text-base md:flex items-center gap-2 md:px-8">
               <BlinkingDot />

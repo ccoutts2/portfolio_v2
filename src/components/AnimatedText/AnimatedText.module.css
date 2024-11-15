@@ -1,0 +1,12 @@
+.Word {
+  overflow: hidden;
+  vertical-align: top;
+  display: inline-block;
+}
+
+.Word div {
+  transform: translateY(100%);
+  will-change: transform;
+  opacity: 0;
+  visibility: 0;
+}

@@ -9,6 +9,7 @@ interface TransitionLinkProps extends LinkProps {
   children: React.ReactNode;
   href: string;
   underline?: boolean;
+  className?: string;
 }
 
 const sleep = (ms: number): Promise<void> => {
@@ -19,6 +20,7 @@ export const TransitionLink = ({
   children,
   href,
   underline = false,
+  className,
   ...props
 }: TransitionLinkProps) => {
   const router = useRouter();
@@ -40,7 +42,7 @@ export const TransitionLink = ({
       onClick={handleTransition}
       href={href}
       {...props}
-      className={classNames(underline ? styles.HoverAnimation : "")}>
+      className={classNames(underline ? styles.HoverAnimation : className)}>
       {children}
     </Link>
   );
