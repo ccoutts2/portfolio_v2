@@ -30,3 +30,7 @@ export { EmailTemplate } from "./EmailTemplate/EmailTemplate";
 // smooth scroll
 
 // export { SmoothScroll } from "./SmoothScroll/SmoothScroll";
+
+// animations
+
+export { AnimatedText } from "./animations/AnimatedText/AnimatedText";

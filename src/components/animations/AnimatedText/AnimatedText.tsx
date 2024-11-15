@@ -1,3 +1,4 @@
+"use client";
 import styles from "./AnimatedText.module.css";
 
 import { useRef } from "react";
@@ -7,9 +8,10 @@ import SplitType from "split-type";
 
 interface AnimatedTextProps {
   children: React.ReactNode;
+  delay: number;
 }
 
-const AnimatedText = ({ children }: AnimatedTextProps) => {
+export const AnimatedText = ({ children, delay }: AnimatedTextProps) => {
   const container = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
 
@@ -23,7 +25,7 @@ const AnimatedText = ({ children }: AnimatedTextProps) => {
         gsap.to(splitTextInstance.words, {
           y: "0%",
           autoAlpha: 1,
-          delay: 2,
+          delay: delay,
           stagger: 0.01,
           duration: 1.3,
         });
@@ -40,5 +42,3 @@ const AnimatedText = ({ children }: AnimatedTextProps) => {
     </div>
   );
 };
-
-export default AnimatedText;
