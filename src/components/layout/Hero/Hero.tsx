@@ -24,7 +24,7 @@ const Hero = () => {
 
       gsap.to(featuredProject.current, {
         autoAlpha: 1,
-        delay: 2,
+        delay: 2.5,
         duration: 1.5,
         ease: "power4.inOut",
       });
@@ -52,12 +52,12 @@ const Hero = () => {
           </AnimatedText>
           <AnimatedText delay={2.2}>
             <h2>
-              <span className="ml-8">Full</span> Stack Developer
+              <span className="ml-8">I&apos;m</span> a Full Stack Developer
             </h2>
           </AnimatedText>
           <AnimatedText delay={2.4}>
             <h2>
-              <span className="ml-4">London</span> Based
+              <span className="ml-4">Based</span> in London
             </h2>
           </AnimatedText>
         </section>
