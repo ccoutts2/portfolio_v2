@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { TransitionLink } from "../navigation/TransitionLink/TransitionLink";
-import { NavLink } from "../navigation/NavLink/NavLink";
 
 const Footer = () => {
   return (
