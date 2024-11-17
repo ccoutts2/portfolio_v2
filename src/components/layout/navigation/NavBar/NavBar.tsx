@@ -21,8 +21,8 @@ export const NavBar = () => {
     () => {
       gsap.fromTo(
         navbarRef.current,
-        { y: -100 },
-        { y: 0, duration: 1, ease: "power4.out", delay: 2 }
+        { autoAlpha: 0, yPercent: 10 },
+        { autoAlpha: 1, duration: 3, yPercent: 0, ease: "power4.out", delay: 4 }
       );
     },
     { scope: container, dependencies: [] }
