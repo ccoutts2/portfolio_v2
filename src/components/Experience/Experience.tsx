@@ -7,8 +7,52 @@ import { useInView } from "react-intersection-observer";
 import { AnimatedText } from "../animations/AnimatedText/AnimatedText";
 import Image from "next/image";
 import { assetsConfig } from "@/config/assets";
+import { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const Experience = () => {
+  const container = useRef<HTMLDivElement | null>(null);
+  const imageContainer1 = useRef<HTMLElement | null>(null);
+  const imageContainer2 = useRef<HTMLElement | null>(null);
+  const imageContainer3 = useRef<HTMLElement | null>(null);
+
+  const tl = useRef<GSAPTimeline | null>();
+
+  useGSAP(
+    () => {
+      tl.current = gsap
+        .timeline({ delay: 1.5 })
+        .to(imageContainer1.current, {
+          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+          duration: 0.8,
+          delay: 0.25,
+          ease: "power4.inOut",
+        })
+        .to(
+          imageContainer2.current,
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            duration: 0.8,
+            delay: 0.15,
+            ease: "power4.inOut",
+          },
+          "<"
+        )
+        .to(
+          imageContainer3.current,
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            duration: 0.8,
+            delay: 0.15,
+            ease: "power4.inOut",
+          },
+          "<"
+        );
+    },
+    { scope: container, dependencies: [] }
+  );
+
   return (
     <section className="p-4">
       <div>
@@ -26,19 +70,24 @@ const Experience = () => {
           </p>
         </AnimatedText>
       </div>
-      <div className="flex flex-col-reverse md:flex-row justify-between p-4 py-12 md:p-12">
+      <div className="flex flex-col-reverse md:flex-row justify-between p-4 py-12 md:p-12 gap-6">
         <div className="flex-[1]">
-          <p className="text-lg">
-            I come with a diverse background in both engineering and technology.
-            Originally holding a Master&apos;s in Chemical Engineering, I
-            transitioned into the tech industry and now, I&apos;m focused on building
-            cutting-edge solutions in software development. My journey has been
-            marked by continuous upskilling, freelancing, and a passion for
-            problem-solving within business and technical environments
-          </p>
+          <AnimatedText delay={1.4}>
+            <p className="text-lg">
+              I come with a diverse background in both engineering and technology.
+              Originally holding a Master&apos;s in Chemical Engineering, I
+              transitioned into the tech industry and now, I&apos;m focused on
+              building cutting-edge solutions in software development. My journey has
+              been marked by continuous upskilling, freelancing, and a passion for
+              problem-solving within business and technical environments
+            </p>
+          </AnimatedText>
         </div>
-        <aside className="w-clampSmallImages flex flex-wrap gap-4">
-          <figure className="max-h-[10rem]">
+        <aside ref={container} className="flex flex-wrap gap-4">
+          <figure
+            ref={imageContainer1}
+            className="max-h-[10rem] w-clampSmallImages"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
               src={assetsConfig["new-street"][0].src}
               alt={assetsConfig["new-street"][0].description}
@@ -47,7 +96,10 @@ const Experience = () => {
               className="w-full h-full object-cover"
             />
           </figure>
-          <figure className="max-h-[10rem]">
+          <figure
+            ref={imageContainer2}
+            className="max-h-[10rem] w-clampSmallImages"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
               src={assetsConfig["new-street"][0].src}
               alt={assetsConfig["new-street"][0].description}
@@ -57,7 +109,10 @@ const Experience = () => {
             />
           </figure>
 
-          <figure className="max-h-[10rem]">
+          <figure
+            ref={imageContainer3}
+            className="max-h-[10rem] w-clampSmallImages"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
               src={assetsConfig["new-street"][0].src}
               alt={assetsConfig["new-street"][0].description}

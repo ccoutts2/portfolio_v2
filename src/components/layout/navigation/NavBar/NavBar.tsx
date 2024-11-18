@@ -14,20 +14,6 @@ export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState("closed");
 
-  const container = useRef<HTMLElement | null>(null);
-  const navbarRef = useRef<HTMLElement | null>(null);
-
-  useGSAP(
-    () => {
-      gsap.fromTo(
-        navbarRef.current,
-        { autoAlpha: 0, yPercent: 10 },
-        { autoAlpha: 1, duration: 3, yPercent: 0, ease: "power4.out", delay: 4 }
-      );
-    },
-    { scope: container, dependencies: [] }
-  );
-
   const toggleBurgerMenu = () => {
     if (isOpen) {
       setIsOpen(false);
@@ -40,10 +26,8 @@ export const NavBar = () => {
     }
   };
   return (
-    <header ref={container} className="w-full border-b border-solid">
-      <nav
-        ref={navbarRef}
-        className="flex justify-between items-center w-full gap-4">
+    <header className="w-full border-b border-solid">
+      <nav className="flex justify-between items-center w-full gap-4">
         <div className="flex-[1]">
           <h1 className="p-4 md:px-8 text-3xl md:text-5xl">
             <TransitionLink href="/">Chris Coutts</TransitionLink>

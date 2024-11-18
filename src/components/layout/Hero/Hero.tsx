@@ -82,35 +82,69 @@ const Hero = () => {
           ref={backgroundLoader}
           className="fixed inset-0 z-20 flex justify-center items-center h-screen bg-black"></div>
       </div>
-      <div className="#f6f6f6">
-        <NavBar />
-        <div className="h-screen flex flex-col justify-between relative">
-          <div className="flex flex-col justify-between md:flex-row gap-8">
-            <section className="flex flex-col gap-2 text-clampHome flex-[1]">
-              <AnimatedText delay={4}>
-                <h1>
-                  <span className="ml-12">My</span> name is{" "}
-                  <TransitionLink href="/about" underline>
-                    Chris Coutts
-                  </TransitionLink>
-                </h1>
-              </AnimatedText>
-              <AnimatedText delay={4.1}>
-                <h2>
-                  <span className="ml-8">I&apos;m</span> a Full Stack Developer
-                </h2>
-              </AnimatedText>
-              <AnimatedText delay={4.2}>
-                <h2>
-                  <span className="ml-4">Based</span> in London
-                </h2>
-              </AnimatedText>
-            </section>
+      <div className="h-screen flex flex-col justify-between relative">
+        <div className="flex flex-col justify-between md:flex-row gap-8">
+          <section className="flex flex-col gap-2 text-clampHome flex-[1]">
+            <AnimatedText delay={4}>
+              <h1>
+                <span className="ml-12">My</span> name is{" "}
+                <TransitionLink href="/about" underline>
+                  Chris Coutts
+                </TransitionLink>
+              </h1>
+            </AnimatedText>
+            <AnimatedText delay={4.1}>
+              <h2>
+                <span className="ml-8">I&apos;m</span> a Full Stack Developer
+              </h2>
+            </AnimatedText>
+            <AnimatedText delay={4.2}>
+              <h2>
+                <span className="ml-4">Based</span> in London
+              </h2>
+            </AnimatedText>
+          </section>
 
-            <div
-              ref={image}
-              className="w-clampImage h-clampImage"
-              style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" }}>
+          <div
+            ref={image}
+            className="w-clampImage h-clampImage"
+            style={{ clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" }}>
+            <Image
+              src={assetsConfig["new-street"][0].src}
+              alt={assetsConfig["new-street"][0].description}
+              width={assetsConfig["new-street"][0].width}
+              height={assetsConfig["new-street"][0].height}
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <aside ref={featuredProject} className="flex-[1]">
+          <h3 className="text-lg">Featured Project</h3>
+          <article className="border border-solid max-w-fit p-4 flex flex-row-reverse gap-4 relative">
+            <div className="flex flex-col justify-between h-full gap-4">
+              <div className="flex flex-col">
+                <h4>
+                  <span className="uppercase relative text-sm md:text-base">
+                    Ewm{" "}
+                  </span>
+                  Besoke Interiors
+                </h4>
+                <dl className="flex gap-1 text-xs text-gray-500 flex-wrap">
+                  <dt className="vh">Role</dt>
+                  <dd>Design,</dd>
+                  <dt className="vh">Role</dt>
+                  <dd>Development,</dd>
+                  <dt className="vh">Year</dt>
+                  <dd>2024</dd>
+                </dl>
+              </div>
+              <span className="block text-sm md:text-base">
+                <Link href="/contact">See Project</Link>
+              </span>
+            </div>
+
+            <div className="border-[0.75rem] border-solid max-w-[12rem] max-h-[12rem]">
               <Image
                 src={assetsConfig["new-street"][0].src}
                 alt={assetsConfig["new-street"][0].description}
@@ -119,49 +153,12 @@ const Hero = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-          </div>
 
-          <aside ref={featuredProject} className="flex-[1]">
-            <h3 className="text-lg">Featured Project</h3>
-            <article className="border border-solid max-w-fit p-4 flex flex-row-reverse gap-4 relative">
-              <div className="flex flex-col justify-between h-full gap-4">
-                <div className="flex flex-col">
-                  <h4>
-                    <span className="uppercase relative text-sm md:text-base">
-                      Ewm{" "}
-                    </span>
-                    Besoke Interiors
-                  </h4>
-                  <dl className="flex gap-1 text-xs text-gray-500 flex-wrap">
-                    <dt className="vh">Role</dt>
-                    <dd>Design,</dd>
-                    <dt className="vh">Role</dt>
-                    <dd>Development,</dd>
-                    <dt className="vh">Year</dt>
-                    <dd>2024</dd>
-                  </dl>
-                </div>
-                <span className="block text-sm md:text-base">
-                  <Link href="/contact">See Project</Link>
-                </span>
-              </div>
-
-              <div className="border-[0.75rem] border-solid max-w-[12rem] max-h-[12rem]">
-                <Image
-                  src={assetsConfig["new-street"][0].src}
-                  alt={assetsConfig["new-street"][0].description}
-                  width={assetsConfig["new-street"][0].width}
-                  height={assetsConfig["new-street"][0].height}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              <TransitionLink href="/contact" className="absolute inset-0">
-                <span className="vh">See EWM Project Case Study</span>
-              </TransitionLink>
-            </article>
-          </aside>
-        </div>
+            <TransitionLink href="/contact" className="absolute inset-0">
+              <span className="vh">See EWM Project Case Study</span>
+            </TransitionLink>
+          </article>
+        </aside>
       </div>
     </div>
   );

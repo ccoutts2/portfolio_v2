@@ -19,7 +19,7 @@ export default {
       },
       width: {
         clampImage: "clamp(10rem, calc(-20rem + 0.8 * 100vw), 20rem)",
-        clampSmallImages: "calc(clamp(5em, 7.5vw, 7.5em) * 1.7)",
+        clampSmallImages: "calc(clamp(4em, 7.5vw, 7.5em) * 1.7)",
       },
       height: {
         clampImage: "clamp(15rem, calc(-20rem + 0.8 * 100vw), 25rem)",
