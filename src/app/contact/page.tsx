@@ -1,7 +1,7 @@
-import { NavLink } from "@/components";
 import ContactForm from "@/components/ContactForm/ContactForm";
 import { PageHeader } from "@/components/layout/header/PageHeader/PageHeader";
 import MobileContactForm from "@/components/MobileContactForm/MobileContactForm";
+import Link from "next/link";
 
 export default async function Page() {
   return (
@@ -13,7 +13,9 @@ export default async function Page() {
           <p>
             Fill in the form or{" "}
             <span className="italic">
-              <NavLink href="mailto:chris.dcoutts@gmail.com">email me</NavLink>
+              <Link href="mailto:chris.dcoutts@gmail.com" target="_blank">
+                email me
+              </Link>
             </span>
           </p>
           <strong className="text-3xl pt-8 font-normal">

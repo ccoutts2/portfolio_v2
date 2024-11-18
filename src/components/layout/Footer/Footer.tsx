@@ -43,7 +43,9 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="md:hidden">
-                  <Link href="mailto:Info@ewmbespokeinteriors.co.uk">Email</Link>
+                  <Link href="mailto:Info@ewmbespokeinteriors.co.uk" target="_blank">
+                    Email
+                  </Link>
                 </li>
                 <li>
                   <Link

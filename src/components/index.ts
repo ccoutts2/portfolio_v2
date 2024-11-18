@@ -19,6 +19,10 @@ export { Icon } from "./ui/Icon/Icon";
 export { Input } from "./ui/inputs/Input/Input";
 export { TextArea } from "./ui/inputs/TextArea/TextArea";
 
+// sections
+
+export { ContactMe } from "./ui/ContactMe/ContactMe";
+
 // input wrapper
 
 export { Field } from "./ui/Field/Field";
@@ -29,8 +33,12 @@ export { EmailTemplate } from "./EmailTemplate/EmailTemplate";
 
 // smooth scroll
 
-// export { SmoothScroll } from "./SmoothScroll/SmoothScroll";
+export { SmoothScroll } from "./SmoothScroll/SmoothScroll";
 
 // animations
 
 export { AnimatedText } from "./animations/AnimatedText/AnimatedText";
+
+// featured project
+
+export { FeaturedProject } from "./ui/cards/FeaturedProject/FeaturedProject";
