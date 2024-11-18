@@ -26,7 +26,6 @@ const Hero = () => {
     () => {
       gsap.set(textRef.current, {
         yPercent: 100,
-        autoAlpha: 0,
       });
       gsap.set(featuredProject.current, {
         autoAlpha: 0,
@@ -76,7 +75,7 @@ const Hero = () => {
       <div className="overflow-hidden">
         <p
           ref={textRef}
-          className="fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 overflow-hidden z-[3] text-white">
+          className="fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 overflow-hidden z-[1000] text-white opacity-0 invisible">
           say hello
         </p>
         <div
@@ -162,14 +161,6 @@ const Hero = () => {
               </TransitionLink>
             </article>
           </aside>
-          {/* <div className="absolute bottom-1 right-1">
-        <AnimatedText>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam voluptates
-          quos ratione consequatur ullam commodi velit rerum sequi ipsam blanditiis,
-          quo debitis exercitationem molestiae quasi. Nesciunt quod nihil iste
-          repudiandae?
-        </AnimatedText>
-      </div> */}
         </div>
       </div>
     </div>
