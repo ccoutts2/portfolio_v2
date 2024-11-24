@@ -16,6 +16,7 @@ export default {
         clampHome: "clamp(1.4rem, 4vw, 4rem)",
         clampPageIntro: "clamp(1.2rem, 4vw, 2rem)",
         clampHeader: "clamp(3rem, 10vw, 10rem)",
+        clampAccordionContent: "clamp(1.2rem, 4vw, 2rem)",
       },
       width: {
         clampImage: "clamp(10rem, calc(-20rem + 0.8 * 100vw), 20rem)",

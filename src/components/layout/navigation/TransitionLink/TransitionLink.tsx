@@ -10,6 +10,8 @@ interface TransitionLinkProps extends LinkProps {
   href: string;
   underline?: boolean;
   className?: string;
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
 }
 
 const sleep = (ms: number): Promise<void> => {

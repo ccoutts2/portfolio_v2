@@ -4,7 +4,6 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 import Image from "next/image";
-import Link from "next/link";
 
 import { TransitionLink } from "../navigation/TransitionLink/TransitionLink";
 import { AnimatedText } from "@/components/animations/AnimatedText/AnimatedText";
@@ -59,11 +58,15 @@ const Hero = () => {
           duration: 1.5,
           ease: "power4.inOut",
         })
-        .to(image.current, {
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-          duration: 1,
-          ease: "power4.inOut",
-        });
+        .to(
+          image.current,
+          {
+            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+            duration: 1,
+            ease: "power4.inOut",
+          },
+          "<"
+        );
     },
     { scope: container, dependencies: [] }
   );
