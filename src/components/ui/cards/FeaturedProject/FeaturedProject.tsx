@@ -52,7 +52,9 @@ export const FeaturedProject = ({
           />
         </div>
 
-        <TransitionLink href="/contact" className="absolute inset-0">
+        <TransitionLink
+          href="/work/ewm-bespoke-interiors"
+          className="absolute inset-0">
           <span className="vh">See EWM Project Case Study</span>
         </TransitionLink>
       </article>

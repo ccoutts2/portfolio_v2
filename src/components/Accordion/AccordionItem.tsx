@@ -6,6 +6,8 @@ import Image from "next/image";
 import classNames from "classnames";
 import Link from "next/link";
 import { Button } from "../ui/buttons/Button";
+import gsap from "gsap";
+import { TransitionLink } from "../layout/navigation/TransitionLink/TransitionLink";
 
 export interface AccordionItemProps {
   isActive: boolean;
@@ -16,6 +18,7 @@ export interface AccordionItemProps {
   tech: string[];
   image: string;
   alt: string;
+  slug: string;
 }
 
 export const AccordionItem = ({
@@ -26,6 +29,7 @@ export const AccordionItem = ({
   image,
   alt,
   title,
+  slug,
   onClick,
 }: AccordionItemProps) => {
   const contentRef = useRef<HTMLDivElement>(null);
@@ -43,7 +47,7 @@ export const AccordionItem = ({
   }, [isActive]);
 
   return (
-    <div className={styles.AccordionItem}>
+    <div className={styles.AccordionItem} onClick={onClick}>
       <AccordionTitle title={title} onClick={onClick} isActive={isActive} />
       <section
         className={classNames(
@@ -89,9 +93,9 @@ export const AccordionItem = ({
               </ul>
             </div>
           </div>
-          <Link className="AccordionLink" href={`/work/${title}`}>
+          <TransitionLink className={styles.AccordionLink} href={`/work/${slug}`}>
             View Project
-          </Link>
+          </TransitionLink>
         </div>
       </section>
     </div>

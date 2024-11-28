@@ -11,6 +11,9 @@ export const accordionData: AccordionItems[] = [
     tech: ["Next.js", "GSAP", "Lenis Scroll", "TailwindCSS", "CSS"],
     image: assetsConfig["new-street"][0].src,
     alt: assetsConfig["new-street"][0].description,
+    slug: "ewm-bespoke-interiors",
+    year: "2024",
+    project: "Commercial",
   },
 
   {
@@ -18,17 +21,12 @@ export const accordionData: AccordionItems[] = [
     content:
       "An immersive image gallery experience, telling the story of my trip to France during the Rugby World Cup in 2023",
     service: ["Design", "Development"],
-    tech: [
-      "Next.js",
-      "PostgreSQL",
-      "Prisma",
-      "GSAP",
-      "Lenis Scroll",
-      "TailwindCSS",
-      "CSS",
-    ],
+    tech: ["Next.js", "GSAP", "Lenis Scroll", "TailwindCSS", "CSS"],
     image: assetsConfig["new-street"][1].src,
     alt: assetsConfig["new-street"][1].description,
+    slug: "france-2k23",
+    year: "2024",
+    project: "Personal",
   },
   {
     title: "Triangulate",
@@ -46,5 +44,8 @@ export const accordionData: AccordionItems[] = [
     ],
     image: assetsConfig["new-street"][2].src,
     alt: assetsConfig["new-street"][2].description,
+    slug: "triangulate",
+    year: "2024",
+    project: "Personal",
   },
 ];

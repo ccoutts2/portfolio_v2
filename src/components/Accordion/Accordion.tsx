@@ -11,6 +11,7 @@ export interface AccordionProps {
     tech: string[];
     image: string;
     alt: string;
+    slug: string;
   }[];
   defaultExpanded?: Number[];
   single?: boolean;

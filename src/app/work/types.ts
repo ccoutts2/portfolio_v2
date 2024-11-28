@@ -5,4 +5,7 @@ export interface AccordionItems {
   tech: string[];
   image: string;
   alt: string;
+  slug: string;
+  year: string;
+  project: string;
 }
