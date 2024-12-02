@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Button } from "../ui/buttons/Button";
 import gsap from "gsap";
 import { TransitionLink } from "../layout/navigation/TransitionLink/TransitionLink";
+import HoverBackground from "../HoverBackground/HoverBackground";
 
 export interface AccordionItemProps {
   isActive: boolean;
@@ -47,7 +48,7 @@ export const AccordionItem = ({
   }, [isActive]);
 
   return (
-    <div className={styles.AccordionItem} onClick={onClick}>
+    <HoverBackground className={styles.AccordionItem} onClick={onClick}>
       <AccordionTitle title={title} onClick={onClick} isActive={isActive} />
       <section
         className={classNames(
@@ -98,7 +99,7 @@ export const AccordionItem = ({
           </TransitionLink>
         </div>
       </section>
-    </div>
+    </HoverBackground>
   );
 };
 export default AccordionItem;
