@@ -4,11 +4,8 @@ import { ReactElement, useEffect, useRef } from "react";
 import { AccordionTitle } from "./AccordionTitle";
 import Image from "next/image";
 import classNames from "classnames";
-import Link from "next/link";
-import { Button } from "../ui/buttons/Button";
-import gsap from "gsap";
 import { TransitionLink } from "../layout/navigation/TransitionLink/TransitionLink";
-import HoverBackground from "../HoverBackground/HoverBackground";
+import HoverBackground from "../animations/HoverBackground/HoverBackground";
 
 export interface AccordionItemProps {
   isActive: boolean;
