@@ -91,9 +91,11 @@ export const AccordionItem = ({
               </ul>
             </div>
           </div>
-          <TransitionLink className={styles.AccordionLink} href={`/work/${slug}`}>
-            View Project
-          </TransitionLink>
+          <div className="w-fit">
+            <TransitionLink className={styles.AccordionLink} href={`/work/${slug}`}>
+              View Project
+            </TransitionLink>
+          </div>
         </div>
       </section>
     </HoverBackground>

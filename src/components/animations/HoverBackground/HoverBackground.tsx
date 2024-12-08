@@ -31,7 +31,8 @@ const HoverBackground = ({ children, className, onClick }: HoverBackgroundProps)
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
       style={{
-        backgroundColor: isHovering ? `hsl(${degrees}, 80%, 70%)` : "#f6f6f6",
+        color: isHovering ? "#191919" : "",
+        backgroundColor: isHovering ? `hsl(${degrees}, 80%, 70%)` : "",
       }}>
       {children}
     </div>

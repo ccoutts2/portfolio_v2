@@ -127,7 +127,7 @@ const ContactForm = ({ onClick }: ContactFormProps) => {
         ) : (
           <Button type="submit">
             <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
-            {buttonLabel}
+            <span className="dark:text-[#191919]">{buttonLabel}</span>
           </Button>
         )}
         {Object.keys(errorMessages).length > 0 && (

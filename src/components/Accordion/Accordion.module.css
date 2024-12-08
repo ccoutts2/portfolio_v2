@@ -89,6 +89,7 @@
 }
 
 .AccordionLink {
+  padding: 0.1rem 0.5rem;
   position: relative;
 
   &:before {
