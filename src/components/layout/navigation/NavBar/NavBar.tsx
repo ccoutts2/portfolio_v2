@@ -1,14 +1,14 @@
 "use client";
 
-import { useState, useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
+import { useState } from "react";
 import { NavLink } from "@/components/";
 import { BurgerButton } from "@/components/";
 import { BlinkingDot } from "@/components/";
 import { TransitionLink } from "@/components/";
 import { Icon } from "@/components/";
 import Link from "next/link";
+import ThemeSwitch from "@/components/ThemeSwitch/ThemeSwitch";
+import DateTime from "@/components/DateTime/DateTime";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,10 +28,11 @@ export const NavBar = () => {
   return (
     <header className="w-full border-b border-solid">
       <nav className="flex justify-between items-center w-full gap-4">
-        <div className="flex-[1]">
-          <h1 className="p-4 md:px-8 text-3xl md:text-5xl">
+        <div className="flex-[1] flex-col p-4 md:px-8">
+          <h1 className="text-3xl md:text-5xl">
             <TransitionLink href="/">Chris Coutts</TransitionLink>
           </h1>
+          <DateTime />
         </div>
 
         <div className="hidden md:flex justify-center gap-20 flex-[2] w-full">
@@ -53,7 +54,11 @@ export const NavBar = () => {
             </li>
           </ul>
         </div>
-        <div className="flex-[1] flex justify-end items-center md:border-solid">
+
+        <div className="flex-[1] flex justify-end items-center md:border-solid gap-2">
+          <span>
+            <ThemeSwitch />
+          </span>
           <ul className="flex md:flex-col items-stretch md:border-r md:border-l md:border-solid">
             <li className="p-4 md:border-b border-solid hover:bg-[#435558] hover:duration-200 relative">
               <Icon>
@@ -92,9 +97,7 @@ export const NavBar = () => {
             <BurgerButton status={status} onClick={toggleBurgerMenu} />
             <p className="hidden md:text-sm lg:text-base md:flex items-center gap-2 md:px-8">
               <BlinkingDot />
-              <NavLink href="mailto:chris.dcoutts@gmail.com">
-                Available for work
-              </NavLink>
+              <NavLink href="mailto:chris.dcoutts@gmail.com">Available</NavLink>
             </p>
           </div>
         </div>

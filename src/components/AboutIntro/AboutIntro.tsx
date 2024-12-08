@@ -54,13 +54,20 @@ const AboutIntro = () => {
           <p className="text-clampPageIntro">
             <span className="ml-12">I&apos;m</span> a full stack developer who
             transitioned into the tech industry through a{" "}
-            <span className="text-[#442c35] font-bold">passion</span> for building
-            and creating. I love turning ideas into reality, whether that be building
-            apps for me and my friends to use, or collaborating with clients to bring
-            their <span className="text-[#442c35] font-bold">visions</span> to life.
-            For me, every line of code is an{" "}
-            <span className="text-[#442c35] font-bold">opportunity</span> to solve
-            problems and make a difference.
+            <span className="text-[#442c35] dark:text-[#f40c3f] font-bold">
+              passion
+            </span>{" "}
+            for building and creating. I love turning ideas into reality, whether
+            that be building apps for me and my friends to use, or collaborating with
+            clients to bring their{" "}
+            <span className="text-[#442c35] dark:text-[#f40c3f] font-bold">
+              visions
+            </span>{" "}
+            to life. For me, every line of code is an{" "}
+            <span className="text-[#442c35] dark:text-[#f40c3f] font-bold">
+              opportunity
+            </span>{" "}
+            to solve problems and make a difference.
           </p>
         </AnimatedText>
       </div>

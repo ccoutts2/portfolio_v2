@@ -11,7 +11,9 @@ export const ContactMe = () => {
           You can get in touch by either filling out the
           <TransitionLink href="/contact">
             {" "}
-            <span className="font-bold text-[#442c35]">contact form</span>
+            <span className="font-bold text-[#442c35] dark:text-[#f40c3f]">
+              contact form
+            </span>
           </TransitionLink>{" "}
           or by pinging me an{" "}
           <Link href="mailto:chris.dcoutts@gmail.com" target="_blank">

@@ -29,6 +29,7 @@ const Experience = () => {
                 "justify-between",
                 "items-start",
                 "gap-4",
+                "dark:after:bg-[#f6f6f6]",
                 {
                   [styles.InView]: inView,
                 }
