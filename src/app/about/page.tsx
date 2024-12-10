@@ -9,7 +9,9 @@ export default async function Page({
 }: {
   searchParams: { [key: string]: string | undefined };
 }) {
-  const experienceFilter = searchParams["filter[experience]"] as string;
+  const experienceFilter = (await searchParams).experience;
+
+  console.log(experienceFilter);
 
   const filterResults = (experiences: ExperienceDetails[]) => {
     if (experienceFilter) {
