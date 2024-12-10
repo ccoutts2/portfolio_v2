@@ -63,8 +63,8 @@ const ContactForm = ({ onClick }: ContactFormProps) => {
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setErrorMessages({});
-    setButtonLabel("Sending");
     setButtonPending(true);
+    setButtonLabel("Sending");
 
     const formData = new FormData(form.current!);
     const validatedFields = Schema.safeParse({

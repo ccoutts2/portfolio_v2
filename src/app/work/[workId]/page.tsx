@@ -21,6 +21,8 @@ export default function Page({ params }: WorkPageProps) {
   const [workId, setWorkId] = useState<string | null>(null);
   const work = workDetails[workId as keyof typeof workDetails];
 
+  console.log(work);
+
   useEffect(() => {
     const fetchParams = async () => {
       const resolvedParams = await params;
@@ -38,8 +40,8 @@ export default function Page({ params }: WorkPageProps) {
     <>
       <div className="w-full h-[75vh]">
         <Image
-          src={assetsConfig["new-street"][0].src}
-          alt={assetsConfig["new-street"][0].description}
+          src={work.images[0].src}
+          alt={work.images[0].description}
           width={800}
           height={800}
           className="w-full h-full object-cover"
@@ -88,8 +90,8 @@ export default function Page({ params }: WorkPageProps) {
 
       <div className="w-full h-[75vh]">
         <Image
-          src={assetsConfig["new-street"][0].src}
-          alt={assetsConfig["new-street"][0].description}
+          src={work.images[1].src}
+          alt={work.images[1].description}
           width={800}
           height={800}
           className="w-full h-full object-cover"
@@ -105,8 +107,8 @@ export default function Page({ params }: WorkPageProps) {
 
       <div className="w-full py-2 px-6 flex flex-col md:flex-row gap-6">
         <ImageContainer
-          src={assetsConfig["new-street"][0].src}
-          alt={assetsConfig["new-street"][0].description}></ImageContainer>
+          src={work.images[2].src}
+          alt={work.images[2].description}></ImageContainer>
 
         <ImageContainer
           src={assetsConfig["new-street"][0].src}

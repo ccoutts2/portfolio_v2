@@ -1,4 +1,19 @@
 export const assetsConfig = {
+  ewm: [
+    {
+      description: "iPhone immage of the active burger menu, showing menu items",
+      src: "https://firebasestorage.googleapis.com/v0/b/effortless-interior-design.appspot.com/o/Portfolio%2FEWM%2FPixel%20True%20Mockup%20(1).png?alt=media&token=5f254b3a-023d-40d7-a404-45b518c73a9e",
+    },
+
+    {
+      description: "iPhone immage of the active burger menu, showing menu items",
+      src: "https://firebasestorage.googleapis.com/v0/b/effortless-interior-design.appspot.com/o/Portfolio%2FEWM%2FPixel%20True%20Mockup.png?alt=media&token=801e30ba-b3a5-4e69-8c09-8aef21017671",
+    },
+    {
+      description: "iPhone immage of the active burger menu, showing menu items",
+      src: "https://firebasestorage.googleapis.com/v0/b/effortless-interior-design.appspot.com/o/Portfolio%2FEWM%2FPixel%20True%20Mockup%20(1).png?alt=media&token=5f254b3a-023d-40d7-a404-45b518c73a9e",
+    },
+  ],
   "new-street": [
     {
       description: "A photo showing the work done at New Street",

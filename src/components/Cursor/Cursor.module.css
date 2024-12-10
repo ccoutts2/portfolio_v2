@@ -1,5 +1,5 @@
 .Cursor {
-  background-color: #e2ff74;
+  background-color: white;
   border-radius: 50%;
   height: 15px;
   left: 0;
@@ -8,7 +8,6 @@
   position: fixed;
   top: 0;
   transform: translate(-50%, -50%);
-  transition: width 1s, height 1s;
   width: 15px;
   z-index: 9999;
 }

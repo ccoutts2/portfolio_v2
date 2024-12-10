@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 
-const DateTime: React.FC = () => {
-  const [time, setTime] = useState<string>("");
-  const [date, setDate] = useState<string>("");
+const DateTime = () => {
+  const [time, setTime] = useState("");
+  const [message, setMessage] = useState("");
 
   const updateDateTime = () => {
     const now = new Date();
@@ -21,16 +21,19 @@ const DateTime: React.FC = () => {
     const timeStr: string =
       now.toLocaleTimeString("en-GB", timeOptions) + " " + `[${timeZoneAbbr}]`;
 
-    const dateOptions: Intl.DateTimeFormatOptions = {
-      weekday: "long",
-      day: "numeric",
-      month: "long",
-      year: "numeric",
-    };
-    const dateStr: string = now.toLocaleDateString("en-GB", dateOptions);
-
     setTime(timeStr);
-    setDate(dateStr);
+
+    const currentHour = now.getHours();
+
+    if (currentHour < 12) {
+      setMessage("Good Morning");
+    } else if (currentHour >= 12 && currentHour < 16) {
+      setMessage("Good Afternoon");
+    } else if (currentHour >= 16 && currentHour <= 21) {
+      setMessage("Good Evening");
+    } else {
+      setMessage("Good Night");
+    }
   };
 
   useEffect(() => {
@@ -41,12 +44,14 @@ const DateTime: React.FC = () => {
   }, []);
 
   return (
-    <dl className="flex gap-1 text-xs">
+    <dl className="flex items-center gap-2 text-xs">
       <dt className="vh">Current time:</dt>
-      <dd>{time}</dd>
+      <dd className="hidden md:flex">{time}</dd>
 
-      <dt className="vh">Current date:</dt>
-      <dd className="hidden lg:flex">{date}</dd>
+      <dt className="vh">Message alert:</dt>
+      <dd className="border border-[#191919] dark:border-[#f6f6f6] rounded-3xl px-[6px] py-[1.5px]">
+        {message}
+      </dd>
     </dl>
   );
 };

@@ -28,7 +28,7 @@ export const NavBar = () => {
   return (
     <header className="w-full border-b border-solid">
       <nav className="flex justify-between items-center w-full gap-4">
-        <div className="flex-[1] flex-col p-4 md:px-8">
+        <div className="flex-[2] flex-col p-4 pr-0 md:pr-4 md:px-8">
           <h1 className="text-3xl md:text-5xl">
             <TransitionLink href="/">Chris Coutts</TransitionLink>
           </h1>
@@ -56,10 +56,7 @@ export const NavBar = () => {
         </div>
 
         <div className="flex-[1] flex justify-end items-center md:border-solid gap-2">
-          <span>
-            <ThemeSwitch />
-          </span>
-          <ul className="flex md:flex-col items-stretch md:border-r md:border-l md:border-solid">
+          <ul className="flex flex-col items-stretch md:border-r md:border-l md:border-solid">
             <li className="p-4 md:border-b border-solid hover:bg-[#435558] hover:duration-200 relative">
               <Icon>
                 <svg
@@ -93,12 +90,15 @@ export const NavBar = () => {
               </Link>
             </li>
           </ul>
-          <div className="pr-4">
+          <div className="pr-4 md:px-6 flex flex-row-reverse items-center md:flex-col md:items-end gap-2">
             <BurgerButton status={status} onClick={toggleBurgerMenu} />
-            <p className="hidden md:text-sm lg:text-base md:flex items-center gap-2 md:px-8">
+            <p className="hidden md:text-sm lg:text-base md:flex items-center gap-2">
               <BlinkingDot />
               <NavLink href="mailto:chris.dcoutts@gmail.com">Available</NavLink>
             </p>
+            <span>
+              <ThemeSwitch />
+            </span>
           </div>
         </div>
       </nav>

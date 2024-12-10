@@ -1,3 +1,10 @@
+import { assetsConfig } from "@/config/assets";
+
+interface ProjectImages {
+  description: string;
+  src: string;
+}
+
 export interface WorkDetails {
   id: number;
   title: string;
@@ -7,6 +14,7 @@ export interface WorkDetails {
   service: string[];
   tech: string[];
   slug: string;
+  images: ProjectImages[];
 }
 
 export const workDetails: { [key: string]: WorkDetails } = {
@@ -20,6 +28,7 @@ export const workDetails: { [key: string]: WorkDetails } = {
     service: ["Design", "Development"],
     tech: ["Next.js", "GSAP", "Lenis Scroll", "TailwindCSS", "CSS"],
     slug: "ewm-bespoke-interiors",
+    images: assetsConfig.ewm.map(({ description, src }) => ({ description, src })),
   },
   "france-2k23": {
     id: 1,
@@ -31,6 +40,12 @@ export const workDetails: { [key: string]: WorkDetails } = {
     service: ["Design", "Development"],
     tech: ["Next.js", "GSAP", "Lenis Scroll", "TailwindCSS", "CSS"],
     slug: "france-2k23",
+    images: [
+      {
+        description: "",
+        src: "",
+      },
+    ],
   },
   triangulate: {
     id: 2,
@@ -50,5 +65,11 @@ export const workDetails: { [key: string]: WorkDetails } = {
       "SCSS",
     ],
     slug: "triangulate",
+    images: [
+      {
+        description: "",
+        src: "",
+      },
+    ],
   },
 };
