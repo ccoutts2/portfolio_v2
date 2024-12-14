@@ -93,9 +93,6 @@ const ContactForm = ({ onClick }: ContactFormProps) => {
 
   return (
     <form ref={form} onSubmit={onSubmit} className="flex flex-col gap-8 w-full">
-      <div className="absolute top-2 right-2 md:hidden">
-        <Button onClick={onClick}>X</Button>
-      </div>
       <Field label="What's your name?" id="name">
         <Input onChange={handleInputChange} name="name" required value={name} />
       </Field>

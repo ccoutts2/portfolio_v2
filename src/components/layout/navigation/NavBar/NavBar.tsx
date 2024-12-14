@@ -9,6 +9,7 @@ import { Icon } from "@/components/";
 import Link from "next/link";
 import ThemeSwitch from "@/components/ThemeSwitch/ThemeSwitch";
 import DateTime from "@/components/DateTime/DateTime";
+import BurgerMenu from "../BurgerMenu/BurgerMenu";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,10 +20,8 @@ export const NavBar = () => {
       setIsOpen(false);
       setStatus("closed");
     } else if (!isOpen) {
-      setTimeout(() => {
-        setIsOpen(true);
-        setStatus("open");
-      }, 800);
+      setIsOpen(true);
+      setStatus("open");
     }
   };
   return (
@@ -30,7 +29,7 @@ export const NavBar = () => {
       <header className="w-full border-b border-solid">
         <nav className="flex justify-between items-center w-full gap-4">
           <div className="flex-[2] flex-col p-4 pr-0 md:pr-4 md:px-8">
-            <h1 className="text-3xl md:text-5xl">
+            <h1 className="text-clampPageIntro">
               <TransitionLink href="/">Chris Coutts</TransitionLink>
             </h1>
             <DateTime />
@@ -58,7 +57,7 @@ export const NavBar = () => {
 
           <div className="flex-[1] flex justify-end items-center md:border-solid gap-2">
             <ul className="flex flex-col items-stretch md:border-r md:border-l md:border-solid">
-              <li className="p-4 md:border-b border-solid hover:bg-[#435558] hover:duration-200 relative">
+              <li className="p-2 md:p-4 md:border-b border-solid hover:bg-[#435558] hover:duration-200 relative">
                 <Icon>
                   <svg
                     className="h-4 w-4 hover:scale-110 hover:duration-200 dark:fill-[#f6f6f6]"
@@ -74,7 +73,7 @@ export const NavBar = () => {
                   <span className="vh">See my LinkedIn profile</span>
                 </Link>
               </li>
-              <li className="p-4 hover:bg-[#435558] hover:duration-200 relative">
+              <li className="p-2 md:p-4 hover:bg-[#435558] hover:duration-200 relative">
                 <Icon>
                   <svg
                     className="h-4 w-4 hover:scale-110 hover:duration-200 dark:fill-[#f6f6f6]"
@@ -91,8 +90,12 @@ export const NavBar = () => {
                 </Link>
               </li>
             </ul>
-            <div className="pr-4 md:px-6 flex flex-row-reverse items-center md:flex-col md:items-end gap-2">
-              <BurgerButton status={status} onClick={toggleBurgerMenu} />
+            <div className="pr-4 md:px-6 flex flex-row-reverse items-center md:flex-col md:items-end gap-4">
+              <BurgerButton
+                status={status}
+                onClick={toggleBurgerMenu}
+                isOpen={isOpen}
+              />
               <p className="hidden md:text-sm lg:text-base md:flex items-center gap-2">
                 <BlinkingDot />
                 <NavLink href="mailto:chris.dcoutts@gmail.com">Available</NavLink>
@@ -104,6 +107,12 @@ export const NavBar = () => {
           </div>
         </nav>
       </header>
+
+      <BurgerMenu
+        isOpen={isOpen}
+        toggleBurgerMenu={toggleBurgerMenu}
+        status={status}
+      />
     </>
   );
 };

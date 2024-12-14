@@ -22,11 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={` antialiased dark:bg-[#252126] dark:text-[#f6f6f6]`}>
-        <Cursor />
         <SmoothScroll>
           <NavBar />
           {children}
           <Footer />
+          <Cursor />
         </SmoothScroll>
       </body>
     </html>

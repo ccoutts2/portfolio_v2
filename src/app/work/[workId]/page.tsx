@@ -63,16 +63,16 @@ export default function Page({ params }: WorkPageProps) {
           </div>
         </div>
       </aside>
-      <section className="flex flex-col sm:flex-row gap-4 py-32 px-6 w-full">
+      <section className="flex flex-col sm:flex-row gap-4 py-12 md:py-32 px-6 w-full">
         <div className="flex-[1]">
           <h1 className="text-clampHome">
-            Dynamic Vision: <br />
-            TechCorp x Innovate Media
+            Bespoke Deign: <br />
+            Timeless Craft
           </h1>
         </div>
 
         <div className="flex-[1]">
-          <p className="text-2xl">{work.information}</p>
+          <p className="text-clampProjectText">{work.information}</p>
 
           <div className="flex gap-4 my-8 mx-0 justify-between">
             <ul className="flex gap-4">
