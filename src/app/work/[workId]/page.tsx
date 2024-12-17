@@ -51,7 +51,7 @@ export default function Page({ params }: WorkPageProps) {
       <aside className="flex gap-4 p-6 w-full text-sm">
         <div className="flex-[1] flex flex-col md:flex-row gap-4">
           <div className="flex-[1]">
-            <p>Client &#x2192; {work.title}</p>
+            <h1>Client &#x2192; {work.title}</h1>
           </div>
           <div className="flex-[1]">
             <p>Project Type &#x2192; {work.projectType}</p>
@@ -65,10 +65,7 @@ export default function Page({ params }: WorkPageProps) {
       </aside>
       <section className="flex flex-col sm:flex-row gap-4 py-12 md:py-32 px-6 w-full">
         <div className="flex-[1]">
-          <h1 className="text-clampHome">
-            Bespoke Deign: <br />
-            Timeless Craft
-          </h1>
+          <h2 className="text-clampHome">{work.slogan}</h2>
         </div>
 
         <div className="flex-[1]">

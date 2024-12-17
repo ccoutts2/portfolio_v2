@@ -1,3 +1,4 @@
+import { NavLink } from "@/components/layout/navigation/NavLink/NavLink";
 import { TransitionLink } from "@/components/layout/navigation/TransitionLink/TransitionLink";
 import Link from "next/link";
 
@@ -16,9 +17,7 @@ export const ContactMe = () => {
             </span>
           </TransitionLink>{" "}
           or by pinging me an{" "}
-          <Link href="mailto:chris.dcoutts@gmail.com" target="_blank">
-            email
-          </Link>
+          <NavLink href="mailto:chris.dcoutts@gmail.com">email</NavLink>
         </p>
 
         <svg

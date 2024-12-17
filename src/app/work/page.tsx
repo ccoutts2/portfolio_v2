@@ -1,6 +1,6 @@
 import { PageHeader } from "@/components/layout/header/PageHeader/PageHeader";
-import ProjectList from "@/components/ProjectList/ProjectList";
 import { accordionData } from "./data";
+import { Accordion } from "@/components/Accordion/Accordion";
 
 export default async function Page() {
   return (
@@ -9,7 +9,7 @@ export default async function Page() {
         <PageHeader label="My Work" />
         <span className="text-clampHome">({accordionData.length})</span>
       </div>
-      <ProjectList />
+      <Accordion items={accordionData} />
     </main>
   );
 }

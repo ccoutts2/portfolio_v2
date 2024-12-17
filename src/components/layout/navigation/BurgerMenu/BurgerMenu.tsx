@@ -93,7 +93,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
   }, [isOpen]);
 
   return (
-    <div data-menu-open={isOpen} ref={container}>
+    <div data-lenis-prevent ref={container}>
       <nav ref={menu} className="fixed inset-0 z-50 backdrop-blur-md p-4">
         <div className="flex justify-between items-center">
           <section className="flex flex-col">
