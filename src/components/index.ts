@@ -38,6 +38,8 @@ export { SmoothScroll } from "./SmoothScroll/SmoothScroll";
 // animations
 
 export { AnimatedText } from "./animations/AnimatedText/AnimatedText";
+export { AnimatedWordBlock } from "./animations/AnimatedWordBlock/AnimatedWordBlock";
+export { ImageZoomScroll } from "./ImageZoomScroll/ImageZoomScroll";
 
 // featured project
 

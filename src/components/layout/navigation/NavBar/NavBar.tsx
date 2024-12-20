@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { NavLink } from "@/components/";
 import { BurgerButton } from "@/components/";
 import { BlinkingDot } from "@/components/";
@@ -25,13 +25,6 @@ export const NavBar = () => {
     }
   };
 
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "scroll";
-    }
-  }, [isOpen]);
   return (
     <>
       <header className="w-full border-b border-solid">

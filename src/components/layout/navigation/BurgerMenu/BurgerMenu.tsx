@@ -50,6 +50,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
   const menu = useRef<HTMLElement | null>(null);
   const menuLinks = useRef<(HTMLDivElement | null)[]>([]);
   const socialLinks = useRef<(HTMLDivElement | null)[]>([]);
+  const name = useRef<HTMLSpanElement | null>(null);
 
   const tl = useRef<GSAPTimeline | null>();
 
@@ -57,6 +58,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
     () => {
       gsap.set(menu.current, { autoAlpha: 0 });
       gsap.set(menuLinks.current, { y: 75 });
+      gsap.set(name.current, { y: 25 });
       gsap.set(socialLinks.current, { y: 75 });
 
       tl.current = gsap
@@ -73,10 +75,20 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
           ease: "power4.inOut",
           delay: -0.75,
         })
+        .to(
+          name.current,
+          {
+            y: 0,
+            duration: 1,
+            stagger: 0.15,
+            delay: -0.75,
+            ease: "power4.inOut",
+          },
+          "<"
+        )
         .to(socialLinks.current, {
           y: 0,
           duration: 1,
-          stagger: 0.15,
           ease: "power4.inOut",
           delay: -0.75,
         });
@@ -87,18 +99,34 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
   useEffect(() => {
     if (isOpen) {
       tl.current?.play();
+      document.body.style.overflow = "hidden";
     } else {
       tl.current?.reverse();
+      document.body.style.overflow = "scroll";
     }
   }, [isOpen]);
+
+  const splitText = (word: string) => {
+    return (
+      <>
+        {word.split("").map((el, index) => {
+          return (
+            <span key={index} className="inline-block" ref={name}>
+              {el}
+            </span>
+          );
+        })}
+      </>
+    );
+  };
 
   return (
     <div data-lenis-prevent ref={container}>
       <nav ref={menu} className="fixed inset-0 z-50 backdrop-blur-md p-4">
         <div className="flex justify-between items-center">
           <section className="flex flex-col">
-            <h1 className="text-clampPageIntro">
-              <TransitionLink href="/">Chris Coutts</TransitionLink>
+            <h1 className="text-clampPageIntro relative">
+              <TransitionLink href="/">{splitText("Chris Coutts")}</TransitionLink>
             </h1>
             <DateTime />
           </section>

@@ -9,7 +9,6 @@ const ThemeSwitch = () => {
   const [theme, setTheme] = useState<Theme>("light");
   const [isThemeClicked, setIsThemeClicked] = useState(false);
   const container = useRef<HTMLDivElement | null>(null);
-  const textRef = useRef<HTMLDivElement | null>(null);
   const lightTextRef = useRef<HTMLElement | null>(null);
   const darkTextRef = useRef<HTMLElement | null>(null);
 
