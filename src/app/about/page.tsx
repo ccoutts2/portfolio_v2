@@ -11,7 +11,7 @@ export default async function Page() {
       <AboutIntro />
       <Experience />
       <ContactMe />
-      <ImageZoomScroll />
+      {/* <ImageZoomScroll /> */}
     </main>
   );
 }

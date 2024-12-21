@@ -79,7 +79,10 @@ export const ImageZoomScroll = () => {
       <div className=" w-full h-full">
         <div className="h-[100vh] flex flex-col items-center justify-center text-clampHome">
           {" "}
-          <AnimatedWordBlock wordAbove="Health" wordBelow="Health" />
+          <AnimatedWordBlock
+            wordAbove="Lorem ipsum dolor sit amet"
+            wordBelow="Lorem ipsum dolor sit amet"
+          />
         </div>
         <div className="h-[100vh] flex flex-col items-center justify-center text-clampHome">
           {" "}
