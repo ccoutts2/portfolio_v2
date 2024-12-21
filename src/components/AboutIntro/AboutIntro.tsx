@@ -17,7 +17,7 @@ const AboutIntro = () => {
   useGSAP(
     () => {
       tl.current = gsap
-        .timeline({ delay: 1.5 })
+        .timeline({ delay: 1 })
         .to(imageContainer1.current, {
           clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
           duration: 0.8,
@@ -29,7 +29,7 @@ const AboutIntro = () => {
           {
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
             duration: 0.8,
-            delay: 0.15,
+            delay: 0.1,
             ease: "power4.inOut",
           },
           "<"
@@ -39,7 +39,7 @@ const AboutIntro = () => {
           {
             clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
             duration: 0.8,
-            delay: 0.15,
+            delay: 0.1,
             ease: "power4.inOut",
           },
           "<"
@@ -50,7 +50,7 @@ const AboutIntro = () => {
   return (
     <>
       <div className="p-4">
-        <AnimatedText delay={1.25}>
+        <AnimatedText delay={0.8}>
           <p className="text-clampPageIntro">
             <span className="ml-12">I&apos;m</span> a full stack developer who
             transitioned into the tech industry through a{" "}
@@ -73,7 +73,7 @@ const AboutIntro = () => {
       </div>
       <div className="flex flex-col-reverse md:flex-row justify-between p-4 py-12 md:p-12 gap-6">
         <div className="flex-[1]">
-          <AnimatedText delay={1.4}>
+          <AnimatedText delay={1}>
             <p className="text-lg">
               I come with a diverse background in both engineering and technology.
               Originally holding a Master&apos;s in Chemical Engineering, I

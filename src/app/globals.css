@@ -30,8 +30,8 @@ body {
   font-weight: 500;
   margin: 0;
   padding: 0;
-  transition-duration: 800ms;
-  transition-property: opacity, filter, background;
+  transition-duration: 500ms;
+  transition-property: opacity, filter;
   transition-timing-function: ease-in-out;
 }
 
@@ -46,7 +46,6 @@ body {
 }
 
 .PageTransition {
-  background: #bdc1b6;
   filter: blur(12px);
   opacity: 0;
 }
