@@ -51,28 +51,28 @@ export const ImageZoomScroll = () => {
       <div className="sticky h-[100vh] overflow-hidden w-full top-0">
         <Image
           ref={image1}
-          src={assetsConfig["new-street"][0].src}
-          alt={assetsConfig["new-street"][0].description}
-          width={assetsConfig["new-street"][0].width}
-          height={assetsConfig["new-street"][0].height}
+          src={assetsConfig["ewm"][0].src}
+          alt={assetsConfig["ewm"][0].description}
+          width={800}
+          height={800}
           className="w-full h-full absolute top-0 left-0 object-cover z-10"
         />
 
         <Image
           ref={image2}
-          src={assetsConfig["new-street"][1].src}
-          alt={assetsConfig["new-street"][1].description}
-          width={assetsConfig["new-street"][1].width}
-          height={assetsConfig["new-street"][1].height}
+          src={assetsConfig["ewm"][1].src}
+          alt={assetsConfig["ewm"][1].description}
+          width={800}
+          height={800}
           className="w-full h-full absolute top-0 left-0 object-cover z-20"
         />
 
         <Image
           ref={image3}
-          src={assetsConfig["new-street"][2].src}
-          alt={assetsConfig["new-street"][2].description}
-          width={assetsConfig["new-street"][2].width}
-          height={assetsConfig["new-street"][2].height}
+          src={assetsConfig["ewm"][2].src}
+          alt={assetsConfig["ewm"][2].description}
+          width={800}
+          height={800}
           className="w-full h-full absolute top-0 left-0 object-cover z-30"
         />
       </div>

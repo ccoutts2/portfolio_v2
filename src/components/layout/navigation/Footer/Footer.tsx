@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { TransitionLink } from "../navigation/TransitionLink/TransitionLink";
+import { TransitionLink } from "../TransitionLink/TransitionLink";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       className="relative h-[300px] z-[100]"
       style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
       <div className="fixed bottom-0 h-[300px] w-full">
-        <div className="flex h-full w-full flex-col justify-between bg-[#c6c6c6] dark:text-[#191919] px-4 py-8 md:px-12 lg:px-32">
+        <div className="flex h-full w-full flex-col justify-between bg-[#FB4D4C] dark:text-[#191919] px-4 py-8 md:px-12">
           <nav className="flex w-full justify-between">
             <section className="flex w-full flex-col justify-between gap-4">
               <h3 className="b-bottom uppercase">Sitemap</h3>

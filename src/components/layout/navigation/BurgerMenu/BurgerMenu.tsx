@@ -46,6 +46,7 @@ const burgerMenuItems: Links[] = [
 ];
 
 const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
+  if (typeof window === "undefined") return null;
   const container = useRef<HTMLDivElement | null>(null);
   const menu = useRef<HTMLElement | null>(null);
   const menuLinks = useRef<(HTMLDivElement | null)[]>([]);
@@ -106,27 +107,13 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
     }
   }, [isOpen]);
 
-  const splitText = (word: string) => {
-    return (
-      <>
-        {word.split("").map((el, index) => {
-          return (
-            <span key={index} className="inline-block" ref={name}>
-              {el}
-            </span>
-          );
-        })}
-      </>
-    );
-  };
-
   return (
     <div data-lenis-prevent ref={container}>
       <nav ref={menu} className="fixed inset-0 z-50 backdrop-blur-md p-4">
         <div className="flex justify-between items-center">
           <section className="flex flex-col">
             <h1 className="text-clampPageIntro relative">
-              <TransitionLink href="/">{splitText("Chris Coutts")}</TransitionLink>
+              <TransitionLink href="/">Chris Coutts</TransitionLink>
             </h1>
             <DateTime />
           </section>

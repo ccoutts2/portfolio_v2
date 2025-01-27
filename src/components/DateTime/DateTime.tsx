@@ -3,7 +3,8 @@
 import { useState, useEffect } from "react";
 
 const DateTime = () => {
-  const [time, setTime] = useState("");
+  if (typeof window === "undefined") return null;
+  const [time, setTime] = useState<string | null>(null);
   const [message, setMessage] = useState("");
 
   const updateDateTime = () => {
@@ -46,7 +47,9 @@ const DateTime = () => {
   return (
     <dl className="flex items-center gap-2 text-xs">
       <dt className="vh">Current time:</dt>
-      <dd className="hidden md:flex">{time}</dd>
+      <dd className="hidden md:flex">
+        <time suppressHydrationWarning={true}>{time}</time>
+      </dd>
 
       <dt className="vh">Message alert:</dt>
       <dd className="border border-[#191919] dark:border-[#f6f6f6] rounded-3xl px-[6px] py-[1.5px]">

@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 const Cursor = () => {
-  const cursorRef = useRef(null);
+  const cursorRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
     const onMouseMove = (e: MouseEvent) => {
@@ -13,14 +13,16 @@ const Cursor = () => {
         x: clientX,
         y: clientY,
         duration: 0.3,
+        ease: "power1.out",
       });
     };
 
     const onMouseEnter = (e: MouseEvent) => {
       if ((e.target as HTMLElement).tagName === "A") {
         gsap.to(cursorRef.current, {
-          scale: 3,
+          scale: 3.5,
           duration: 0.25,
+          ease: "power1.out",
         });
       }
     };
@@ -30,6 +32,7 @@ const Cursor = () => {
         gsap.to(cursorRef.current, {
           scale: 1,
           duration: 0.25,
+          ease: "power1.out",
         });
       }
     };

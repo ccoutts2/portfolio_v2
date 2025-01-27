@@ -10,8 +10,10 @@ import Link from "next/link";
 import ThemeSwitch from "@/components/ThemeSwitch/ThemeSwitch";
 import DateTime from "@/components/DateTime/DateTime";
 import BurgerMenu from "../BurgerMenu/BurgerMenu";
+import { PercentageScroll } from "@/components/PercentageScroll/PercentageScroll";
 
 export const NavBar = () => {
+  if (typeof window === "undefined") return null;
   const [isOpen, setIsOpen] = useState(false);
   const [status, setStatus] = useState("closed");
 
@@ -27,13 +29,15 @@ export const NavBar = () => {
 
   return (
     <>
-      <header className="w-full border-b border-solid">
+      <header className="w-full border-b border-solid lg:sticky lg:top-0 z-[1000] backdrop-blur-md">
         <nav className="flex justify-between items-center w-full gap-4">
-          <div className="flex-[2] flex-col p-4 pr-0 md:pr-4 md:px-8">
-            <h1 className="text-clampPageIntro">
+          <div className="flex-[2] flex items-center p-4 pr-0 md:pr-4 md:px-8 gap-4">
+            <h1 className="text-base md:text-2xl">
               <TransitionLink href="/">Chris Coutts</TransitionLink>
             </h1>
             <DateTime />
+
+            <PercentageScroll />
           </div>
 
           <div className="hidden md:flex justify-center gap-20 flex-[2] w-full">
@@ -57,7 +61,7 @@ export const NavBar = () => {
           </div>
 
           <div className="flex-[1] flex justify-end items-center md:border-solid gap-2">
-            <ul className="flex flex-col items-stretch md:border-r md:border-l md:border-solid">
+            <ul className="hidden md:flex flex-col items-stretch md:border-r md:border-l md:border-solid">
               <li className="p-2 md:p-4 md:border-b border-solid hover:bg-[#435558] hover:duration-200 relative">
                 <Icon>
                   <svg

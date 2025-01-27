@@ -44,10 +44,10 @@ export const FeaturedProject = ({
 
         <div className="border-[0.75rem] border-solid max-w-[12rem] max-h-[12rem]">
           <Image
-            src={assetsConfig["new-street"][0].src}
-            alt={assetsConfig["new-street"][0].description}
-            width={assetsConfig["new-street"][0].width}
-            height={assetsConfig["new-street"][0].height}
+            src={assetsConfig["ewm"][0].src}
+            alt={assetsConfig["ewm"][0].description}
+            width={800}
+            height={800}
             className="w-full h-full object-cover"
           />
         </div>

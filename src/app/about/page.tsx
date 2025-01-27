@@ -1,7 +1,7 @@
 import { ContactMe } from "@/components";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
 import Experience from "@/components/Experience/Experience";
-import { ImageZoomScroll } from "@/components";
+import FunBio from "@/components/FunBio/FunBio";
 import { PageHeader } from "@/components/layout/header/PageHeader/PageHeader";
 
 export default async function Page() {
@@ -11,7 +11,9 @@ export default async function Page() {
       <AboutIntro />
       <Experience />
       <ContactMe />
-      {/* <ImageZoomScroll /> */}
+      <div className="flex items-center justify-center my-[5vh] md:my-[20vh] relative">
+        <FunBio />
+      </div>
     </main>
   );
 }

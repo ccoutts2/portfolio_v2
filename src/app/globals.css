@@ -29,6 +29,7 @@ body {
   font-family: HankenGrotesk-Regular;
   font-weight: 500;
   margin: 0;
+  overflow: hidden;
   padding: 0;
   transition-duration: 500ms;
   transition-property: opacity, filter;
@@ -48,4 +49,16 @@ body {
 .PageTransition {
   filter: blur(12px);
   opacity: 0;
+}
+
+.slide-in-hidden {
+  transform: translateY(100px);
+  opacity: 0;
+}
+
+@keyframes slide-in {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }

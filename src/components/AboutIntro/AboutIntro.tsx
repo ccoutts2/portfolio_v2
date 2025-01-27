@@ -90,10 +90,10 @@ const AboutIntro = () => {
             className="max-h-[10rem] w-clampSmallImages"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
-              src={assetsConfig["new-street"][0].src}
-              alt={assetsConfig["new-street"][0].description}
-              width={assetsConfig["new-street"][0].width}
-              height={assetsConfig["new-street"][0].height}
+              src={assetsConfig["ewm"][0].src}
+              alt={assetsConfig["ewm"][0].description}
+              width={800}
+              height={800}
               className="w-full h-full object-cover"
             />
           </figure>
@@ -102,10 +102,10 @@ const AboutIntro = () => {
             className="max-h-[10rem] w-clampSmallImages"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
-              src={assetsConfig["new-street"][0].src}
-              alt={assetsConfig["new-street"][0].description}
-              width={assetsConfig["new-street"][0].width}
-              height={assetsConfig["new-street"][0].height}
+              src={assetsConfig["ewm"][0].src}
+              alt={assetsConfig["ewm"][0].description}
+              width={800}
+              height={800}
               className="w-full h-full object-cover"
             />
           </figure>
@@ -115,10 +115,10 @@ const AboutIntro = () => {
             className="max-h-[10rem] w-clampSmallImages"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
-              src={assetsConfig["new-street"][0].src}
-              alt={assetsConfig["new-street"][0].description}
-              width={assetsConfig["new-street"][0].width}
-              height={assetsConfig["new-street"][0].height}
+              src={assetsConfig["ewm"][0].src}
+              alt={assetsConfig["ewm"][0].description}
+              width={800}
+              height={800}
               className="w-full h-full object-cover"
             />
           </figure>

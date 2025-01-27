@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "@/app/globals.css";
 import { NavBar } from "@/components";
-import Footer from "@/components/layout/Footer/Footer";
+import Footer from "@/components/layout/navigation/Footer/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll/SmoothScroll";
 import Cursor from "@/components/Cursor/Cursor";
 

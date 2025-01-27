@@ -86,10 +86,12 @@ const ThemeSwitch = () => {
     <button
       onClick={toggleTheme}
       className="border rounded-3xl border-[#191919] dark:border-[white] px-2">
-      <div className="flex flex-col overflow-hidden h-[1.34rem]" ref={container}>
+      <span
+        className="flex flex-col overflow-hidden h-[1.34rem] text-sm"
+        ref={container}>
         <span ref={lightTextRef}>Light</span>
         <span ref={darkTextRef}>Dark</span>
-      </div>
+      </span>
     </button>
   );
 };
