@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { workDetails } from "@/lib/getWorkDetails";
 import { useScreenDetector } from "@/hooks/useScreenDetector";
@@ -20,15 +20,10 @@ interface WorkPageProps {
 }
 
 export default function Page({ params }: WorkPageProps) {
-  const { ref, inView } = useInView({
-    threshold: 1,
-    triggerOnce: true,
-  });
-
   const [workId, setWorkId] = useState<string | null>(null);
   const work = workDetails[workId as keyof typeof workDetails];
 
-  const { isMobile, isTablet, isDesktop } = useScreenDetector();
+  const { isMobile } = useScreenDetector();
 
   useEffect(() => {
     const fetchParams = async () => {
@@ -80,7 +75,7 @@ export default function Page({ params }: WorkPageProps) {
         </div>
 
         <div className="flex-[1]">
-          <SlideUp>
+          <SlideUp delay={0.2}>
             <p className="text-clampProjectText">{work.information}</p>
           </SlideUp>
 
@@ -165,18 +160,6 @@ export default function Page({ params }: WorkPageProps) {
           alt={assetsConfig.ewm[2].description}></ImageContainer>
       </div>
 
-      <div ref={ref} className="w-full h-full my-36">
-        <Image
-          src={assetsConfig.ewm[2].src}
-          alt={assetsConfig.ewm[2].description}
-          width={800}
-          height={800}
-          className={classNames("w-full", "h-full", "object-cover", "scale-95", {
-            [styles.InViewLarge]: inView,
-          })}
-        />
-      </div>
-
       <div className="h-[25vh] flex flex-col items-center justify-center">
         <h3 className="text-clampHome">More Work</h3>
 
@@ -184,7 +167,7 @@ export default function Page({ params }: WorkPageProps) {
           {Object.values(workDetails).map(({ title, slug, id }) => (
             <li key={id}>
               <TransitionLink underline href={`/work/${slug}`}>
-                {title}
+                <SlideUp delay={id * 0.1}>{title}</SlideUp>
               </TransitionLink>
             </li>
           ))}
