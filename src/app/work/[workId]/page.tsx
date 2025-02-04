@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { workDetails } from "@/lib/getWorkDetails";
 import { useScreenDetector } from "@/hooks/useScreenDetector";
@@ -12,6 +12,7 @@ import { TransitionLink } from "@/components";
 import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import { SlideUp } from "@/components";
+import ClipContainer from "@/components/ClipContainer/ClipContainer";
 
 interface WorkPageProps {
   params: Promise<{
@@ -159,6 +160,8 @@ export default function Page({ params }: WorkPageProps) {
           src={assetsConfig.ewm[2].src}
           alt={assetsConfig.ewm[2].description}></ImageContainer>
       </div>
+
+      <ClipContainer />
 
       <div className="h-[25vh] flex flex-col items-center justify-center">
         <h3 className="text-clampHome">More Work</h3>
