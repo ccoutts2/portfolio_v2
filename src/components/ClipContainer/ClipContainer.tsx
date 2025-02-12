@@ -21,7 +21,6 @@ const ClipContainer = () => {
         scrollTrigger: {
           trigger: imageRef.current,
           scrub: true,
-          markers: true,
           start: "top center-=100px",
           end: "top top-=200px",
         },
