@@ -53,7 +53,8 @@ export const AnimatedWordBlock = ({
     <span
       ref={wordContainerRef}
       style={{ clipPath: "polygon(0 3%, 0 99%, 100% 99%, 100% 3%)" }}
-      className="flex flex-col overflow-hidden leading-[0.8] relative">
+      className="flex flex-col overflow-hidden leading-[0.8] relative"
+    >
       <span ref={wordAboveRef}>{wordAbove}</span>
       <span ref={wordBelowRef} className="absolute left-0 top-0">
         {wordBelow}

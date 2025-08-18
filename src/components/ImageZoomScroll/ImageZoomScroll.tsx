@@ -47,7 +47,10 @@ export const ImageZoomScroll = () => {
   );
 
   return (
-    <div ref={container} className="w-full h-[300vh] relative flex justify-between">
+    <div
+      ref={container}
+      className="w-full h-[300vh] relative flex justify-between"
+    >
       <div className="sticky h-[100vh] overflow-hidden w-full top-0">
         <Image
           ref={image1}

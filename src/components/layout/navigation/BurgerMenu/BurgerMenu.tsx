@@ -57,6 +57,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
 
   useGSAP(
     () => {
+      gsap.set(container.current, { opacity: 1 });
       gsap.set(menu.current, { autoAlpha: 0 });
       gsap.set(menuLinks.current, { y: 75 });
       gsap.set(name.current, { y: 25 });
@@ -108,7 +109,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
   }, [isOpen]);
 
   return (
-    <div data-lenis-prevent ref={container}>
+    <div data-lenis-prevent ref={container} className="opacity-0 lg:hidden">
       <nav ref={menu} className="fixed inset-0 z-50 backdrop-blur-md p-4">
         <div className="flex justify-between items-center">
           <section className="flex flex-col">
@@ -117,7 +118,11 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
             </h1>
             <DateTime />
           </section>
-          <BurgerButton status={status} onClick={toggleBurgerMenu} isOpen={isOpen} />
+          <BurgerButton
+            status={status}
+            onClick={toggleBurgerMenu}
+            isOpen={isOpen}
+          />
         </div>
 
         <ul className="mt-12 flex flex-col justify-end items-end w-full uppercase">
@@ -125,13 +130,15 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
             <li
               key={index}
               className="text-6xl"
-              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}>
+              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
+            >
               <div
                 className="relative"
                 ref={(el) => {
                   menuLinks.current[index] = el;
                 }}
-                onClick={toggleBurgerMenu}>
+                onClick={toggleBurgerMenu}
+              >
                 <TransitionLink href={item.href} underline>
                   <span className="tracking-tight"> {item.label}</span>
                 </TransitionLink>
@@ -145,13 +152,15 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
             <li
               key={index}
               className="text-xl"
-              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}>
+              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
+            >
               <div
                 className="relative"
                 ref={(el) => {
                   socialLinks.current[index] = el;
                 }}
-                onClick={toggleBurgerMenu}>
+                onClick={toggleBurgerMenu}
+              >
                 <TransitionLink href={item.href} underline>
                   <span className="tracking-tight"> {item.label}</span>
                 </TransitionLink>

@@ -10,9 +10,11 @@ const PreLoader = () => {
 
   const tl = useRef<GSAPTimeline | null>();
 
+  const hasPlayed = localStorage.getItem("preLoader");
+
   useGSAP(
     () => {
-      const hasPlayed = localStorage.getItem("preLoader");
+      gsap.set(container.current, { opacity: 1 });
 
       if (!hasPlayed) {
         gsap.set(textRef.current, {
@@ -58,15 +60,17 @@ const PreLoader = () => {
     { scope: container }
   );
   return (
-    <div ref={container} className="overflow-hidden">
+    <div ref={container} className="overflow-hidden opacity-0">
       <p
         ref={textRef}
-        className="fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 overflow-hidden z-[1000] text-white opacity-0 invisible">
+        className="fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 overflow-hidden z-[1000] text-white opacity-0 invisible"
+      >
         say hello
       </p>
       <div
         ref={backgroundLoader}
-        className="fixed inset-0 z-20 flex justify-center items-center h-screen bg-black"></div>
+        className="fixed inset-0 z-20 flex justify-center items-center h-screen bg-black"
+      ></div>
     </div>
   );
 };
