@@ -1,6 +1,5 @@
 import ContactForm from "@/components/ContactForm/ContactForm";
 import { PageHeader } from "@/components/layout/header/PageHeader/PageHeader";
-import MobileContactForm from "@/components/MobileContactForm/MobileContactForm";
 import Link from "next/link";
 
 export default async function Page() {

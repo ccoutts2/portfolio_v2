@@ -5,7 +5,8 @@ const Footer = () => {
   return (
     <footer
       className="relative h-[300px] z-[100]"
-      style={{ clipPath: "polygon(0% 0, 100% 0%, 100% 100%, 0 100%)" }}>
+      style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)" }}
+    >
       <div className="fixed bottom-0 h-[300px] w-full">
         <div className="flex h-full w-full flex-col justify-between bg-[#FB4D4C] dark:text-[#191919] px-4 py-8 md:px-12">
           <nav className="flex w-full justify-between">
@@ -43,14 +44,18 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li className="md:hidden">
-                  <Link href="mailto:Info@ewmbespokeinteriors.co.uk" target="_blank">
+                  <Link
+                    href="mailto:Info@ewmbespokeinteriors.co.uk"
+                    target="_blank"
+                  >
                     Email
                   </Link>
                 </li>
                 <li>
                   <Link
                     href="https://www.linkedin.com/in/chris-coutts/"
-                    target="_blank">
+                    target="_blank"
+                  >
                     LinkedIn
                   </Link>
                 </li>

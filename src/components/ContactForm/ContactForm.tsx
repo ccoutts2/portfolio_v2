@@ -20,11 +20,7 @@ const Schema = z.object({
   message: z.string().min(1, "A message is required"),
 });
 
-interface ContactFormProps {
-  onClick?: () => void;
-}
-
-const ContactForm = ({ onClick }: ContactFormProps) => {
+const ContactForm = () => {
   const form = useRef<HTMLFormElement>(null);
 
   const [name, setName] = useState("");
@@ -124,7 +120,9 @@ const ContactForm = ({ onClick }: ContactFormProps) => {
         ) : (
           <Button type="submit">
             <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
-            <span className="dark:text-[#191919] text-[#191919]">{buttonLabel}</span>
+            <span className="dark:text-[#191919] text-[#191919]">
+              {buttonLabel}
+            </span>
           </Button>
         )}
         {Object.keys(errorMessages).length > 0 && (

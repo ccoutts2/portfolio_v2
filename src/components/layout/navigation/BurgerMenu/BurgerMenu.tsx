@@ -46,7 +46,6 @@ const burgerMenuItems: Links[] = [
 ];
 
 const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
-  if (typeof window === "undefined") return null;
   const container = useRef<HTMLDivElement | null>(null);
   const menu = useRef<HTMLElement | null>(null);
   const menuLinks = useRef<(HTMLDivElement | null)[]>([]);
@@ -113,9 +112,12 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
       <nav ref={menu} className="fixed inset-0 z-50 backdrop-blur-md p-4">
         <div className="flex justify-between items-center">
           <section className="flex flex-col">
-            <h1 className="text-clampPageIntro relative">
-              <TransitionLink href="/">Chris Coutts</TransitionLink>
-            </h1>
+            <header className="relative">
+              <h1 className="text-clampPageIntro">
+                <TransitionLink href="/">Chris Coutts</TransitionLink>
+              </h1>
+            </header>
+
             <DateTime />
           </section>
           <BurgerButton
