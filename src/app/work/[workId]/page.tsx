@@ -9,8 +9,6 @@ import Image from "next/image";
 import { assetsConfig } from "@/config/assets";
 import { TransitionLink } from "@/components";
 
-import { useInView } from "react-intersection-observer";
-import classNames from "classnames";
 import { SlideUp } from "@/components";
 import ClipContainer from "@/components/ClipContainer/ClipContainer";
 import { Mockups } from "@/components/ui/Mockups/Mockups";
@@ -43,12 +41,13 @@ export default function Page({ params }: WorkPageProps) {
 
   return (
     <main>
-      <div className="w-full h-[75vh]">
+      <div className="w-full">
         <Image
-          src=""
+          src={assetsConfig.ewm[0].src}
           alt=""
-          width={800}
-          height={800}
+          width={3024}
+          height={1646}
+          sizes="(max-width: 768px) 100vh, (max-width: 1024px) 75vh"
           className="w-full h-full object-cover"
         />
       </div>
@@ -110,31 +109,78 @@ export default function Page({ params }: WorkPageProps) {
             </div>
           </div>
           <div className="flex flex-col gap-8 h-[330vh] flex-[1] justify-between px-12">
-            <Mockups type="mobile" src="" alt="" width={690} height={1304} />
-            <Mockups type="mobile" src="" alt="" width={690} height={1304} />
-            <Mockups type="mobile" src="" alt="" width={690} height={1304} />
+            <Mockups
+              type="mobile"
+              src={assetsConfig.ewm[9].src}
+              alt=""
+              width={700}
+              height={1472}
+            />
+            <Mockups
+              type="mobile"
+              src={assetsConfig.ewm[8].src}
+              alt=""
+              width={700}
+              height={1472}
+            />
+            <Mockups
+              type="mobile"
+              src={assetsConfig.ewm[7].src}
+              alt=""
+              width={700}
+              height={1472}
+            />
           </div>
         </div>
       )}
 
       <div className="w-full py-4 md:px-4 my-24 flex flex-col md:flex-row md:justify-between gap-6">
         <div className="flex-1">
-          <Mockups type="desktop" src="" alt="" width={3024} height={1476} />
+          <Mockups
+            type="desktop"
+            src={assetsConfig.ewm[1].src}
+            alt=""
+            width={3024}
+            height={1646}
+          />
         </div>
         <div className="flex-1">
-          <Mockups type="desktop" src="" alt="" width={3024} height={1476} />
+          <Mockups
+            type="desktop"
+            src={assetsConfig.ewm[2].src}
+            alt=""
+            width={3024}
+            height={1646}
+          />
         </div>
       </div>
       <div className="w-full py-4 md:px-6 my-36 flex flex-col md:flex-row md:justify-between gap-6 md:gap-44">
         <div className="flex-[1.75]">
-          <Mockups type="desktop" src="" alt="" width={3024} height={1476} />
+          <Mockups
+            type="desktop"
+            src={assetsConfig.ewm[3].src}
+            alt=""
+            width={3024}
+            height={1646}
+          />
         </div>
         <div className="flex-1">
-          <Mockups type="mobile" src="" alt="" width={3024} height={1476} />
+          <Mockups
+            type="mobile"
+            src={assetsConfig.ewm[10].src}
+            alt=""
+            width={700}
+            height={1472}
+          />
         </div>
       </div>
 
-      <ClipContainer src="" alt="" width={3024} height={1476} />
+      <ClipContainer
+        src={assetsConfig.ewm[4].src}
+        alt=""
+        width={3024}
+        height={1646}
+      />
 
       <div className="h-[25vh] flex flex-col items-center justify-center">
         <h3 className="text-clampHome">More Work</h3>

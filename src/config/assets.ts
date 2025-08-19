@@ -2,23 +2,47 @@ export const assetsConfig = {
   ewm: [
     {
       description: "iPhone image of the active burger menu, showing menu items",
-      src: "https://plgerenymtakiikhvsyi.supabase.co/storage/v1/object/public/portfolio-images/ewm-bespoke-interiors/Screenshot%202025-01-25%20at%2016.54.00.png",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/desktop-1.webp",
     },
     {
       description: "iPhone image of the active burger menu, showing menu items",
-      src: "https://plgerenymtakiikhvsyi.supabase.co/storage/v1/object/public/portfolio-images/ewm-bespoke-interiors/Screenshot%202025-01-25%20at%2016.54.48.png",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/desktop-2.webp",
     },
     {
       description: "iPhone image of the active burger menu, showing menu items",
-      src: "https://plgerenymtakiikhvsyi.supabase.co/storage/v1/object/public/portfolio-images/ewm-bespoke-interiors/Screenshot%202025-01-25%20at%2016.55.16.png",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/desktop-3.webp",
     },
     {
       description: "iPhone image of the active burger menu, showing menu items",
-      src: "https://plgerenymtakiikhvsyi.supabase.co/storage/v1/object/public/portfolio-images/ewm-bespoke-interiors/Screenshot%202025-01-25%20at%2016.55.38.png",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/desktop-4.webp",
     },
     {
       description: "iPhone image of the active burger menu, showing menu items",
-      src: "https://plgerenymtakiikhvsyi.supabase.co/storage/v1/object/public/portfolio-images/ewm-bespoke-interiors/Screenshot%202025-01-25%20at%2016.55.58.png",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/desktop-5.webp",
+    },
+    {
+      description: "iPhone image of the active burger menu, showing menu items",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/desktop-6.webp",
+    },
+    {
+      description: "iPhone image of the active burger menu, showing menu items",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/desktop-7.webp",
+    },
+    {
+      description: "iPhone image of the active burger menu, showing menu items",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/mobile-1.webp",
+    },
+    {
+      description: "iPhone image of the active burger menu, showing menu items",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/mobile-2.webp",
+    },
+    {
+      description: "iPhone image of the active burger menu, showing menu items",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/mobile-3.webp",
+    },
+    {
+      description: "iPhone image of the active burger menu, showing menu items",
+      src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/mobile-4.webp",
     },
   ],
 };
