@@ -11,7 +11,7 @@ import { z } from "zod";
 import { Toast } from "../Toast/Toast";
 
 const Schema = z.object({
-  name: z.string().min(1, "Your name is reuiqred"),
+  name: z.string().min(1, "Your name is required"),
   email: z
     .string({
       invalid_type_error: "Invalid email",

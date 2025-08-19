@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 
 const DateTime = () => {
-  if (typeof window === "undefined") return null;
   const [time, setTime] = useState<string | null>(null);
   const [message, setMessage] = useState("");
 
@@ -11,7 +10,8 @@ const DateTime = () => {
     const now = new Date();
 
     const timeZone: string = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const timeZoneAbbr: string = timeZone.split("/").pop()?.replace("_", " ") || "";
+    const timeZoneAbbr: string =
+      timeZone.split("/").pop()?.replace("_", " ") || "";
 
     const timeOptions: Intl.DateTimeFormatOptions = {
       hour: "numeric",
@@ -28,9 +28,9 @@ const DateTime = () => {
 
     if (currentHour < 12) {
       setMessage("Good Morning");
-    } else if (currentHour >= 12 && currentHour < 16) {
+    } else if (currentHour >= 12 && currentHour < 17) {
       setMessage("Good Afternoon");
-    } else if (currentHour >= 16 && currentHour <= 21) {
+    } else if (currentHour >= 17 && currentHour <= 21) {
       setMessage("Good Evening");
     } else {
       setMessage("Good Night");

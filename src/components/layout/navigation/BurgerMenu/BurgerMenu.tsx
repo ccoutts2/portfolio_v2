@@ -6,6 +6,7 @@ import DateTime from "@/components/DateTime/DateTime";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { PercentageScroll } from "@/components/PercentageScroll/PercentageScroll";
 
 interface BurgerMenuProps {
   isOpen: boolean;
@@ -50,7 +51,6 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
   const menu = useRef<HTMLElement | null>(null);
   const menuLinks = useRef<(HTMLDivElement | null)[]>([]);
   const socialLinks = useRef<(HTMLDivElement | null)[]>([]);
-  const name = useRef<HTMLSpanElement | null>(null);
 
   const tl = useRef<GSAPTimeline | null>();
 
@@ -59,7 +59,6 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
       gsap.set(container.current, { opacity: 1 });
       gsap.set(menu.current, { autoAlpha: 0 });
       gsap.set(menuLinks.current, { y: 75 });
-      gsap.set(name.current, { y: 25 });
       gsap.set(socialLinks.current, { y: 75 });
 
       tl.current = gsap
@@ -72,26 +71,16 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
         .to(menuLinks.current, {
           y: 0,
           duration: 1,
-          stagger: 0.15,
+          stagger: 0.1,
           ease: "power4.inOut",
-          delay: -0.75,
+          delay: -0.5,
         })
-        .to(
-          name.current,
-          {
-            y: 0,
-            duration: 1,
-            stagger: 0.15,
-            delay: -0.75,
-            ease: "power4.inOut",
-          },
-          "<"
-        )
         .to(socialLinks.current, {
           y: 0,
           duration: 1,
+          stagger: 0.1,
           ease: "power4.inOut",
-          delay: -0.75,
+          delay: -0.5,
         });
     },
     { scope: container }
@@ -109,30 +98,33 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
 
   return (
     <div data-lenis-prevent ref={container} className="opacity-0 lg:hidden">
-      <nav ref={menu} className="fixed inset-0 z-50 backdrop-blur-md p-4">
+      <nav ref={menu} className="fixed inset-0 z-50 backdrop-blur-md">
         <div className="flex justify-between items-center">
-          <section className="flex flex-col">
-            <header className="relative">
-              <h1 className="text-clampPageIntro">
-                <TransitionLink href="/">Chris Coutts</TransitionLink>
-              </h1>
-            </header>
-
+          <section className="flex-[2] flex items-center p-4 pr-0 md:pr-4 md:px-8 gap-4">
+            <h1 className="text-base md:text-2xl">
+              <TransitionLink href="/">Chris Coutts</TransitionLink>
+            </h1>
             <DateTime />
+
+            <PercentageScroll />
           </section>
-          <BurgerButton
-            status={status}
-            onClick={toggleBurgerMenu}
-            isOpen={isOpen}
-          />
+          <div className="pr-4">
+            <BurgerButton
+              status={status}
+              onClick={toggleBurgerMenu}
+              isOpen={isOpen}
+            />
+          </div>
         </div>
 
-        <ul className="mt-12 flex flex-col justify-end items-end w-full uppercase">
+        <ul className="mt-12 flex flex-col justify-end items-end w-full uppercase p-4">
           {burgerMenuItems.slice(0, 3).map((item, index) => (
             <li
               key={index}
               className="text-6xl"
-              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
+              style={{
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              }}
             >
               <div
                 className="relative"
@@ -149,12 +141,14 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
           ))}
         </ul>
 
-        <ul className="mt-12 flex flex-col justify-end items-end w-full uppercase">
+        <ul className="mt-12 flex flex-col justify-end items-end w-full uppercase p-4">
           {burgerMenuItems.slice(3, 6).map((item, index) => (
             <li
               key={index}
               className="text-xl"
-              style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 0% 100%)" }}
+              style={{
+                clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              }}
             >
               <div
                 className="relative"

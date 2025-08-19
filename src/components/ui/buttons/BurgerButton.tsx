@@ -13,8 +13,6 @@ export const BurgerButton = ({
   status,
   ...props
 }: BurgerButtonProps) => {
-  if (typeof window === "undefined") return null;
-
   if (status === "closed") {
     return (
       <div className="lg:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000">

@@ -9,7 +9,14 @@ import { assetsConfig } from "@/config/assets";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const ClipContainer = () => {
+interface ClipContainerProps {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+const ClipContainer = ({ src, alt, width, height }: ClipContainerProps) => {
   const container = useRef<HTMLDivElement | null>(null);
   const imageRef = useRef<HTMLImageElement | null>(null);
   const tl = useRef<GSAPTimeline | null>();
@@ -17,12 +24,12 @@ const ClipContainer = () => {
     () => {
       tl.current = gsap.timeline().to(imageRef.current, {
         clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
-        ease: "power4.inOut",
+        ease: "none",
         scrollTrigger: {
           trigger: imageRef.current,
           scrub: true,
           start: "top center-=100px",
-          end: "top top-=200px",
+          end: "bottom top+=400px",
         },
       });
     },
@@ -36,11 +43,11 @@ const ClipContainer = () => {
           clipPath: "polygon(30% 35%, 70% 35%, 70% 80%, 30% 80%)",
         }}
         ref={imageRef}
-        src={assetsConfig.ewm[2].src}
-        alt={assetsConfig.ewm[2].description}
-        width={800}
-        height={800}
-        className="w-full h-full object-cover pt-4 zoom"
+        src={src}
+        alt={alt}
+        width={width}
+        height={height}
+        className="w-full h-full object-cover pt-4"
       />
     </div>
   );

@@ -6,8 +6,6 @@ import { useGSAP } from "@gsap/react";
 type Theme = "light" | "dark";
 
 const ThemeSwitch = () => {
-  if (typeof window === "undefined") return null;
-
   const [theme, setTheme] = useState<Theme>("light");
   const [isThemeClicked, setIsThemeClicked] = useState(false);
   const container = useRef<HTMLDivElement | null>(null);
@@ -87,10 +85,12 @@ const ThemeSwitch = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="border rounded-3xl border-[#191919] dark:border-[white] px-2">
+      className="border rounded-3xl border-[#191919] dark:border-[white] px-2"
+    >
       <span
         className="flex flex-col overflow-hidden h-[1.34rem] text-sm"
-        ref={container}>
+        ref={container}
+      >
         <span ref={lightTextRef}>Light</span>
         <span ref={darkTextRef}>Dark</span>
       </span>

@@ -33,7 +33,8 @@ const Experience = () => {
                 {
                   [styles.InView]: inView,
                 }
-              )}>
+              )}
+            >
               <div className="flex-[1]">
                 <h3 className="font-bold text-gray-400 text-sm">Company</h3>
                 <p>{item.company}</p>
@@ -44,7 +45,7 @@ const Experience = () => {
               </div>
               <div className="flex-[0.25]">
                 <h3 className="font-bold text-gray-400 text-sm">Year</h3>
-                <time>{item.period}</time>
+                <time dateTime={item.period}>{item.period}</time>
               </div>
             </li>
           );

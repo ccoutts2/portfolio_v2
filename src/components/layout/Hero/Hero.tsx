@@ -49,8 +49,8 @@ const Hero = () => {
   );
 
   return (
-    <div ref={container}>
-      <div className="h-screen flex flex-col justify-between relative">
+    <div ref={container} className="min-h-screen">
+      <div className="flex flex-col justify-between relative">
         <div className="flex flex-col justify-between md:flex-row gap-8 p-4">
           <section className="flex flex-col gap-2 text-clampHome flex-[1]">
             <AnimatedText delay={1}>

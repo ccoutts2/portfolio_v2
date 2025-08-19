@@ -19,7 +19,7 @@ export const accordionData: AccordionItems[] = [
     ],
     image: assetsConfig.ewm[0].src,
     alt: assetsConfig.ewm[0].description,
-    slug: "coming-soon/wedding-website",
+    slug: "/wedding-website",
     year: "2024",
     project: "Commercial",
   },

@@ -13,6 +13,7 @@ import { useInView } from "react-intersection-observer";
 import classNames from "classnames";
 import { SlideUp } from "@/components";
 import ClipContainer from "@/components/ClipContainer/ClipContainer";
+import { Mockups } from "@/components/ui/Mockups/Mockups";
 
 interface WorkPageProps {
   params: Promise<{
@@ -44,8 +45,8 @@ export default function Page({ params }: WorkPageProps) {
     <main>
       <div className="w-full h-[75vh]">
         <Image
-          src={work.images[0].src}
-          alt={work.images[0].description}
+          src=""
+          alt=""
           width={800}
           height={800}
           className="w-full h-full object-cover"
@@ -54,9 +55,9 @@ export default function Page({ params }: WorkPageProps) {
 
       <aside className="flex gap-4 p-6 w-full text-sm">
         <div className="flex-[1] flex flex-col md:flex-row gap-4">
-          <div className="flex-[1]">
+          <header className="flex-[1]">
             <h1>Client &#x2192; {work.title}</h1>
-          </div>
+          </header>
 
           <div className="flex-[1]">
             <p>Project Type &#x2192; {work.projectType}</p>
@@ -98,7 +99,7 @@ export default function Page({ params }: WorkPageProps) {
       </section>
 
       {!isMobile && (
-        <div className="h-[200vh] relative flex justify-between gap-8">
+        <div className="h-[330vh] relative flex justify-between gap-8">
           <div className="w-full sticky h-fit overflow-hidden top-[10vh] flex-[2] pl-12">
             <div className="text-PageHome flex flex-col gap-8 pt-8">
               {work.information2.map((item, index) => (
@@ -108,60 +109,32 @@ export default function Page({ params }: WorkPageProps) {
               ))}
             </div>
           </div>
-          <div className="flex flex-col gap-8 h-[200vh] flex-[1] justify-between px-12">
-            <Image
-              src={assetsConfig.ewm[2].src}
-              alt={assetsConfig.ewm[2].description}
-              width={800}
-              height={800}
-              className="w-full h-full object-cover pb-4"
-            />
-            <Image
-              src={assetsConfig.ewm[2].src}
-              alt={assetsConfig.ewm[2].description}
-              width={800}
-              height={800}
-              className="w-full h-full object-cover py-4"
-            />
-            <Image
-              src={assetsConfig.ewm[2].src}
-              alt={assetsConfig.ewm[2].description}
-              width={800}
-              height={800}
-              className="w-full h-full object-cover pt-4"
-            />
+          <div className="flex flex-col gap-8 h-[330vh] flex-[1] justify-between px-12">
+            <Mockups type="mobile" src="" alt="" width={690} height={1304} />
+            <Mockups type="mobile" src="" alt="" width={690} height={1304} />
+            <Mockups type="mobile" src="" alt="" width={690} height={1304} />
           </div>
         </div>
       )}
 
       <div className="w-full py-4 md:px-4 my-24 flex flex-col md:flex-row md:justify-between gap-6">
-        <ImageContainer
-          width="32"
-          height="32"
-          src={assetsConfig.ewm[2].src}
-          alt={assetsConfig.ewm[2].description}></ImageContainer>
-
-        <ImageContainer
-          width="40"
-          height="48"
-          src={assetsConfig.ewm[4].src}
-          alt={assetsConfig.ewm[4].description}></ImageContainer>
+        <div className="flex-1">
+          <Mockups type="desktop" src="" alt="" width={3024} height={1476} />
+        </div>
+        <div className="flex-1">
+          <Mockups type="desktop" src="" alt="" width={3024} height={1476} />
+        </div>
       </div>
       <div className="w-full py-4 md:px-6 my-36 flex flex-col md:flex-row md:justify-between gap-6 md:gap-44">
-        <ImageContainer
-          width="52"
-          height="36"
-          src={assetsConfig.ewm[4].src}
-          alt={assetsConfig.ewm[4].description}></ImageContainer>
-
-        <ImageContainer
-          width="24"
-          height="24"
-          src={assetsConfig.ewm[2].src}
-          alt={assetsConfig.ewm[2].description}></ImageContainer>
+        <div className="flex-[1.75]">
+          <Mockups type="desktop" src="" alt="" width={3024} height={1476} />
+        </div>
+        <div className="flex-1">
+          <Mockups type="mobile" src="" alt="" width={3024} height={1476} />
+        </div>
       </div>
 
-      <ClipContainer />
+      <ClipContainer src="" alt="" width={3024} height={1476} />
 
       <div className="h-[25vh] flex flex-col items-center justify-center">
         <h3 className="text-clampHome">More Work</h3>
@@ -179,61 +152,3 @@ export default function Page({ params }: WorkPageProps) {
     </main>
   );
 }
-
-interface ImageContainerProps {
-  src: string;
-  alt: string;
-  width: string;
-  height: string;
-}
-
-const ImageContainer = ({ src, alt, width, height }: ImageContainerProps) => {
-  const { ref, inView } = useInView({
-    threshold: 0.3,
-    triggerOnce: true,
-  });
-
-  const { isMobile } = useScreenDetector();
-
-  if (isMobile) {
-    return (
-      <div ref={ref} className="w-full h-[30rem]">
-        <Image
-          src={src}
-          alt={alt}
-          width={800}
-          height={800}
-          className={classNames(
-            styles.ImageReveal,
-            "w-full",
-            "h-full",
-            "object-cover",
-            {
-              [styles.InView]: inView,
-            }
-          )}
-        />
-      </div>
-    );
-  } else {
-    return (
-      <div ref={ref} style={{ width: `${width}rem`, height: `${height}rem` }}>
-        <Image
-          src={src}
-          alt={alt}
-          width={800}
-          height={800}
-          className={classNames(
-            styles.ImageReveal,
-            "w-full",
-            "h-full",
-            "object-cover",
-            {
-              [styles.InView]: inView,
-            }
-          )}
-        />
-      </div>
-    );
-  }
-};
