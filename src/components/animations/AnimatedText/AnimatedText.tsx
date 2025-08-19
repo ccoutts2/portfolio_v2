@@ -15,6 +15,8 @@ export const AnimatedText = ({ children, delay }: AnimatedTextProps) => {
   const container = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
 
+  const hasPlayed = localStorage.getItem("preLoader");
+
   useGSAP(
     () => {
       if (textRef.current) {
@@ -25,9 +27,9 @@ export const AnimatedText = ({ children, delay }: AnimatedTextProps) => {
         gsap.to(splitTextInstance.words, {
           y: "0%",
           autoAlpha: 1,
-          delay: delay,
+          delay: hasPlayed ? delay : 4,
           stagger: 0.01,
-          duration: 1.3,
+          duration: 1.2,
         });
       }
     },

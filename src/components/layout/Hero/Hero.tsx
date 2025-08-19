@@ -18,6 +18,8 @@ const Hero = () => {
 
   const tl = useRef<GSAPTimeline | null>();
 
+  const hasPlayed = localStorage.getItem("preLoader");
+
   useGSAP(
     () => {
       gsap.set(featuredProject.current, {
@@ -29,15 +31,15 @@ const Hero = () => {
         .to(featuredProject.current, {
           autoAlpha: 1,
           duration: 1.5,
-          delay: 1,
+          delay: hasPlayed ? 1 : 4.25,
           ease: "power4.inOut",
         })
         .to(
           image.current,
           {
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-            duration: 1,
-            delay: 1,
+            clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            duration: 1.5,
+            delay: 0.5,
             ease: "power4.inOut",
           },
           "<"
@@ -74,7 +76,8 @@ const Hero = () => {
           <div
             ref={image}
             className="w-clampImage h-clampImage"
-            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
+            style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }}
+          >
             <Image
               src={assetsConfig["ewm"][0].src}
               alt={assetsConfig["ewm"][0].description}
