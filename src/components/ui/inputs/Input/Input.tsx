@@ -22,7 +22,7 @@ export const Input = ({
           type,
           ...props,
         }}
-        className=" bg-transparent border-b border-[#191919] dark:border-[#f6f6f6] border-solid min-h-10 outline-none"
+        className=" bg-transparent border-b border-[#191919] dark:border-[#f6f6f6] border-solid min-h-10 outline-hidden"
       />
     </>
   );

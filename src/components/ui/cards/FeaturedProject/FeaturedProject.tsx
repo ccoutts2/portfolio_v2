@@ -42,7 +42,7 @@ export const FeaturedProject = ({
           </span>
         </div>
 
-        <div className="border-[0.75rem] border-solid max-w-[12rem] max-h-[12rem]">
+        <div className="border-[0.75rem] border-solid max-w-48 max-h-48">
           <Image
             src={assetsConfig["ewm"][0].src}
             alt={assetsConfig["ewm"][0].description}

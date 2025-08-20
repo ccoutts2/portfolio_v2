@@ -8,7 +8,7 @@ import { useInView } from "react-intersection-observer";
 const Experience = () => {
   return (
     <section className="p-4">
-      <h2 className="text-clampHome">Experience</h2>
+      <h2 className="text-clamp-home">Experience</h2>
       <ul className="flex flex-col py-4 w-full">
         {experience.map((item, index) => {
           const { ref, inView } = useInView({
@@ -35,11 +35,11 @@ const Experience = () => {
                 }
               )}
             >
-              <div className="flex-[1]">
+              <div className="flex-1">
                 <h3 className="font-bold text-gray-400 text-sm">Company</h3>
                 <p>{item.company}</p>
               </div>
-              <div className="flex-[1]">
+              <div className="flex-1">
                 <h3 className="font-bold text-gray-400 text-sm">Role</h3>
                 <p>{item.role}</p>
               </div>

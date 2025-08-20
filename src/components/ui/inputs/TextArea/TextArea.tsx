@@ -14,7 +14,7 @@ export const TextArea = ({ onChange, name, id, ...props }: TextAreaProps) => {
           onChange,
           ...props,
         }}
-        className="bg-transparent outline-none border-b border-[#191919] dark:border-[#f6f6f6] border-solid"
+        className="bg-transparent outline-hidden border-b border-[#191919] dark:border-[#f6f6f6] border-solid"
       />
     </>
   );

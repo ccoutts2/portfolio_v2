@@ -114,12 +114,12 @@ const ContactForm = () => {
       <div className="relative w-full pb-1 pt-4">
         {buttonPending ? (
           <Button type="submit">
-            <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#d8d82e]"></span>
+            <span className="flex h-2 w-2 items-center justify-center rounded-[20rem] bg-[#d8d82e]"></span>
             {buttonLabel}
           </Button>
         ) : (
           <Button type="submit">
-            <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
+            <span className="flex h-2 w-2 items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
             <span className="dark:text-[#191919] text-[#191919]">
               {buttonLabel}
             </span>

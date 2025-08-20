@@ -52,31 +52,31 @@ export default function Page({ params }: WorkPageProps) {
       </div>
 
       <aside className="flex gap-4 p-6 w-full text-sm">
-        <div className="flex-[1] flex flex-col md:flex-row gap-4">
-          <header className="flex-[1]">
+        <div className="flex-1 flex flex-col md:flex-row gap-4">
+          <header className="flex-1">
             <h1>Client &#x2192; {work.title}</h1>
           </header>
 
-          <div className="flex-[1]">
+          <div className="flex-1">
             <p>Project Type &#x2192; {work.projectType}</p>
           </div>
         </div>
-        <div className="sm:flex-[1] md:flex-[0.5] flex-[1]">
+        <div className="sm:flex-1 md:flex-[0.5] flex-1">
           <div className="text-end">
             <p>Year &#x2192; {work.year}</p>
           </div>
         </div>
       </aside>
       <section className="flex flex-col sm:flex-row gap-4 py-12 md:py-32 px-6 w-full">
-        <div className="flex-[1]">
+        <div className="flex-1">
           <SlideUp>
-            <h2 className="text-clampHome">{work.slogan}</h2>
+            <h2 className="text-clamp-home">{work.slogan}</h2>
           </SlideUp>
         </div>
 
-        <div className="flex-[1]">
+        <div className="flex-1">
           <SlideUp delay={0.2}>
-            <p className="text-clampProjectText">{work.information}</p>
+            <p className="text-clamp-project-text">{work.information}</p>
           </SlideUp>
 
           <div className="flex gap-4 my-8 mx-0 justify-between">
@@ -98,7 +98,7 @@ export default function Page({ params }: WorkPageProps) {
 
       {!isMobile ? (
         <div className="h-[330vh] relative flex justify-between gap-8">
-          <div className="w-full sticky h-fit overflow-hidden top-[10vh] flex-[2] pl-12">
+          <div className="w-full sticky h-fit overflow-hidden top-[10vh] flex-2 pl-12">
             <div className="text-PageHome flex flex-col gap-8 pt-8">
               {work.information2.map((item, index) => (
                 <SlideUp key={index}>
@@ -107,7 +107,7 @@ export default function Page({ params }: WorkPageProps) {
               ))}
             </div>
           </div>
-          <div className="flex flex-col gap-8 h-[330vh] flex-[1] justify-between px-12">
+          <div className="flex flex-col gap-8 h-[330vh] flex-1 justify-between px-12">
             <Mockups
               type="mobile"
               src={assetsConfig.ewm[9].src}
@@ -217,7 +217,7 @@ export default function Page({ params }: WorkPageProps) {
       />
 
       <div className="h-[25vh] flex flex-col items-center justify-center">
-        <h3 className="text-clampHome">More Work</h3>
+        <h3 className="text-clamp-home">More Work</h3>
 
         <ul className="flex flex-col md:flex-row justify-center items-center gap-8 py-8">
           {Object.values(workDetails).map(({ title, slug, id }) => (

@@ -54,13 +54,13 @@ export const AccordionItem = ({
         )}
         ref={contentRef}
         {...(isActive && { "data-is-open": true })}>
-        <div className="flex-[1]">
+        <div className="flex-1">
           <Image src={image} alt={alt} width={500} height={500} />
         </div>
-        <div className="flex-[1] flex flex-col gap-2 justify-between">
-          <h2 className="text-clampAccordionContent">{content}</h2>
+        <div className="flex-1 flex flex-col gap-2 justify-between">
+          <h2 className="text-clamp-accordion-content">{content}</h2>
           <div className="flex justify-between">
-            <div className="flex flex-col flex-[1]">
+            <div className="flex flex-col flex-1">
               <h3>Services</h3>
               <ul
                 className={classNames(
@@ -75,7 +75,7 @@ export const AccordionItem = ({
                 ))}
               </ul>
             </div>
-            <div className="flex flex-col flex-[1]">
+            <div className="flex flex-col flex-1">
               <h3>Tech</h3>
               <ul
                 className={classNames(

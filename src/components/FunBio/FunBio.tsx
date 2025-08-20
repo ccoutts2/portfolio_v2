@@ -17,7 +17,7 @@ const FunBio = () => {
   const [hoverImage, setHoverImage] = useState<ImageKey | null>(null);
 
   return (
-    <div className="p-4 md:w-[50%] text-clampProjectText relative">
+    <div className="p-4 md:w-[50%] text-clamp-project-text relative">
       <p>
         <span
           onMouseEnter={() => setHoverImage("shoutcast")}
@@ -40,7 +40,7 @@ const FunBio = () => {
       </p>
       {hoverImage && (
         <div
-          className="w-[10rem] h-[10rem] absolute pointer-events-none animate-bounce z-[10]"
+          className="w-40 h-40 absolute pointer-events-none animate-bounce z-10"
           style={{ ...images[hoverImage].position }}>
           <img src={images[hoverImage].src} className="h-full w-full object-cover" />
         </div>

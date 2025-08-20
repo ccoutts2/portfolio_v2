@@ -52,7 +52,7 @@ const Hero = () => {
     <div ref={container} className="min-h-screen">
       <div className="flex flex-col justify-between relative">
         <div className="flex flex-col justify-between md:flex-row gap-8 p-4">
-          <section className="flex flex-col gap-2 text-clampHome flex-[1]">
+          <section className="flex flex-col gap-2 text-clamp-home flex-1">
             <AnimatedText delay={1}>
               <h1>
                 <span className="ml-12">My</span> name is{" "}
@@ -75,7 +75,7 @@ const Hero = () => {
 
           <div
             ref={image}
-            className="w-clampImage h-clampImage"
+            className="w-clamp-image h-clamp-image"
             style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }}
           >
             <Image
@@ -88,7 +88,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <aside ref={featuredProject} className="flex-[1] p-4">
+        <aside ref={featuredProject} className="flex-1 p-4">
           <FeaturedProject
             projectName="EWM Bespoke Interiors"
             role={[{ role: "Design" }, { role: "Development" }]}

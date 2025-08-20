@@ -51,7 +51,7 @@ const AboutIntro = () => {
     <>
       <div className="p-4">
         <AnimatedText delay={0.8}>
-          <p className="text-clampPageIntro">
+          <p className="text-clamp-page-intro">
             <span className="ml-12">I&apos;m</span> a full stack developer who
             transitioned into the tech industry through a{" "}
             <span className="text-[#442c35] dark:text-[#f40c3f] font-bold">
@@ -72,7 +72,7 @@ const AboutIntro = () => {
         </AnimatedText>
       </div>
       <div className="flex flex-col-reverse md:flex-row justify-between p-4 py-12 md:p-12 gap-6">
-        <div className="flex-[1]">
+        <div className="flex-1">
           <AnimatedText delay={1}>
             <p className="text-lg">
               I come with a diverse background in both engineering and technology.
@@ -87,7 +87,7 @@ const AboutIntro = () => {
         <aside ref={container} className="flex flex-wrap gap-4">
           <figure
             ref={imageContainer1}
-            className="max-h-[10rem] w-clampSmallImages"
+            className="max-h-40 w-clamp-small-images"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
               src={assetsConfig["ewm"][0].src}
@@ -99,7 +99,7 @@ const AboutIntro = () => {
           </figure>
           <figure
             ref={imageContainer2}
-            className="max-h-[10rem] w-clampSmallImages"
+            className="max-h-40 w-clamp-small-images"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
               src={assetsConfig["ewm"][0].src}
@@ -112,7 +112,7 @@ const AboutIntro = () => {
 
           <figure
             ref={imageContainer3}
-            className="max-h-[10rem] w-clampSmallImages"
+            className="max-h-40 w-clamp-small-images"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
             <Image
               src={assetsConfig["ewm"][0].src}

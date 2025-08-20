@@ -7,7 +7,7 @@ export default async function Page() {
     <main className="min-h-screen relative">
       <div className="flex">
         <PageHeader label="My Work" />
-        <span className="text-clampHome">({accordionData.length})</span>
+        <span className="text-clamp-home">({accordionData.length})</span>
       </div>
       <Accordion items={accordionData} />
     </main>

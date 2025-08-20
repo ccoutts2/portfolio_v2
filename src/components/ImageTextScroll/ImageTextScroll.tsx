@@ -40,15 +40,15 @@ const ImageTextScroll = () => {
     { scope: container }
   );
   return (
-    <div ref={container} className="h-[100vh] relative">
-      <div className="w-full sticky h-[100vh] overflow-hidden top-0">
+    <div ref={container} className="h-screen relative">
+      <div className="w-full sticky h-screen overflow-hidden top-0">
         <Image
           ref={imageRef1}
           src={assetsConfig["ewm"][0].src}
           alt={assetsConfig["ewm"][0].description}
           width={800}
           height={800}
-          className="w-full h-full object-cover z-[100] absolute top-0 right-0 p-4"
+          className="w-full h-full object-cover z-100 absolute top-0 right-0 p-4"
         />
         <div className="fixed bottom-0 left-0">hello world</div>
       </div>

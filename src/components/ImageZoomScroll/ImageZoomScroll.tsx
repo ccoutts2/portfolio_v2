@@ -51,7 +51,7 @@ export const ImageZoomScroll = () => {
       ref={container}
       className="w-full h-[300vh] relative flex justify-between"
     >
-      <div className="sticky h-[100vh] overflow-hidden w-full top-0">
+      <div className="sticky h-screen overflow-hidden w-full top-0">
         <Image
           ref={image1}
           src={assetsConfig["ewm"][0].src}
@@ -80,18 +80,18 @@ export const ImageZoomScroll = () => {
         />
       </div>
       <div className=" w-full h-full">
-        <div className="h-[100vh] flex flex-col items-center justify-center text-clampHome">
+        <div className="h-screen flex flex-col items-center justify-center text-clamp-home">
           {" "}
           <AnimatedWordBlock
             wordAbove="Lorem ipsum dolor sit amet"
             wordBelow="Lorem ipsum dolor sit amet"
           />
         </div>
-        <div className="h-[100vh] flex flex-col items-center justify-center text-clampHome">
+        <div className="h-screen flex flex-col items-center justify-center text-clamp-home">
           {" "}
           <AnimatedWordBlock wordAbove="Power" wordBelow="Power" />
         </div>
-        <div className="h-[100vh] flex flex-col items-center justify-center text-clampHome">
+        <div className="h-screen flex flex-col items-center justify-center text-clamp-home">
           {" "}
           <AnimatedWordBlock wordAbove="Desire" wordBelow="Desire" />
         </div>

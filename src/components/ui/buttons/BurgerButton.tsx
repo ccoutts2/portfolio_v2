@@ -16,7 +16,7 @@ export const BurgerButton = ({
   if (status === "closed") {
     return (
       <div className="lg:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000">
-        <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#2ed84a]"></span>
+        <span className="flex h-2 w-2 items-center justify-center rounded-[20rem] bg-[#2ed84a]"></span>
         <button onClick={onClick} {...props}>
           Menu
         </button>
@@ -56,7 +56,7 @@ export const BurgerButton = ({
   if (status === "open") {
     return (
       <div className="md:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000">
-        <span className="flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
+        <span className="flex h-2 w-2 items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
         <button onClick={onClick} {...props}>
           Close
         </button>

@@ -100,7 +100,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
     <div data-lenis-prevent ref={container} className="opacity-0 lg:hidden">
       <nav ref={menu} className="fixed inset-0 z-50 backdrop-blur-md">
         <div className="flex justify-between items-center">
-          <section className="flex-[2] flex items-center p-4 pr-0 md:pr-4 md:px-8 gap-4">
+          <section className="flex-2 flex items-center p-4 pr-0 md:pr-4 md:px-8 gap-4">
             <h1 className="text-base md:text-2xl">
               <TransitionLink href="/">Chris Coutts</TransitionLink>
             </h1>

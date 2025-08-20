@@ -58,12 +58,12 @@ const PreLoader = () => {
   );
   return (
     <div ref={container} className="overflow-hidden opacity-0">
-      <div className="fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 overflow-hidden text-[#191919] text-2xl z-[1000]">
+      <div className="fixed top-[50%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 overflow-hidden text-[#191919] text-2xl z-1000">
         <p ref={textRef}>say hello</p>
       </div>
       <div
         ref={backgroundLoader}
-        className="fixed inset-0 z-[999] flex justify-center items-center h-screen bg-[#FB4D4C]"
+        className="fixed inset-0 z-999 flex justify-center items-center h-screen bg-[#FB4D4C]"
       ></div>
     </div>
   );

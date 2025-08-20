@@ -28,9 +28,9 @@ export const NavBar = () => {
 
   return (
     <>
-      <header className="w-full border-b border-solid lg:sticky lg:top-0 z-[999] backdrop-blur-md">
+      <header className="w-full border-b border-solid lg:sticky lg:top-0 z-999 backdrop-blur-md">
         <nav className="flex justify-between items-center w-full gap-4">
-          <section className="flex-[2] flex items-center p-4 pr-0 md:pr-4 md:px-8 gap-4">
+          <section className="flex-2 flex items-center p-4 pr-0 md:pr-4 md:px-8 gap-4">
             <h1 className="text-base md:text-2xl">
               <TransitionLink href="/">Chris Coutts</TransitionLink>
             </h1>
@@ -39,7 +39,7 @@ export const NavBar = () => {
             <PercentageScroll />
           </section>
 
-          <div className="hidden lg:flex justify-center gap-20 flex-[2] w-full">
+          <div className="hidden lg:flex justify-center gap-20 flex-2 w-full">
             <ul className="hidden lg:flex items-center justify-center gap-20 p-4">
               <li>
                 <TransitionLink href="/about" underline>
@@ -59,7 +59,7 @@ export const NavBar = () => {
             </ul>
           </div>
 
-          <div className="flex-[1] flex justify-end items-center md:border-solid gap-2">
+          <div className="flex-1 flex justify-end items-center md:border-solid gap-2">
             <ul className="hidden lg:flex flex-col items-stretch md:border-r md:border-l md:border-solid">
               <li className="p-2 md:p-4 md:border-b border-solid hover:bg-[#435558] hover:duration-200 relative">
                 <Icon>

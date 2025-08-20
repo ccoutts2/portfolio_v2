@@ -9,7 +9,7 @@ export const BlinkingDot = ({ status = "available" }: BlinkingDotProps) => {
     <span
       className={` ${
         styles.Blinking
-      } flex h-[0.5rem] w-[0.5rem] items-center justify-center rounded-[20rem] ${
+      } flex h-2 w-2 items-center justify-center rounded-[20rem] ${
         status === "available" ? "bg-[#2ed84a]" : "bg-[#d82e2e]"
       }`}></span>
   );
