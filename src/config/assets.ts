@@ -1,5 +1,5 @@
 export const assetsConfig = {
-  ewm: [
+  "ewm-bespoke-interiors": [
     {
       description: "iPhone image of the active burger menu, showing menu items",
       src: "https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/ewm-project/desktop-1.webp",

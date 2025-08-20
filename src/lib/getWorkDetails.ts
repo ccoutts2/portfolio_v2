@@ -45,10 +45,12 @@ export const workDetails: { [key: string]: WorkDetails } = {
       "SCSS",
     ],
     slug: "triangulate",
-    images: assetsConfig.ewm.map(({ description, src }) => ({
-      description,
-      src,
-    })),
+    images: assetsConfig["ewm-bespoke-interiors"].map(
+      ({ description, src }) => ({
+        description,
+        src,
+      })
+    ),
     liveSite: "https://github.com/ccoutts2/triangulate-project",
   },
   "france-2k23": {
@@ -75,10 +77,12 @@ export const workDetails: { [key: string]: WorkDetails } = {
       "CSS",
     ],
     slug: "france-2k23",
-    images: assetsConfig.ewm.map(({ description, src }) => ({
-      description,
-      src,
-    })),
+    images: assetsConfig["ewm-bespoke-interiors"].map(
+      ({ description, src }) => ({
+        description,
+        src,
+      })
+    ),
     liveSite: "https://france2k23.chris-coutts.com",
   },
   "ewm-bespoke-interiors": {
@@ -98,10 +102,12 @@ export const workDetails: { [key: string]: WorkDetails } = {
     service: ["Design", "Development"],
     tech: ["Next.js", "GSAP", "Lenis Scroll", "TailwindCSS", "CSS"],
     slug: "ewm-bespoke-interiors",
-    images: assetsConfig.ewm.map(({ description, src }) => ({
-      description,
-      src,
-    })),
+    images: assetsConfig["ewm-bespoke-interiors"].map(
+      ({ description, src }) => ({
+        description,
+        src,
+      })
+    ),
     liveSite: "https://www.ewmbespokeinteriors.co.uk",
   },
   "wedding-website": {
@@ -131,10 +137,12 @@ export const workDetails: { [key: string]: WorkDetails } = {
       "SCSS",
     ],
     slug: "wedding-website",
-    images: assetsConfig.ewm.map(({ description, src }) => ({
-      description,
-      src,
-    })),
+    images: assetsConfig["ewm-bespoke-interiors"].map(
+      ({ description, src }) => ({
+        description,
+        src,
+      })
+    ),
     liveSite: "https://www.clareanddavidwedding26.org/",
   },
 };

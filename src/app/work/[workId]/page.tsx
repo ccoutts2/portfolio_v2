@@ -21,6 +21,7 @@ interface WorkPageProps {
 export default function Page({ params }: WorkPageProps) {
   const [workId, setWorkId] = useState<string | null>(null);
   const work = workDetails[workId as keyof typeof workDetails];
+  const projectAssets = assetsConfig[workId as keyof typeof assetsConfig];
 
   const { isMobile } = useScreenDetector();
 
@@ -42,12 +43,13 @@ export default function Page({ params }: WorkPageProps) {
     <main>
       <div className="w-full">
         <Image
-          src={assetsConfig.ewm[0].src}
+          src={projectAssets[0].src}
           alt=""
           width={3024}
           height={1646}
           sizes="(max-width: 768px) 100vh, (max-width: 1024px) 75vh"
           className="w-full h-full object-cover"
+          priority
         />
       </div>
 
@@ -110,21 +112,21 @@ export default function Page({ params }: WorkPageProps) {
           <div className="flex flex-col gap-8 h-[330vh] flex-1 justify-between px-12">
             <Mockups
               type="mobile"
-              src={assetsConfig.ewm[9].src}
+              src={projectAssets[9].src}
               alt=""
               width={700}
               height={1472}
             />
             <Mockups
               type="mobile"
-              src={assetsConfig.ewm[8].src}
+              src={projectAssets[8].src}
               alt=""
               width={700}
               height={1472}
             />
             <Mockups
               type="mobile"
-              src={assetsConfig.ewm[7].src}
+              src={projectAssets[7].src}
               alt=""
               width={700}
               height={1472}
@@ -137,21 +139,21 @@ export default function Page({ params }: WorkPageProps) {
             <div className="flex gap-12 w-fit">
               <Mockups
                 type="mobile"
-                src={assetsConfig.ewm[9].src}
+                src={projectAssets[9].src}
                 alt=""
                 width={700}
                 height={1472}
               />
               <Mockups
                 type="mobile"
-                src={assetsConfig.ewm[8].src}
+                src={projectAssets[8].src}
                 alt=""
                 width={700}
                 height={1472}
               />
               <Mockups
                 type="mobile"
-                src={assetsConfig.ewm[7].src}
+                src={projectAssets[7].src}
                 alt=""
                 width={700}
                 height={1472}
@@ -172,7 +174,7 @@ export default function Page({ params }: WorkPageProps) {
         <div className="flex-1">
           <Mockups
             type="desktop"
-            src={assetsConfig.ewm[1].src}
+            src={projectAssets[1].src}
             alt=""
             width={3024}
             height={1646}
@@ -181,7 +183,7 @@ export default function Page({ params }: WorkPageProps) {
         <div className="flex-1">
           <Mockups
             type="desktop"
-            src={assetsConfig.ewm[2].src}
+            src={projectAssets[2].src}
             alt=""
             width={3024}
             height={1646}
@@ -192,7 +194,7 @@ export default function Page({ params }: WorkPageProps) {
         <div className="flex-[1.75]">
           <Mockups
             type="desktop"
-            src={assetsConfig.ewm[3].src}
+            src={projectAssets[3].src}
             alt=""
             width={3024}
             height={1646}
@@ -201,7 +203,7 @@ export default function Page({ params }: WorkPageProps) {
         <div className="flex-1">
           <Mockups
             type="mobile"
-            src={assetsConfig.ewm[10].src}
+            src={projectAssets[10].src}
             alt=""
             width={700}
             height={1472}
@@ -210,7 +212,7 @@ export default function Page({ params }: WorkPageProps) {
       </div>
 
       <ClipContainer
-        src={assetsConfig.ewm[4].src}
+        src={projectAssets[4].src}
         alt=""
         width={3024}
         height={1646}
