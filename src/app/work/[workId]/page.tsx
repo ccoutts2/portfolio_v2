@@ -132,9 +132,9 @@ export default function Page({ params }: WorkPageProps) {
           </div>
         </div>
       ) : (
-        <div>
-          <div className="overflow-x-auto relative whitespace-nowrap">
-            <div className="flex gap-8  w-fit">
+        <div className="px-4">
+          <div className="overflow-x-auto relative whitespace-nowrap | noScrollBar">
+            <div className="flex gap-12 w-fit">
               <Mockups
                 type="mobile"
                 src={assetsConfig.ewm[9].src}
@@ -168,7 +168,7 @@ export default function Page({ params }: WorkPageProps) {
         </div>
       )}
 
-      <div className="w-full py-4 md:px-4 my-24 flex flex-col md:flex-row md:justify-between gap-6">
+      <div className="w-full p-4 my-24 flex flex-col md:flex-row md:justify-between gap-6">
         <div className="flex-1">
           <Mockups
             type="desktop"
@@ -188,7 +188,7 @@ export default function Page({ params }: WorkPageProps) {
           />
         </div>
       </div>
-      <div className="w-full py-4 md:px-6 my-36 flex flex-col md:flex-row md:justify-between gap-6 md:gap-44">
+      <div className="w-full p-4 md:px-6 my-36 flex flex-col md:flex-row md:justify-between gap-6 md:gap-44">
         <div className="flex-[1.75]">
           <Mockups
             type="desktop"
@@ -216,7 +216,7 @@ export default function Page({ params }: WorkPageProps) {
         height={1646}
       />
 
-      <div className="h-[25vh] flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center my-12">
         <h3 className="text-clamp-home">More Work</h3>
 
         <ul className="flex flex-col md:flex-row justify-center items-center gap-8 py-8">

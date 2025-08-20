@@ -5,7 +5,6 @@ import gsap from "gsap";
 
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Image from "next/image";
-import { useScreenDetector } from "@/hooks/useScreenDetector";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -21,8 +20,6 @@ const ClipContainer = ({ src, alt, width, height }: ClipContainerProps) => {
   const imageRef = useRef<HTMLImageElement | null>(null);
   const tl = useRef<GSAPTimeline | null>();
 
-  const { isMobile } = useScreenDetector();
-
   useGSAP(
     () => {
       if (tl.current) {
@@ -34,12 +31,13 @@ const ClipContainer = ({ src, alt, width, height }: ClipContainerProps) => {
         ease: "none",
         scrollTrigger: {
           trigger: imageRef.current,
-          start: isMobile ? "top bottom" : "top center+=100px",
-          end: isMobile ? "bottom center" : "bottom top+=600px",
+          start: "top center+=100px",
+          end: "bottom top+=500px",
+          scrub: true,
         },
       });
     },
-    { scope: container, dependencies: [isMobile] }
+    { scope: container, dependencies: [] }
   );
 
   return (

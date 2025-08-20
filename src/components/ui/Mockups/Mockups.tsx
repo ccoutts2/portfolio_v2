@@ -11,25 +11,11 @@ interface MockupsProps {
 }
 
 export const Mockups = ({ type, src, alt, width, height }: MockupsProps) => {
-  return type === "mobile" ? (
+  return (
     <div
-      className="min-w-full overflow-hidden rounded-[0.625rem] border-2 sm:rounded-3xl [&_img]:pointer-events-none"
-      style={{
-        borderColor: "rgba(33, 33, 33, 0.3)",
-        maskImage: "-webkit-radial-gradient(center, white, black)",
-      }}
-    >
-      <Image
-        className="w-full h-full object-cover"
-        src={src}
-        alt={alt}
-        width={width}
-        height={height}
-      />
-    </div>
-  ) : (
-    <div
-      className="min-w-full overflow-hidden rounded-[0.625rem] border-2 sm:rounded-2xl [&_img]:pointer-events-none"
+      className={`min-w-[35vw] overflow-hidden rounded-[0.625rem] sm:rounded-3xl [&_img]:pointer-events-none ${
+        type === "mobile" ? "border-2" : "border-3"
+      }`}
       style={{
         borderColor: "rgba(33, 33, 33, 0.3)",
         maskImage: "-webkit-radial-gradient(center, white, black)",

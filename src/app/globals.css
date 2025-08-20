@@ -1,4 +1,4 @@
-@import 'tailwindcss';
+@import "tailwindcss";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -38,7 +38,8 @@
 
 @font-face {
   font-family: "HankenGrotesk-Light";
-  src: url("/assets/fonts/HankenGrotesk/HankenGrotesk-Light.ttf") format("truetype");
+  src: url("/assets/fonts/HankenGrotesk/HankenGrotesk-Light.ttf")
+    format("truetype");
 }
 
 @font-face {
@@ -78,6 +79,15 @@ body {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.noScrollBar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.noScrollBar::-webkit-scrollbar {
+  display: none;
 }
 
 .PageTransition {
