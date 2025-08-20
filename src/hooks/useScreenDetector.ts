@@ -17,7 +17,7 @@ export const useScreenDetector = () => {
     };
   }, []);
 
-  const isMobile = width !== null && width <= 768;
+  const isMobile = width !== null && width <= 767;
   const isTablet = width !== null && width < 1024;
   const isDesktop = width !== null && width > 1024;
 

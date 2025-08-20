@@ -1,5 +1,4 @@
 "use client";
-import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 
 import { workDetails } from "@/lib/getWorkDetails";
@@ -33,7 +32,7 @@ export default function Page({ params }: WorkPageProps) {
     };
 
     fetchParams();
-  }, [params]);
+  }, [params, isMobile]);
 
   if (!work) {
     return <p>Loading Project</p>;
@@ -97,7 +96,7 @@ export default function Page({ params }: WorkPageProps) {
         </div>
       </section>
 
-      {!isMobile && (
+      {!isMobile ? (
         <div className="h-[330vh] relative flex justify-between gap-8">
           <div className="w-full sticky h-fit overflow-hidden top-[10vh] flex-[2] pl-12">
             <div className="text-PageHome flex flex-col gap-8 pt-8">
@@ -130,6 +129,41 @@ export default function Page({ params }: WorkPageProps) {
               width={700}
               height={1472}
             />
+          </div>
+        </div>
+      ) : (
+        <div>
+          <div className="overflow-x-auto relative whitespace-nowrap">
+            <div className="flex gap-8  w-fit">
+              <Mockups
+                type="mobile"
+                src={assetsConfig.ewm[9].src}
+                alt=""
+                width={700}
+                height={1472}
+              />
+              <Mockups
+                type="mobile"
+                src={assetsConfig.ewm[8].src}
+                alt=""
+                width={700}
+                height={1472}
+              />
+              <Mockups
+                type="mobile"
+                src={assetsConfig.ewm[7].src}
+                alt=""
+                width={700}
+                height={1472}
+              />
+            </div>
+          </div>
+          <div className="text-PageHome flex flex-col gap-8 pt-8">
+            {work.information2.map((item, index) => (
+              <SlideUp key={index}>
+                <p>{item}</p>
+              </SlideUp>
+            ))}
           </div>
         </div>
       )}

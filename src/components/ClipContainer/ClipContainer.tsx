@@ -34,7 +34,6 @@ const ClipContainer = ({ src, alt, width, height }: ClipContainerProps) => {
         ease: "none",
         scrollTrigger: {
           trigger: imageRef.current,
-          scrub: true,
           start: isMobile ? "top bottom" : "top center+=100px",
           end: isMobile ? "bottom center" : "bottom top+=600px",
         },
@@ -44,7 +43,7 @@ const ClipContainer = ({ src, alt, width, height }: ClipContainerProps) => {
   );
 
   return (
-    <div ref={container}>
+    <div ref={container} className="overflow-hidden">
       <Image
         style={{
           clipPath: "polygon(30% 35%, 70% 35%, 70% 80%, 30% 80%)",
