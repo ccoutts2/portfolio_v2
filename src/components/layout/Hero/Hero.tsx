@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useRef } from "react";
+import styles from "./Hero.module.css";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -9,6 +10,7 @@ import { TransitionLink } from "../navigation/TransitionLink/TransitionLink";
 import { AnimatedText } from "@/components/animations/AnimatedText/AnimatedText";
 import { assetsConfig } from "@/config/assets";
 import { FeaturedProject } from "@/components/ui/cards/FeaturedProject/FeaturedProject";
+import classNames from "classnames";
 
 const Hero = () => {
   const container = useRef<HTMLDivElement | null>(null);
@@ -18,8 +20,10 @@ const Hero = () => {
 
   const tl = useRef<GSAPTimeline | null>();
 
+  const [isPageLoaded, setIsPageLoaded] = useState<boolean>(false);
+
   useEffect(() => {
-    document.body.classList.add("is-ready");
+    setIsPageLoaded(true);
   }, []);
 
   useGSAP(
@@ -52,7 +56,11 @@ const Hero = () => {
   );
 
   return (
-    <div ref={container} className="min-h-screen">
+    <div
+      ref={container}
+      className={classNames(styles.Hero, "min-h-screen")}
+      {...(isPageLoaded && { "data-is-loaded": true })}
+    >
       <div className="flex flex-col justify-between relative">
         <div className="flex flex-col justify-between md:flex-row gap-8 p-4">
           <section className="flex flex-col gap-2 text-clamp-home flex-1">

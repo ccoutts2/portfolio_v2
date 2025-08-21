@@ -69,11 +69,6 @@ body {
   transition-duration: 500ms;
   transition-property: opacity, filter, background;
   transition-timing-function: ease-in-out;
-  opacity: 0;
-}
-
-.is-ready {
-  opacity: 1;
 }
 
 .vh {

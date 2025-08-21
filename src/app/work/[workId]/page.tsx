@@ -9,8 +9,8 @@ import { assetsConfig } from "@/config/assets";
 import { TransitionLink } from "@/components";
 
 import { SlideUp } from "@/components";
-import ClipContainer from "@/components/ClipContainer/ClipContainer";
-import { Mockups } from "@/components/ui/Mockups/Mockups";
+import { ClipContainer } from "@/components";
+import { Mockups } from "@/components";
 
 interface WorkPageProps {
   params: Promise<{

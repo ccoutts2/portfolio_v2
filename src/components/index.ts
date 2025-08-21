@@ -41,7 +41,12 @@ export { AnimatedText } from "./animations/AnimatedText/AnimatedText";
 export { AnimatedWordBlock } from "./animations/AnimatedWordBlock/AnimatedWordBlock";
 export { ImageZoomScroll } from "./ImageZoomScroll/ImageZoomScroll";
 export { SlideUp } from "./animations/SlideUp/SlideUp";
+export { ClipContainer } from "./animations/ClipContainer/ClipContainer";
 
 // featured project
 
 export { FeaturedProject } from "./ui/cards/FeaturedProject/FeaturedProject";
+
+// mockup warpper
+
+export { Mockups } from "./ui/Mockups/Mockups";

@@ -1,0 +1,8 @@
+.Hero {
+  opacity: 0;
+  transition: z-index opacity 500ms;
+}
+
+.Hero[data-is-loaded] {
+  opacity: 1;
+}
