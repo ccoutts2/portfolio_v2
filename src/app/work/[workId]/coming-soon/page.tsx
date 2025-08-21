@@ -1,4 +1,4 @@
-import { TransitionLink } from "@/components";
+import { BackNavLink } from "@/components";
 
 export default function Page() {
   return (
@@ -6,11 +6,7 @@ export default function Page() {
       <h1 className="text-clamp-home p-4 text-center">
         This project is stil in development. Revisit again soon!
       </h1>
-      <nav>
-        <TransitionLink underline href="/work">
-          ← Back
-        </TransitionLink>
-      </nav>
+      <BackNavLink />
     </section>
   );
 }

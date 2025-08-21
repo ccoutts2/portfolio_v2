@@ -3,6 +3,7 @@
 export { NavLink } from "./layout/navigation/NavLink/NavLink";
 export { NavBar } from "./layout/navigation/NavBar/NavBar";
 export { TransitionLink } from "./layout/navigation/TransitionLink/TransitionLink";
+export { BackNavLink } from "./layout/navigation/BackNavLink/BackNavLink";
 
 // buttons
 

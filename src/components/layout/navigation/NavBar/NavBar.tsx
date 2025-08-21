@@ -30,7 +30,7 @@ export const NavBar = () => {
     <>
       <header className="w-full border-b border-solid lg:sticky lg:top-0 z-999 backdrop-blur-md">
         <nav className="flex justify-between items-center w-full gap-4">
-          <section className="flex-2 flex items-center p-4 pr-0 md:pr-4 md:px-8 gap-4">
+          <section className="flex-2 flex items-center p-4 pr-0 md:pr-4 md:px-8 gap-2">
             <h1 className="text-base md:text-2xl">
               <TransitionLink href="/">Chris Coutts</TransitionLink>
             </h1>

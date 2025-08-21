@@ -6,18 +6,28 @@ interface Experience {
 
 export const experience: Experience[] = [
   {
+    company: "MMGY Global",
+    role: "Front End Web Developer (Perm)",
+    period: "2025 - now",
+  },
+  {
+    company: "Wedding Website (private client)",
+    role: "Web Development (Freelance)",
+    period: "2025",
+  },
+  {
     company: "Sunderland Software City",
-    role: "Junior Software Developer",
-    period: "2024 - now",
+    role: "Junior Software Developer (FTC)",
+    period: "2024 - 2025",
   },
   {
     company: "Effortless Interior Designer",
-    role: "Freelance Design and Development",
+    role: "Web Development (Freelance)",
     period: "2024 - now",
   },
   {
     company: "EWM Bespoke Interiors",
-    role: "Freelance Design and Development",
+    role: "Web Development (Freelance)",
     period: "2024",
   },
 ];

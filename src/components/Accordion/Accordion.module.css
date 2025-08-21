@@ -1,7 +1,7 @@
 .Accordion {
   display: flex;
   flex-direction: column;
-  padding: 0.25rem 0rem;
+  padding-block: 2rem;
 }
 
 .Accordion > div:first-of-type {
@@ -29,30 +29,30 @@
 }
 
 .AccordionItem__Preview {
+  height: 275px;
+  left: 0;
+  pointer-events: none;
   position: absolute;
   top: 0;
-  left: 0;
   width: 225px;
-  height: 275px;
   z-index: 2;
-  pointer-events: none;
 }
 
 .AccordionItem__Image {
+  height: 100%;
   position: absolute;
   width: 100%;
-  height: 100%;
 }
 
 .AccordionItem__Image-2 {
-  top: 20px;
   height: 20px;
+  top: 20px;
 }
 
 .AccordionItem__Image img {
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
 }
 
 .AccordionItem__Section[data-is-open] {
@@ -61,8 +61,8 @@
 
 .AccordionItem p {
   margin: 0;
-  padding-top: 0.25;
   padding: 0.5rem;
+  padding-top: 0.25;
 }
 
 .AccordionTitle {
@@ -77,13 +77,13 @@
 .AccordionList {
   position: relative;
 
-  &:before {
-    border-bottom: 1px dashed #a7a7a7;
+  &::before {
     content: "";
+    border-bottom: 1px dashed #a7a7a7;
     height: 1px;
     left: 0;
     position: absolute;
-    top: calc(clamp(calc(0.0666666667rem / 14.4 * 1vw, /14.4 * 1vw) * 0.5));
+    top: calc(clamp(calc(0.0666666667rem / 14.4 * 1vw, 14.4 * 1vw) * 0.5));
     width: 100%;
   }
 }
@@ -92,10 +92,10 @@
   padding: 0.1rem 0.5rem;
   position: relative;
 
-  &:before {
+  &::before {
+    content: "";
     border-radius: 3px;
     border: 1px solid black;
-    content: "";
     height: 100%;
     left: 0;
     position: absolute;

@@ -6,11 +6,12 @@ import { useScreenDetector } from "@/hooks/useScreenDetector";
 import Link from "next/link";
 import Image from "next/image";
 import { assetsConfig } from "@/config/assets";
-import { TransitionLink } from "@/components";
 
+import { TransitionLink } from "@/components";
 import { SlideUp } from "@/components";
 import { ClipContainer } from "@/components";
 import { Mockups } from "@/components";
+import { BackNavLink } from "@/components";
 
 interface WorkPageProps {
   params: Promise<{
@@ -35,8 +36,21 @@ export default function Page({ params }: WorkPageProps) {
     fetchParams();
   }, [params, isMobile]);
 
+  if (!workId) {
+    return (
+      <div className="min-h-screen w-full flex items-center justify-center">
+        <p className="text-clamp-page-intro">As you wish...</p>
+      </div>
+    );
+  }
+
   if (!work) {
-    return <p>Loading Project</p>;
+    return (
+      <div className="min-h-screen w-full flex flex-col items-center justify-center">
+        <p className="text-clamp-page-intro">Project doesn't exist!</p>
+        <BackNavLink />
+      </div>
+    );
   }
 
   return (
@@ -203,7 +217,7 @@ export default function Page({ params }: WorkPageProps) {
         <div className="flex-1">
           <Mockups
             type="mobile"
-            src={projectAssets[10].src}
+            src={projectAssets[6].src}
             alt=""
             width={700}
             height={1472}
@@ -219,7 +233,14 @@ export default function Page({ params }: WorkPageProps) {
       />
 
       <div className="flex flex-col items-center justify-center my-12">
-        <h3 className="text-clamp-home">More Work</h3>
+        <h3 className="text-clamp-home">
+          More{" "}
+          <span>
+            <TransitionLink href="/work" underline>
+              Work
+            </TransitionLink>
+          </span>
+        </h3>
 
         <ul className="flex flex-col md:flex-row justify-center items-center gap-8 py-8">
           {Object.values(workDetails).map(({ title, slug, id }) => (

@@ -41,7 +41,7 @@ const DateTime = () => {
       </dd>
 
       <dt className="vh">Message alert:</dt>
-      <dd className="border border-[#191919] dark:border-[#f6f6f6] rounded-3xl px-[6px] py-[1.5px]">
+      <dd className="border border-[#191919] dark:border-[#f6f6f6] rounded-3xl px-[6px] py-[1.5px] text-center">
         {message || "Hello"}
       </dd>
     </dl>

@@ -21,38 +21,38 @@ export interface WorkDetails {
 }
 
 export const workDetails: { [key: string]: WorkDetails } = {
-  triangulate: {
-    id: 0,
-    title: "Triangulate",
-    slogan: "Discover, Rate, and Connect: The Pub Experience Reimagined",
-    information:
-      "Triangulate was my first full stack baby. An idea born through two separate friends groups. One friend has been rating pubs around the UK for years now, and stores his data in an ugly looking spreadsheet. Another group of friends wanted an app which helped you and your friends identify the most central point to meet. With my new found tech skillset, I decided to create an app which could do both. This project was for my Capstone project and I only had two weeks to design and develop it. I think I did okay, given it was my first full stack app!",
-    information2: [
-      "The main features of this app included signing up and logging in, creating and joining groups, seeing your friends' locations in the group on a map, calculating the most central point between you and your friends, adding pub markers to the map, rating pubs, and finding out the closest pubs to you based on your live location. Long list!",
-      "As well as making sure the features of the app were built, I wanted to design something which caught the users eye. I decided to go for a fairly monochrome look, with not too many colours. I'm quite a visual person and if something doesn't look good, it removes some of the appeal of using.",
-      "This is defintitely a project I'd like to revist, and probably rebuild using my new favourite framework - SvelteKit. I feel way more competent in my abilities to deliver an app me and my friends would love to use, while enhancing the current features and expanding in the future.",
-    ],
-    projectType: "London",
-    year: "2024",
-    service: ["Design", "Development"],
-    tech: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "Knex.js",
-      "MySQL",
-      "Mapbox",
-      "SCSS",
-    ],
-    slug: "triangulate",
-    images: assetsConfig["ewm-bespoke-interiors"].map(
-      ({ description, src }) => ({
-        description,
-        src,
-      })
-    ),
-    liveSite: "https://github.com/ccoutts2/triangulate-project",
-  },
+  // triangulate: {
+  //   id: 0,
+  //   title: "Triangulate",
+  //   slogan: "Discover, Rate, and Connect: The Pub Experience Reimagined",
+  //   information:
+  //     "Triangulate was my first full stack baby. An idea born through two separate friends groups. One friend has been rating pubs around the UK for years now, and stores his data in an ugly looking spreadsheet. Another group of friends wanted an app which helped you and your friends identify the most central point to meet. With my new found tech skillset, I decided to create an app which could do both. This project was for my Capstone project and I only had two weeks to design and develop it. I think I did okay, given it was my first full stack app!",
+  //   information2: [
+  //     "The main features of this app included signing up and logging in, creating and joining groups, seeing your friends' locations in the group on a map, calculating the most central point between you and your friends, adding pub markers to the map, rating pubs, and finding out the closest pubs to you based on your live location. Long list!",
+  //     "As well as making sure the features of the app were built, I wanted to design something which caught the users eye. I decided to go for a fairly monochrome look, with not too many colours. I'm quite a visual person and if something doesn't look good, it removes some of the appeal of using.",
+  //     "This is defintitely a project I'd like to revist, and probably rebuild using my new favourite framework - SvelteKit. I feel way more competent in my abilities to deliver an app me and my friends would love to use, while enhancing the current features and expanding in the future.",
+  //   ],
+  //   projectType: "London",
+  //   year: "2024",
+  //   service: ["Design", "Development"],
+  //   tech: [
+  //     "React.js",
+  //     "Node.js",
+  //     "Express.js",
+  //     "Knex.js",
+  //     "MySQL",
+  //     "Mapbox",
+  //     "SCSS",
+  //   ],
+  //   slug: "triangulate",
+  //   images: assetsConfig["ewm-bespoke-interiors"].map(
+  //     ({ description, src }) => ({
+  //       description,
+  //       src,
+  //     })
+  //   ),
+  //   liveSite: "https://github.com/ccoutts2/triangulate-project",
+  // },
   "france-2k23": {
     id: 1,
     title: "France2k23",
