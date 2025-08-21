@@ -7,7 +7,6 @@ type Theme = "light" | "dark";
 
 const ThemeSwitch = () => {
   const [theme, setTheme] = useState<Theme>("light");
-  const [isThemeClicked, setIsThemeClicked] = useState(false);
   const container = useRef<HTMLDivElement | null>(null);
   const lightTextRef = useRef<HTMLElement | null>(null);
   const darkTextRef = useRef<HTMLElement | null>(null);
@@ -16,6 +15,7 @@ const ThemeSwitch = () => {
 
   useGSAP(
     () => {
+      const getTheme = localStorage.getItem("theme");
       gsap.set(darkTextRef.current, { autoAlpha: 0, translateY: "50%" });
 
       tl.current = gsap
@@ -45,17 +45,9 @@ const ThemeSwitch = () => {
   );
 
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
-    }
-
-    setIsThemeClicked(!isThemeClicked);
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    window.localStorage.setItem("theme", newTheme);
   };
 
   useEffect(() => {
@@ -63,26 +55,22 @@ const ThemeSwitch = () => {
 
     if (localTheme) {
       setTheme(localTheme);
-
-      if (localTheme === "dark") {
-        document.documentElement.classList.add("dark");
-      }
-    } else if (
-      !("theme" in localStorage) &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme("dark");
-      document.documentElement.classList.add("dark");
+    } else {
+      setTheme("light");
     }
   }, []);
 
   useEffect(() => {
-    if (isThemeClicked) {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
       tl.current?.play();
     } else {
+      document.documentElement.classList.remove("dark");
       tl.current?.reverse();
     }
-  }, [isThemeClicked]);
+  }, [theme, tl]);
 
   return (
     <button
@@ -93,8 +81,12 @@ const ThemeSwitch = () => {
         className="flex flex-col overflow-hidden h-[1.34rem] text-sm"
         ref={container}
       >
-        <span ref={lightTextRef}>Light</span>
-        <span ref={darkTextRef}>Dark</span>
+        <span className="capitalize" ref={lightTextRef}>
+          Light
+        </span>
+        <span className="capitalize" ref={darkTextRef}>
+          Dark
+        </span>
       </span>
     </button>
   );

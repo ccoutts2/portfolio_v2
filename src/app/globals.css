@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
   --color-background: var(--background);
@@ -18,16 +18,6 @@
   --height-clamp-image: clamp(15rem, calc(-20rem + 0.8 * 100vw), 25rem);
 }
 
-:root {
-  --background: #f6f6f6;
-  --foreground: #252126;
-}
-
-.dark {
-  --background: #252126;
-  --foreground: #f6f6f6;
-}
-
 @layer base {
   *,
   ::after,
@@ -35,6 +25,16 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
+  }
+
+  :root {
+    --background: #f6f6f6;
+    --foreground: #252126;
+  }
+
+  .dark {
+    --background: #252126;
+    --foreground: #f6f6f6;
   }
 }
 

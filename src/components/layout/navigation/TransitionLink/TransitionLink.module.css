@@ -2,7 +2,7 @@
   position: relative;
 }
 
-.HoverAnimation:after {
+.HoverAnimation::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -15,7 +15,7 @@
   transform-origin: bottom right;
 }
 
-.HoverAnimation:hover:after {
+.HoverAnimation:hover::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
