@@ -19,7 +19,7 @@ const Experience = () => {
             <li
               ref={ref}
               key={index}
-              className={classNames(
+              className={`dark:after:bg-[#f6f6f6] ${classNames(
                 styles.ListItem,
                 "flex",
                 "relative",
@@ -29,11 +29,10 @@ const Experience = () => {
                 "justify-between",
                 "items-start",
                 "gap-4",
-                "dark:after:bg-[#f6f6f6]",
                 {
                   [styles.InView]: inView,
                 }
-              )}
+              )}`}
             >
               <div className="flex-1">
                 <h3 className="font-bold text-gray-400 text-sm">Company</h3>

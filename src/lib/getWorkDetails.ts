@@ -77,12 +77,10 @@ export const workDetails: { [key: string]: WorkDetails } = {
       "CSS",
     ],
     slug: "france-2k23",
-    images: assetsConfig["ewm-bespoke-interiors"].map(
-      ({ description, src }) => ({
-        description,
-        src,
-      })
-    ),
+    images: assetsConfig["france-2k23"].map(({ description, src }) => ({
+      description,
+      src,
+    })),
     liveSite: "https://france2k23.chris-coutts.com",
   },
   "ewm-bespoke-interiors": {
@@ -115,7 +113,8 @@ export const workDetails: { [key: string]: WorkDetails } = {
     title: "Wedding Website",
     slogan: "Your Presence: The Greatest Gift",
     information:
-      "I worked with a couple to bring wedding RSVP's into the digital era, but also use it as a platform to tell their story. The site featured routes for guests to RSVP, and put down their preferences for their meals. They could also use the platofrm to find out information about getting to the venue as well as accomodation. The engaged couple had their admin panel (only accessibile to them) so they could have an overview of all responses, to help them better organise the event.",
+      "I worked with a couple to bring wedding RSVP's into the digital era, but also use it as a platform to tell their story. The site featured routes for guests to RSVP, and put down their preferences for their meals. They could also use the platofrm to find out information about getting to the venue as well as accomodation. The engaged couple had their admin panel (only accessibile to them) so they could have an overview of all responses, to help them better organise the event. I have uploaded images of the site which hides sensitive details, such as images and location of the wedding/couple, whilst this site is active.",
+
     information2: [
       "What better way to avoid postal issues than to bring your wedding RSVP capabilities to the digital world. Not only were my clients looking for a way to manage RSVP's, but they also wanted to sahre their story and create a wesbite which reflected them. They could have easily gone down the route of building a website using  free tool, but I offered them full customisation - an offer they couldn't refuse.",
       "Core features of the site included: password protection and routes for guests/admins, guest RSVP, admin ability to add guests and view all guests and curent state of responses in a table, coach transfer request and logistics information, an image gallery of the couple's hourney, and finally information surrounding the event in general.",
@@ -137,12 +136,10 @@ export const workDetails: { [key: string]: WorkDetails } = {
       "SCSS",
     ],
     slug: "wedding-website",
-    images: assetsConfig["ewm-bespoke-interiors"].map(
-      ({ description, src }) => ({
-        description,
-        src,
-      })
-    ),
+    images: assetsConfig["wedding-website"].map(({ description, src }) => ({
+      description,
+      src,
+    })),
     liveSite: "https://www.clareanddavidwedding26.org/",
   },
 };

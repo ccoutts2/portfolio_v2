@@ -19,8 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={` antialiased dark:bg-[#252126] dark:text-[#f4f3ed]`}>
+    <html lang="en" className="dark">
+      <body
+        className={`antialiased dark:bg-[--color-background] dark:text-[--color-foreground]`}
+      >
         <SmoothScroll>
           <NavBar />
           {children}

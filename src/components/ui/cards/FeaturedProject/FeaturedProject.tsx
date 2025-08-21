@@ -21,11 +21,11 @@ export const FeaturedProject = ({
 }: FeaturedProjectProps) => {
   return (
     <>
-      <h3 className="text-lg py-2">Featured Project</h3>
+      <h2 className="text-lg py-2">Featured Project</h2>
       <article className="border border-solid max-w-fit p-4 flex flex-row-reverse gap-4 relative">
         <div className="flex flex-col justify-between h-full gap-4">
           <div className="flex flex-col">
-            <h4 className="text-sm md:text-base">{projectName}</h4>
+            <h3 className="text-sm md:text-base">{projectName}</h3>
             <dl className="flex gap-1 text-xs text-gray-500 flex-wrap">
               {role.map((meta, index) => (
                 <React.Fragment key={index}>
@@ -44,8 +44,8 @@ export const FeaturedProject = ({
 
         <div className="border-[0.75rem] border-solid max-w-48 max-h-48">
           <Image
-            src={assetsConfig["ewm"][0].src}
-            alt={assetsConfig["ewm"][0].description}
+            src={assetsConfig["ewm-bespoke-interiors"][0].src}
+            alt={assetsConfig["ewm-bespoke-interiors"][0].description}
             width={800}
             height={800}
             className="w-full h-full object-cover"
@@ -54,7 +54,8 @@ export const FeaturedProject = ({
 
         <TransitionLink
           href="/work/ewm-bespoke-interiors"
-          className="absolute inset-0">
+          className="absolute inset-0"
+        >
           <span className="vh">See EWM Project Case Study</span>
         </TransitionLink>
       </article>

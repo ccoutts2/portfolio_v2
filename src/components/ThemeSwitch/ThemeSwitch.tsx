@@ -55,7 +55,6 @@ const ThemeSwitch = () => {
       document.documentElement.classList.remove("dark");
     }
 
-    console.log(isThemeClicked);
     setIsThemeClicked(!isThemeClicked);
   };
 
@@ -68,7 +67,10 @@ const ThemeSwitch = () => {
       if (localTheme === "dark") {
         document.documentElement.classList.add("dark");
       }
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    } else if (
+      !("theme" in localStorage) &&
+      window.matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
       setTheme("dark");
       document.documentElement.classList.add("dark");
     }

@@ -15,10 +15,10 @@ export const AnimatedText = ({ children, delay }: AnimatedTextProps) => {
   const container = useRef<HTMLDivElement | null>(null);
   const textRef = useRef<HTMLDivElement | null>(null);
 
-  const hasPlayed = localStorage.getItem("preLoader");
-
   useGSAP(
     () => {
+      const hasPlayed = localStorage.getItem("preLoader");
+
       if (textRef.current) {
         const splitTextInstance = new SplitType(textRef.current, {
           types: "words",

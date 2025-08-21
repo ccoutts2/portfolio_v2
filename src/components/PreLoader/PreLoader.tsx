@@ -10,10 +10,9 @@ const PreLoader = () => {
 
   const tl = useRef<GSAPTimeline>();
 
-  const hasPlayed = localStorage.getItem("preLoader");
-
   useGSAP(
     () => {
+      const hasPlayed = localStorage.getItem("preLoader");
       gsap.set(container.current, { opacity: 1 });
 
       if (!hasPlayed) {

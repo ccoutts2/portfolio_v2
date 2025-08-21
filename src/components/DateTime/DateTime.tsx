@@ -1,30 +1,19 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { format } from "date-fns";
 
 const DateTime = () => {
   const [time, setTime] = useState<string | null>(null);
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState<string>("");
 
   const updateDateTime = () => {
-    const now = new Date();
+    const now: Date = new Date();
 
-    const timeZone: string = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    const timeZoneAbbr: string =
-      timeZone.split("/").pop()?.replace("_", " ") || "";
+    const timeString: string = format(now, "hh:mm:ss a");
+    setTime(timeString);
 
-    const timeOptions: Intl.DateTimeFormatOptions = {
-      hour: "numeric",
-      minute: "2-digit",
-      second: "2-digit",
-      hour12: true,
-    };
-    const timeStr: string =
-      now.toLocaleTimeString("en-GB", timeOptions) + " " + `[${timeZoneAbbr}]`;
-
-    setTime(timeStr);
-
-    const currentHour = now.getHours();
+    const currentHour: number = now.getHours();
 
     if (currentHour < 12) {
       setMessage("Good Morning");
@@ -48,12 +37,12 @@ const DateTime = () => {
     <dl className="flex items-center gap-2 text-xs">
       <dt className="vh">Current time:</dt>
       <dd className="hidden md:flex">
-        <time suppressHydrationWarning={true}>{time}</time>
+        <time suppressHydrationWarning={true}>{time || "..."}</time>
       </dd>
 
       <dt className="vh">Message alert:</dt>
       <dd className="border border-[#191919] dark:border-[#f6f6f6] rounded-3xl px-[6px] py-[1.5px]">
-        {message}
+        {message || "Hello"}
       </dd>
     </dl>
   );

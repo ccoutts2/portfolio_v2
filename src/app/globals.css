@@ -18,14 +18,16 @@
   --height-clamp-image: clamp(15rem, calc(-20rem + 0.8 * 100vw), 25rem);
 }
 
-/*
-  The default border color has changed to `currentcolor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
+:root {
+  --background: #f6f6f6;
+  --foreground: #252126;
+}
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+.dark {
+  --background: #252126;
+  --foreground: #f6f6f6;
+}
+
 @layer base {
   *,
   ::after,
@@ -38,8 +40,7 @@
 
 @font-face {
   font-family: "HankenGrotesk-Light";
-  src: url("/assets/fonts/HankenGrotesk/HankenGrotesk-Light.ttf")
-    format("truetype");
+  src: url("/assets/fonts/HankenGrotesk-Light.ttf") format("truetype");
 }
 
 @font-face {
@@ -58,17 +59,21 @@
 }
 
 body {
-  background: #f4f3ed;
+  background: var(--background);
   box-sizing: border-box;
-  color: #191919;
+  color: var(--foreground);
   font-family: HankenGrotesk-Regular;
   font-weight: 500;
   margin: 0;
-  overflow: hidden;
   padding: 0;
   transition-duration: 500ms;
-  transition-property: opacity, filter;
+  transition-property: opacity, filter, background;
   transition-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+.is-ready {
+  opacity: 1;
 }
 
 .vh {
@@ -91,6 +96,7 @@ body {
 }
 
 .PageTransition {
+  background: #bdc1b6;
   filter: blur(12px);
   opacity: 0;
 }

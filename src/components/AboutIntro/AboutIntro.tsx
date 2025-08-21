@@ -8,42 +8,20 @@ import { useRef } from "react";
 
 const AboutIntro = () => {
   const container = useRef<HTMLDivElement | null>(null);
-  const imageContainer1 = useRef<HTMLElement | null>(null);
-  const imageContainer2 = useRef<HTMLElement | null>(null);
-  const imageContainer3 = useRef<HTMLElement | null>(null);
 
   const tl = useRef<GSAPTimeline | null>();
 
   useGSAP(
     () => {
-      tl.current = gsap
-        .timeline({ delay: 1 })
-        .to(imageContainer1.current, {
-          clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-          duration: 0.8,
-          delay: 0.25,
-          ease: "power4.inOut",
-        })
-        .to(
-          imageContainer2.current,
-          {
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-            duration: 0.8,
-            delay: 0.1,
-            ease: "power4.inOut",
-          },
-          "<"
-        )
-        .to(
-          imageContainer3.current,
-          {
-            clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-            duration: 0.8,
-            delay: 0.1,
-            ease: "power4.inOut",
-          },
-          "<"
-        );
+      const images = gsap.utils.toArray(".images");
+
+      tl.current = gsap.timeline({ delay: 1 }).to(images, {
+        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+        duration: 0.8,
+        delay: 0.25,
+        stagger: 0.15,
+        ease: "power4.inOut",
+      });
     },
     { scope: container, dependencies: [] }
   );
@@ -57,9 +35,9 @@ const AboutIntro = () => {
             <span className="text-[#442c35] dark:text-[#f40c3f] font-bold">
               passion
             </span>{" "}
-            for building and creating. I love turning ideas into reality, whether
-            that be building apps for me and my friends to use, or collaborating with
-            clients to bring their{" "}
+            for building and creating. I love turning ideas into reality,
+            whether that be building apps for me and my friends to use, or
+            collaborating with clients to bring their{" "}
             <span className="text-[#442c35] dark:text-[#f40c3f] font-bold">
               visions
             </span>{" "}
@@ -75,35 +53,36 @@ const AboutIntro = () => {
         <div className="flex-1">
           <AnimatedText delay={1}>
             <p className="text-lg">
-              I come with a diverse background in both engineering and technology.
-              Originally holding a Master&apos;s in Chemical Engineering, I
-              transitioned into the tech industry and now, I&apos;m focused on
-              building cutting-edge solutions in software development. My journey has
-              been marked by continuous upskilling, freelancing, and a passion for
-              problem-solving within business and technical environments
+              I come with a diverse background in both engineering and
+              technology. Originally holding a Master&apos;s in Chemical
+              Engineering, I transitioned into the tech industry and now,
+              I&apos;m focused on building cutting-edge solutions in software
+              development. My journey has been marked by continuous upskilling,
+              freelancing, and a passion for problem-solving within business and
+              technical environments
             </p>
           </AnimatedText>
         </div>
         <aside ref={container} className="flex flex-wrap gap-4">
           <figure
-            ref={imageContainer1}
-            className="max-h-40 w-clamp-small-images"
-            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
+            className="max-h-40 w-clamp-small-images | images"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
+          >
             <Image
-              src={assetsConfig["ewm"][0].src}
-              alt={assetsConfig["ewm"][0].description}
+              src={assetsConfig["ewm-bespoke-interiors"][0].src}
+              alt={assetsConfig["ewm-bespoke-interiors"][0].description}
               width={800}
               height={800}
               className="w-full h-full object-cover"
             />
           </figure>
           <figure
-            ref={imageContainer2}
-            className="max-h-40 w-clamp-small-images"
-            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
+            className="max-h-40 w-clamp-small-images | images"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
+          >
             <Image
-              src={assetsConfig["ewm"][0].src}
-              alt={assetsConfig["ewm"][0].description}
+              src={assetsConfig["ewm-bespoke-interiors"][0].src}
+              alt={assetsConfig["ewm-bespoke-interiors"][0].description}
               width={800}
               height={800}
               className="w-full h-full object-cover"
@@ -111,12 +90,12 @@ const AboutIntro = () => {
           </figure>
 
           <figure
-            ref={imageContainer3}
-            className="max-h-40 w-clamp-small-images"
-            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}>
+            className="max-h-40 w-clamp-small-images | images"
+            style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
+          >
             <Image
-              src={assetsConfig["ewm"][0].src}
-              alt={assetsConfig["ewm"][0].description}
+              src={assetsConfig["ewm-bespoke-interiors"][0].src}
+              alt={assetsConfig["ewm-bespoke-interiors"][0].description}
               width={800}
               height={800}
               className="w-full h-full object-cover"

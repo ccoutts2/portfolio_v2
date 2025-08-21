@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -18,10 +18,13 @@ const Hero = () => {
 
   const tl = useRef<GSAPTimeline | null>();
 
-  const hasPlayed = localStorage.getItem("preLoader");
+  useEffect(() => {
+    document.body.classList.add("is-ready");
+  }, []);
 
   useGSAP(
     () => {
+      const hasPlayed = localStorage.getItem("preLoader");
       gsap.set(featuredProject.current, {
         autoAlpha: 0,
       });
@@ -62,14 +65,10 @@ const Hero = () => {
               </h1>
             </AnimatedText>
             <AnimatedText delay={1.1}>
-              <h2>
-                <span>I&apos;m</span> a Full Stack Developer
-              </h2>
+              <span>I&apos;m</span> a Full Stack Developer
             </AnimatedText>
             <AnimatedText delay={1.2}>
-              <h2>
-                <span>Based</span> in London
-              </h2>
+              <span>Based</span> in London
             </AnimatedText>
           </section>
 
@@ -79,8 +78,8 @@ const Hero = () => {
             style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }}
           >
             <Image
-              src={assetsConfig["ewm"][0].src}
-              alt={assetsConfig["ewm"][0].description}
+              src={assetsConfig["ewm-bespoke-interiors"][0].src}
+              alt={assetsConfig["ewm-bespoke-interiors"][0].description}
               width={800}
               height={800}
               className="w-full h-full object-cover"
