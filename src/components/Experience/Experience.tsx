@@ -1,5 +1,5 @@
 import { experience } from "./data";
-import { ExperienceItem } from "./ExperienceItem";
+import { ExperienceItem } from "@/components/experience/ExperienceItem";
 
 const Experience = () => {
   return (
