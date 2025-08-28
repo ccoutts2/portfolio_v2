@@ -27,9 +27,9 @@ export const Accordion = ({
 
   function handleClick(i: number) {
     if (single) {
-      expanded.includes(i) ? setExpanded([]) : setExpanded([i]);
+      return expanded.includes(i) ? setExpanded([]) : setExpanded([i]);
     } else {
-      expanded.includes(i)
+      return expanded.includes(i)
         ? setExpanded(expanded.filter((idx) => idx !== i))
         : setExpanded([...expanded, i]);
     }
