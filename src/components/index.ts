@@ -54,4 +54,4 @@ export { Mockups } from "./ui/Mockups/Mockups";
 
 // experience item wrapper
 
-export { ExperienceItem } from "./experience/ExperienceItem";
+export { ExperienceItem } from "./Experience/ExperienceItem";

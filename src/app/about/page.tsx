@@ -1,6 +1,6 @@
 import { ContactMe } from "@/components";
 import AboutIntro from "@/components/AboutIntro/AboutIntro";
-import Experience from "@/components/experience/Experience";
+import Experience from "@/components/Experience/Experience";
 import FunBio from "@/components/FunBio/FunBio";
 import { PageHeader } from "@/components/layout/header/PageHeader/PageHeader";
 
