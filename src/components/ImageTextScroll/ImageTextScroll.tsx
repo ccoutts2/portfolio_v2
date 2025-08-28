@@ -16,7 +16,10 @@ const ImageTextScroll = () => {
 
   useGSAP(
     () => {
-      gsap.set(imageRef1.current, { scale: 0.25, transformOrigin: "100% 100%" });
+      gsap.set(imageRef1.current, {
+        scale: 0.25,
+        transformOrigin: "100% 100%",
+      });
 
       gsap.to(imageRef1.current, {
         scale: 1,
@@ -44,8 +47,8 @@ const ImageTextScroll = () => {
       <div className="w-full sticky h-screen overflow-hidden top-0">
         <Image
           ref={imageRef1}
-          src={assetsConfig["ewm"][0].src}
-          alt={assetsConfig["ewm"][0].description}
+          src={assetsConfig["ewm-bespoke-interiors"][0].src}
+          alt={assetsConfig["ewm-bespoke-interiors"][0].description}
           width={800}
           height={800}
           className="w-full h-full object-cover z-100 absolute top-0 right-0 p-4"

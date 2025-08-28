@@ -54,8 +54,8 @@ export const ImageZoomScroll = () => {
       <div className="sticky h-screen overflow-hidden w-full top-0">
         <Image
           ref={image1}
-          src={assetsConfig["ewm"][0].src}
-          alt={assetsConfig["ewm"][0].description}
+          src={assetsConfig["ewm-bespoke-interiors"][0].src}
+          alt={assetsConfig["ewm-bespoke-interiors"][0].description}
           width={800}
           height={800}
           className="w-full h-full absolute top-0 left-0 object-cover z-10"
@@ -63,8 +63,8 @@ export const ImageZoomScroll = () => {
 
         <Image
           ref={image2}
-          src={assetsConfig["ewm"][1].src}
-          alt={assetsConfig["ewm"][1].description}
+          src={assetsConfig["ewm-bespoke-interiors"][1].src}
+          alt={assetsConfig["ewm-bespoke-interiors"][1].description}
           width={800}
           height={800}
           className="w-full h-full absolute top-0 left-0 object-cover z-20"
@@ -72,8 +72,8 @@ export const ImageZoomScroll = () => {
 
         <Image
           ref={image3}
-          src={assetsConfig["ewm"][2].src}
-          alt={assetsConfig["ewm"][2].description}
+          src={assetsConfig["ewm-bespoke-interiors"][2].src}
+          alt={assetsConfig["ewm-bespoke-interiors"][2].description}
           width={800}
           height={800}
           className="w-full h-full absolute top-0 left-0 object-cover z-30"
