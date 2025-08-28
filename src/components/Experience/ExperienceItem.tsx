@@ -19,7 +19,6 @@ export const ExperienceItem = ({ item }: ExperienceItemProps) => {
   return (
     <li
       ref={ref}
-      key={item.id}
       className={`dark:after:bg-[#f6f6f6] ${classNames(
         styles.ListItem,
         "flex",

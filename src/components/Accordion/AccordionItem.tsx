@@ -44,7 +44,7 @@ export const AccordionItem = ({
   useEffect(() => {
     const el = contentRef.current as HTMLDivElement;
     handleOpen(el);
-  }, [isActive]);
+  }, [isActive, handleOpen]);
 
   return (
     <HoverBackground className={styles.AccordionItem} onClick={onClick}>

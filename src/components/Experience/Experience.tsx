@@ -7,7 +7,7 @@ const Experience = () => {
       <h2 className="text-clamp-home">Experience</h2>
       <ul className="flex flex-col py-4 w-full">
         {experience.map((item) => (
-          <ExperienceItem item={item} />
+          <ExperienceItem item={item} key={item.id} />
         ))}
       </ul>
     </section>

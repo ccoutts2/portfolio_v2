@@ -40,7 +40,7 @@ export const Accordion = ({
         <AccordionItem
           key={`${i}`}
           {...item}
-          isActive={expanded.includes(i) && true}
+          isActive={expanded.includes(i)}
           onClick={() => handleClick(i)}
         />
       ))}
