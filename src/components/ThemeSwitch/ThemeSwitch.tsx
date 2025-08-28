@@ -15,7 +15,6 @@ const ThemeSwitch = () => {
 
   useGSAP(
     () => {
-      const getTheme = localStorage.getItem("theme");
       gsap.set(darkTextRef.current, { autoAlpha: 0, translateY: "50%" });
 
       tl.current = gsap

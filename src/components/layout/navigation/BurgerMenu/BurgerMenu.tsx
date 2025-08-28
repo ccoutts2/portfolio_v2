@@ -109,11 +109,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
             <PercentageScroll />
           </section>
           <div className="pr-4">
-            <BurgerButton
-              status={status}
-              onClick={toggleBurgerMenu}
-              isOpen={isOpen}
-            />
+            <BurgerButton status={status} onClick={toggleBurgerMenu} />
           </div>
         </div>
 

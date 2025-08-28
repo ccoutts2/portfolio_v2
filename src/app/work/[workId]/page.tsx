@@ -47,7 +47,7 @@ export default function Page({ params }: WorkPageProps) {
   if (!work) {
     return (
       <div className="min-h-screen w-full flex flex-col items-center justify-center">
-        <p className="text-clamp-page-intro">Project doesn't exist!</p>
+        <p className="text-clamp-page-intro">Project doesn&apos;t exist!</p>
         <BackNavLink />
       </div>
     );

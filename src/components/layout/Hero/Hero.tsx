@@ -8,7 +8,6 @@ import Image from "next/image";
 
 import { TransitionLink } from "../navigation/TransitionLink/TransitionLink";
 import { AnimatedText } from "@/components/animations/AnimatedText/AnimatedText";
-import { assetsConfig } from "@/config/assets";
 import { FeaturedProject } from "@/components/ui/cards/FeaturedProject/FeaturedProject";
 import classNames from "classnames";
 

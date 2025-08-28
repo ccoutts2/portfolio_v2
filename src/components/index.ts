@@ -51,3 +51,7 @@ export { FeaturedProject } from "./ui/cards/FeaturedProject/FeaturedProject";
 // mockup warpper
 
 export { Mockups } from "./ui/Mockups/Mockups";
+
+// experience item wrapper
+
+export { ExperienceItem } from "./experience/ExperienceItem";

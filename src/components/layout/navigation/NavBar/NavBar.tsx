@@ -99,11 +99,7 @@ export const NavBar = () => {
               </li>
             </ul>
             <div className="pr-4 md:px-6 flex flex-row-reverse items-center md:flex-col md:items-end gap-4">
-              <BurgerButton
-                status={status}
-                onClick={toggleBurgerMenu}
-                isOpen={isOpen}
-              />
+              <BurgerButton status={status} onClick={toggleBurgerMenu} />
               <p className="hidden md:text-sm lg:text-base lg:flex items-center gap-2">
                 <BlinkingDot />
                 <NavLink href="mailto:chris.dcoutts@gmail.com">

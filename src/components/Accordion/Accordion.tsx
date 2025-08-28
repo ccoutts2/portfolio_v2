@@ -14,7 +14,7 @@ export interface AccordionProps {
     alt?: string;
     slug: string;
   }[];
-  defaultExpanded?: Number[];
+  defaultExpanded?: number[];
   single?: boolean;
 }
 
@@ -23,9 +23,9 @@ export const Accordion = ({
   defaultExpanded = [],
   single = false,
 }: AccordionProps) => {
-  const [expanded, setExpanded] = useState<Number[]>(defaultExpanded);
+  const [expanded, setExpanded] = useState<number[]>(defaultExpanded);
 
-  function handleClick(i: Number) {
+  function handleClick(i: number) {
     if (single) {
       expanded.includes(i) ? setExpanded([]) : setExpanded([i]);
     } else {
@@ -36,7 +36,7 @@ export const Accordion = ({
   }
   return (
     <div className={styles.Accordion}>
-      {items.map((item, i: Number) => (
+      {items.map((item, i: number) => (
         <AccordionItem
           key={`${i}`}
           {...item}

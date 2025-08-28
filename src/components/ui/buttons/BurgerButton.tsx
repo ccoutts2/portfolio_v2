@@ -4,11 +4,9 @@ interface BurgerButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   onClick?: () => void;
   status: string;
-  isOpen: boolean;
 }
 
 export const BurgerButton = ({
-  isOpen,
   onClick,
   status,
   ...props

@@ -6,12 +6,16 @@ interface HoverBackgroundProps {
   onClick?: () => void;
 }
 
-const HoverBackground = ({ children, className, onClick }: HoverBackgroundProps) => {
+const HoverBackground = ({
+  children,
+  className,
+  onClick,
+}: HoverBackgroundProps) => {
   const [degrees, setDegrees] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    let interval: any;
+    let interval: ReturnType<typeof setInterval> | undefined;
 
     if (isHovering) {
       interval = setInterval(() => {
@@ -33,7 +37,8 @@ const HoverBackground = ({ children, className, onClick }: HoverBackgroundProps)
       style={{
         color: isHovering ? "#191919" : "",
         backgroundColor: isHovering ? `hsl(${degrees}, 80%, 70%)` : "",
-      }}>
+      }}
+    >
       {children}
     </div>
   );

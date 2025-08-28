@@ -36,7 +36,7 @@ const Footer = () => {
               </ul>
             </section>
             <aside className="flex w-full flex-col justify-between text-right">
-              <h3 className="b-bottom uppercase">Let's connect</h3>
+              <h3 className="b-bottom uppercase">Let&apos;s connect</h3>
               <ul className="gap-4">
                 <li className="hidden md:block">
                   <Link href="mailto:Info@ewmbespokeinteriors.co.uk">
