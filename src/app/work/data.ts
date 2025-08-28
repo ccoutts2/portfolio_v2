@@ -40,7 +40,7 @@ export const accordionData: AccordionItems[] = [
       "TailwindCSS",
       "CSS",
     ],
-    image: assetsConfig["ewm-bespoke-interiors"][0].src,
+    comingSoon: true,
     alt: assetsConfig["ewm-bespoke-interiors"][0].description,
     slug: "/effortless-interior-design/coming-soon",
     year: "2024",

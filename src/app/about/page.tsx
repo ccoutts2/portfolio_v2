@@ -12,9 +12,7 @@ export default async function Page() {
       <AboutIntro />
       <Experience />
       <ContactMe />
-      <div className="flex items-center justify-center my-[5vh] md:my-[20vh] relative">
-        <FunBio />
-      </div>
+      <FunBio />
     </main>
   );
 }

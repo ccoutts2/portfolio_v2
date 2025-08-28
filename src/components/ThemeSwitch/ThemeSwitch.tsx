@@ -75,7 +75,7 @@ const ThemeSwitch = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="border rounded-3xl border-[#191919] dark:border-[white] px-2"
+      className="border rounded-3xl border-[#191919] dark:border-[white] px-2 cursor-pointer"
     >
       <span
         className="flex flex-col overflow-hidden h-[1.34rem] text-sm"

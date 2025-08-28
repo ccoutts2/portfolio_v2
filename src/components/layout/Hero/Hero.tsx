@@ -86,10 +86,10 @@ const Hero = () => {
             style={{ clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)" }}
           >
             <Image
-              src={assetsConfig["ewm-bespoke-interiors"][0].src}
-              alt={assetsConfig["ewm-bespoke-interiors"][0].description}
-              width={800}
-              height={800}
+              src="https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/home-page/chris_sunny.webp"
+              alt="A man sitting at a table outside, wearing a white tshirt, sunglasses and black cap, looking away from the camera. It is a sunny day with palm trees and a lake in the background."
+              width={900}
+              height={1200}
               className="w-full h-full object-cover"
             />
           </div>

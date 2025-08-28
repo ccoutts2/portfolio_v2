@@ -14,8 +14,9 @@ export interface AccordionItemProps {
   content: string | ReactElement;
   service: string[];
   tech: string[];
-  image: string;
-  alt: string;
+  image?: string;
+  comingSoon?: boolean;
+  alt?: string;
   slug: string;
 }
 
@@ -25,6 +26,7 @@ export const AccordionItem = ({
   service,
   tech,
   image,
+  comingSoon,
   alt,
   title,
   slug,
@@ -53,9 +55,25 @@ export const AccordionItem = ({
           "flex flex-col md:flex-row justify-between gap-4"
         )}
         ref={contentRef}
-        {...(isActive && { "data-is-open": true })}>
+        {...(isActive && { "data-is-open": true })}
+      >
         <div className="flex-1">
-          <Image src={image} alt={alt} width={500} height={500} />
+          {comingSoon ? (
+            <div className="w-full h-full flex items-center justify-center">
+              <p className="text-xl md:text-2xl font-semibold p-4 text-center">
+                Coming Soon
+              </p>
+            </div>
+          ) : (
+            image && (
+              <Image
+                src={image}
+                alt={alt || "Project"}
+                width={500}
+                height={500}
+              />
+            )
+          )}
         </div>
         <div className="flex-1 flex flex-col gap-2 justify-between">
           <h2 className="text-clamp-accordion-content">{content}</h2>
@@ -69,7 +87,8 @@ export const AccordionItem = ({
                   "flex-wrap",
                   "gap-2",
                   "pt-4"
-                )}>
+                )}
+              >
                 {service.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
@@ -84,7 +103,8 @@ export const AccordionItem = ({
                   "flex-wrap",
                   "gap-2",
                   "pt-4"
-                )}>
+                )}
+              >
                 {tech.map((item, index) => (
                   <li key={index}>{item}</li>
                 ))}
@@ -92,7 +112,10 @@ export const AccordionItem = ({
             </div>
           </div>
           <div className="w-fit">
-            <TransitionLink className={styles.AccordionLink} href={`/work/${slug}`}>
+            <TransitionLink
+              className={styles.AccordionLink}
+              href={`/work/${slug}`}
+            >
               View Project
             </TransitionLink>
           </div>

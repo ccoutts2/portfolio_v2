@@ -69,7 +69,7 @@ const AboutIntro = () => {
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
           >
             <Image
-              src={assetsConfig["ewm-bespoke-interiors"][0].src}
+              src="https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/about-page/chris_team.webp"
               alt={assetsConfig["ewm-bespoke-interiors"][0].description}
               width={800}
               height={800}
@@ -81,7 +81,7 @@ const AboutIntro = () => {
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
           >
             <Image
-              src={assetsConfig["ewm-bespoke-interiors"][0].src}
+              src="https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/about-page/chris_robert_helping.webp"
               alt={assetsConfig["ewm-bespoke-interiors"][0].description}
               width={800}
               height={800}
@@ -94,7 +94,7 @@ const AboutIntro = () => {
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
           >
             <Image
-              src={assetsConfig["ewm-bespoke-interiors"][0].src}
+              src="https://hinrakjrdbrmrrvilpbg.supabase.co/storage/v1/object/public/portfolio/about-page/chris_shawn_shoutcast.webp"
               alt={assetsConfig["ewm-bespoke-interiors"][0].description}
               width={800}
               height={800}

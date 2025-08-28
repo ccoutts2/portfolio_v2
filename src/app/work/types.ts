@@ -3,8 +3,9 @@ export interface AccordionItems {
   content: string;
   service: string[];
   tech: string[];
-  image: string;
-  alt: string;
+  image?: string;
+  comingSoon?: boolean;
+  alt?: string;
   slug: string;
   year: string;
   project: string;

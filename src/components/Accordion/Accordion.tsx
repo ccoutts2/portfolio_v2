@@ -9,8 +9,9 @@ export interface AccordionProps {
     content: string | ReactElement;
     service: string[];
     tech: string[];
-    image: string;
-    alt: string;
+    image?: string;
+    comingSoon?: boolean;
+    alt?: string;
     slug: string;
   }[];
   defaultExpanded?: Number[];
