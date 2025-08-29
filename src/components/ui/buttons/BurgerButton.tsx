@@ -58,7 +58,7 @@ export const BurgerButton = ({
       <button
         onClick={onClick}
         {...props}
-        className="md:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000"
+        className="lg:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000"
       >
         <span className="flex h-2 w-2 items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
         <span className="cursor-pointer">Close</span>

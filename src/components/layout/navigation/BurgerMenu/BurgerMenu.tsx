@@ -8,6 +8,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { PercentageScroll } from "@/components/PercentageScroll/PercentageScroll";
 import Link from "next/link";
+import ThemeSwitch from "@/components/ThemeSwitch/ThemeSwitch";
 
 interface BurgerMenuProps {
   isOpen: boolean;
@@ -122,6 +123,9 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
         </div>
 
         <ul className="mt-12 flex flex-col justify-end items-end w-full uppercase p-4">
+          <li className="my-8">
+            <ThemeSwitch />
+          </li>
           {burgerMenuItems.slice(0, 4).map((item, index) => (
             <li
               key={index}
