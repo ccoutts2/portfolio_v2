@@ -1,5 +1,6 @@
-import type { Metadata } from "next";
 import "@/app/globals.css";
+import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { NavBar } from "@/components";
 import Footer from "@/components/layout/navigation/Footer/Footer";
 import { SmoothScroll } from "@/components/SmoothScroll/SmoothScroll";
@@ -26,6 +27,7 @@ export default function RootLayout({
         <SmoothScroll>
           <NavBar />
           {children}
+          <Analytics />
           <Footer />
           <Cursor />
         </SmoothScroll>
