@@ -16,13 +16,13 @@ const DateTime = () => {
     const currentHour: number = now.getHours();
 
     if (currentHour < 12) {
-      setMessage("Good Morning");
+      setMessage("Morning");
     } else if (currentHour >= 12 && currentHour < 17) {
-      setMessage("Good Afternoon");
+      setMessage("Afternoon");
     } else if (currentHour >= 17 && currentHour <= 21) {
-      setMessage("Good Evening");
+      setMessage("Evening");
     } else {
-      setMessage("Good Night");
+      setMessage("Night");
     }
   };
 
