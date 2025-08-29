@@ -7,6 +7,7 @@ import DateTime from "@/components/DateTime/DateTime";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { PercentageScroll } from "@/components/PercentageScroll/PercentageScroll";
+import Link from "next/link";
 
 interface BurgerMenuProps {
   isOpen: boolean;
@@ -21,6 +22,10 @@ interface Links {
 
 const burgerMenuItems: Links[] = [
   {
+    label: "Home",
+    href: "/",
+  },
+  {
     label: "About",
     href: "/about",
   },
@@ -33,16 +38,16 @@ const burgerMenuItems: Links[] = [
     href: "/work",
   },
   {
-    label: "Github",
-    href: "/about",
+    label: "[ Github ]",
+    href: "https://github.com/ccoutts2",
   },
   {
-    label: "LinkedIn",
-    href: "/contact",
+    label: "[ LinkedIn ]",
+    href: "https://www.linkedin.com/in/chris-coutts/",
   },
   {
     label: "Email",
-    href: "/work",
+    href: "mailto:chris.dcoutts@gmail.com",
   },
 ];
 
@@ -65,23 +70,26 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
         .timeline()
         .to(menu.current, {
           autoAlpha: 1,
-          duration: 1,
+          duration: 0.5,
           ease: "power4.inOut",
         })
         .to(menuLinks.current, {
           y: 0,
-          duration: 1,
+          duration: 0.75,
           stagger: 0.1,
           ease: "power4.inOut",
           delay: -0.5,
         })
-        .to(socialLinks.current, {
-          y: 0,
-          duration: 1,
-          stagger: 0.1,
-          ease: "power4.inOut",
-          delay: -0.5,
-        });
+        .to(
+          socialLinks.current,
+          {
+            y: 0,
+            duration: 0.75,
+            stagger: 0.1,
+            ease: "power4.inOut",
+          },
+          "<"
+        );
     },
     { scope: container }
   );
@@ -114,7 +122,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
         </div>
 
         <ul className="mt-12 flex flex-col justify-end items-end w-full uppercase p-4">
-          {burgerMenuItems.slice(0, 3).map((item, index) => (
+          {burgerMenuItems.slice(0, 4).map((item, index) => (
             <li
               key={index}
               className="text-6xl"
@@ -138,7 +146,7 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
         </ul>
 
         <ul className="mt-12 flex flex-col justify-end items-end w-full uppercase p-4">
-          {burgerMenuItems.slice(3, 6).map((item, index) => (
+          {burgerMenuItems.slice(4, 7).map((item, index) => (
             <li
               key={index}
               className="text-xl"
@@ -153,9 +161,9 @@ const BurgerMenu = ({ isOpen, status, toggleBurgerMenu }: BurgerMenuProps) => {
                 }}
                 onClick={toggleBurgerMenu}
               >
-                <TransitionLink href={item.href} underline>
+                <Link href={item.href} target="_blank">
                   <span className="tracking-tight"> {item.label}</span>
-                </TransitionLink>
+                </Link>
               </div>
             </li>
           ))}

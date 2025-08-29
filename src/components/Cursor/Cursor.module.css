@@ -10,4 +10,10 @@
   transform: translate(-50%, -50%);
   width: 15px;
   z-index: 9999;
+
+  &[data-is-mobile="true"] {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+  }
 }

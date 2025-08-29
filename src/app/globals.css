@@ -97,13 +97,13 @@ body {
 }
 
 .slide-in-hidden {
-  transform: translateY(100px);
   opacity: 0;
+  transform: translateY(100px);
 }
 
 @keyframes slide-in {
   to {
-    transform: translateY(0);
     opacity: 1;
+    transform: translateY(0);
   }
 }

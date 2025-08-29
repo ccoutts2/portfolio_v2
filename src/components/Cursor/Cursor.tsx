@@ -2,11 +2,17 @@
 import styles from "./Cursor.module.css";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import { useScreenDetector } from "@/hooks/useScreenDetector";
 
 const Cursor = () => {
   const cursorRef = useRef<HTMLDivElement | null>(null);
+  const { isDesktop } = useScreenDetector();
 
   useEffect(() => {
+    if (!isDesktop) {
+      return;
+    }
+
     const onMouseMove = (e: MouseEvent) => {
       const { clientX, clientY } = e;
       gsap.to(cursorRef.current, {
@@ -46,9 +52,15 @@ const Cursor = () => {
       document.removeEventListener("mouseover", onMouseEnter);
       document.removeEventListener("mouseout", onMouseLeave);
     };
-  }, []);
+  }, [isDesktop]);
 
-  return <div ref={cursorRef} className={styles.Cursor}></div>;
+  return isDesktop ? (
+    <div
+      ref={cursorRef}
+      {...(isDesktop && { "data-is-open": true })}
+      className={styles.Cursor}
+    ></div>
+  ) : null;
 };
 
 export default Cursor;

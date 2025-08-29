@@ -13,11 +13,13 @@ export const BurgerButton = ({
 }: BurgerButtonProps) => {
   if (status === "closed") {
     return (
-      <div className="lg:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000">
+      <button
+        onClick={onClick}
+        {...props}
+        className="lg:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000"
+      >
         <span className="flex h-2 w-2 items-center justify-center rounded-[20rem] bg-[#2ed84a]"></span>
-        <button onClick={onClick} {...props}>
-          Menu
-        </button>
+        <span className="cursor-pointer">Menu</span>
 
         <svg
           className="absolute top-0 left-0"
@@ -48,16 +50,18 @@ export const BurgerButton = ({
           />
           <line x1="4.37114e-08" y1="19.5" x2="20" y2="19.5" stroke="#666666" />
         </svg>
-      </div>
+      </button>
     );
   }
   if (status === "open") {
     return (
-      <div className="md:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000">
+      <button
+        onClick={onClick}
+        {...props}
+        className="md:hidden relative flex cursor-pointer items-center gap-4 px-4 py-2 text-[#191919] dark:text-[#e4e8ed] z-100000"
+      >
         <span className="flex h-2 w-2 items-center justify-center rounded-[20rem] bg-[#d82e2e]"></span>
-        <button onClick={onClick} {...props}>
-          Close
-        </button>
+        <span className="cursor-pointer">Close</span>
         <svg
           className="absolute top-0 left-0"
           width="21"
@@ -87,7 +91,7 @@ export const BurgerButton = ({
           />
           <line x1="4.37114e-08" y1="19.5" x2="20" y2="19.5" stroke="#666666" />
         </svg>
-      </div>
+      </button>
     );
   }
 };
