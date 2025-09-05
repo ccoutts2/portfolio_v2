@@ -65,7 +65,7 @@ const AboutIntro = () => {
         </div>
         <aside ref={container} className="flex flex-wrap gap-4">
           <figure
-            className="max-h-40 w-clamp-small-images | images"
+            className="max-h-30 w-clamp-small-images | images"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
           >
             <Image
@@ -77,7 +77,7 @@ const AboutIntro = () => {
             />
           </figure>
           <figure
-            className="max-h-40 w-clamp-small-images | images"
+            className="max-h-30 w-clamp-small-images | images"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
           >
             <Image
@@ -90,7 +90,7 @@ const AboutIntro = () => {
           </figure>
 
           <figure
-            className="max-h-40 w-clamp-small-images | images"
+            className="max-h-30 w-clamp-small-images | images"
             style={{ clipPath: "polygon(0 0, 100% 0, 100% 0, 0 0)" }}
           >
             <Image

@@ -57,10 +57,10 @@ const Hero = () => {
   return (
     <div
       ref={container}
-      className={classNames(styles.Hero, "min-h-screen")}
+      className={styles.Hero}
       {...(isPageLoaded && { "data-is-loaded": true })}
     >
-      <div className="flex flex-col justify-between relative">
+      <div className="flex flex-col justify-between relative h-full">
         <div className="flex flex-col justify-between md:flex-row gap-8 p-4">
           <section className="flex flex-col gap-2 text-clamp-home flex-1">
             <AnimatedText delay={1}>
@@ -94,7 +94,7 @@ const Hero = () => {
           </div>
         </div>
 
-        <aside ref={featuredProject} className="flex-1 p-4">
+        <aside ref={featuredProject} className="p-4">
           <FeaturedProject
             projectName="EWM Bespoke Interiors"
             role={[{ role: "Design" }, { role: "Development" }]}
