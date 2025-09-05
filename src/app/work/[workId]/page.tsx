@@ -58,7 +58,7 @@ export default function Page({ params }: WorkPageProps) {
       <div className="w-full">
         <Image
           src={projectAssets[0].src}
-          alt=""
+          alt={projectAssets[0].description}
           width={3024}
           height={1646}
           sizes="(max-width: 768px) 100vh, (max-width: 1024px) 75vh"
@@ -127,21 +127,21 @@ export default function Page({ params }: WorkPageProps) {
             <Mockups
               type="mobile"
               src={projectAssets[9].src}
-              alt=""
+              alt={projectAssets[9].description}
               width={700}
               height={1472}
             />
             <Mockups
               type="mobile"
               src={projectAssets[8].src}
-              alt=""
+              alt={projectAssets[8].description}
               width={700}
               height={1472}
             />
             <Mockups
               type="mobile"
               src={projectAssets[7].src}
-              alt=""
+              alt={projectAssets[7].description}
               width={700}
               height={1472}
             />
@@ -154,21 +154,21 @@ export default function Page({ params }: WorkPageProps) {
               <Mockups
                 type="mobile"
                 src={projectAssets[9].src}
-                alt=""
+                alt={projectAssets[9].description}
                 width={700}
                 height={1472}
               />
               <Mockups
                 type="mobile"
                 src={projectAssets[8].src}
-                alt=""
+                alt={projectAssets[8].description}
                 width={700}
                 height={1472}
               />
               <Mockups
                 type="mobile"
                 src={projectAssets[7].src}
-                alt=""
+                alt={projectAssets[7].description}
                 width={700}
                 height={1472}
               />
@@ -189,7 +189,7 @@ export default function Page({ params }: WorkPageProps) {
           <Mockups
             type="desktop"
             src={projectAssets[1].src}
-            alt=""
+            alt={projectAssets[1].description}
             width={3024}
             height={1646}
           />
@@ -198,7 +198,7 @@ export default function Page({ params }: WorkPageProps) {
           <Mockups
             type="desktop"
             src={projectAssets[2].src}
-            alt=""
+            alt={projectAssets[2].description}
             width={3024}
             height={1646}
           />
@@ -209,7 +209,7 @@ export default function Page({ params }: WorkPageProps) {
           <Mockups
             type="desktop"
             src={projectAssets[3].src}
-            alt=""
+            alt={projectAssets[3].description}
             width={3024}
             height={1646}
           />
@@ -218,7 +218,7 @@ export default function Page({ params }: WorkPageProps) {
           <Mockups
             type="mobile"
             src={projectAssets[6].src}
-            alt=""
+            alt={projectAssets[6].description}
             width={700}
             height={1472}
           />
@@ -227,7 +227,7 @@ export default function Page({ params }: WorkPageProps) {
 
       <ClipContainer
         src={projectAssets[4].src}
-        alt=""
+        alt={projectAssets[4].description}
         width={3024}
         height={1646}
       />
