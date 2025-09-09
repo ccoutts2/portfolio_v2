@@ -49,7 +49,7 @@ export const accordionData: AccordionItems[] = [
   {
     title: "EWM Bespoke Interiors",
     content:
-      "A website for a Bespoke Joinery company which transfers residential and commmerical spaces",
+      "A website for a Bespoke Joinery company which transforms residential and commerical spaces",
     service: ["Design", "Development"],
     tech: ["Next.js", "GSAP", "Lenis Scroll", "TailwindCSS", "CSS"],
     image: assetsConfig["ewm-bespoke-interiors"][0].src,
