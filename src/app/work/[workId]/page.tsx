@@ -53,6 +53,10 @@ export default function Page({ params }: WorkPageProps) {
     );
   }
 
+  const filterdList = Object.values(workDetails).filter(
+    (currentWork) => currentWork.slug !== workId
+  );
+
   return (
     <main>
       <div className="w-full">
@@ -243,7 +247,7 @@ export default function Page({ params }: WorkPageProps) {
         </h3>
 
         <ul className="flex flex-col md:flex-row justify-center items-center gap-8 py-8">
-          {Object.values(workDetails).map(({ title, slug, id }) => (
+          {filterdList.map(({ title, slug, id }) => (
             <li key={id}>
               <TransitionLink underline href={`/work/${slug}`}>
                 <SlideUp delay={id * 0.1}>{title}</SlideUp>
