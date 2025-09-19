@@ -86,7 +86,7 @@ export const workDetails: { [key: string]: WorkDetails } = {
   "ewm-bespoke-interiors": {
     id: 2,
     title: "EWM Bespoke Interiors",
-    slogan: "Bespoke Deign: Timeless Craft",
+    slogan: "Bespoke Design: Timeless Craft",
     information:
       "I worked with EWM Bespoke Interiors to design and build a website that truly showcased their incredible craftsmanship and attention to detail. The site featured their portfolio of diverse projects, including stone surfaces and tailored joinery, presented in a clean, modern design. I focused on creating a user-friendly experience that made it easy to explore their work while reflecting the quality and care they put into everything they do. By adding features to simplify client enquiries, the website became both practical and visually stunning - a perfect match for their bespoke approach",
     information2: [
