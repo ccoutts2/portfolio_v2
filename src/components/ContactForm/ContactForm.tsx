@@ -62,6 +62,8 @@ const ContactForm = () => {
     setButtonPending(true);
     setButtonLabel("Sending");
 
+    await new Promise((resolve) => setTimeout(resolve, 0));
+
     const formData = new FormData(form.current!);
     const validatedFields = Schema.safeParse({
       name: formData.get("name"),
