@@ -65,10 +65,21 @@ const ContactForm = () => {
     await new Promise((resolve) => setTimeout(resolve, 0));
 
     const formData = new FormData(form.current!);
+    const botTrap = formData.get("alsoSubmit");
+
+    if (botTrap) {
+      setIsToastVisible(true);
+      setName("");
+      setEmail("");
+      setMessage("");
+      setTimeout(() => setIsToastVisible(false), 5000);
+      return;
+    }
     const validatedFields = Schema.safeParse({
       name: formData.get("name"),
       email: formData.get("email"),
       message: formData.get("message"),
+      alsoSubmit: formData.get("alsoSubmit"),
     });
 
     if (!validatedFields.success) {
@@ -137,6 +148,16 @@ const ContactForm = () => {
             <div>Email was successfully sent!</div>
           </Toast>
         )}
+      </div>
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="alsoSubmit">If you are a human, leave this blank</label>
+        <input
+          type="text"
+          name="alsoSubmit"
+          id="alsoSubmit"
+          tabIndex={-1}
+          autoComplete="off"
+        />
       </div>
     </form>
   );
