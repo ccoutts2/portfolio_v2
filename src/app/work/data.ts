@@ -6,7 +6,7 @@ export const accordionData: AccordionItems[] = [
   {
     title: "Wedding Website",
     content:
-      "A website for a couple who can host their special day information, invite guests, have guests RSVP, and manage their responses",
+      "A website for a couple who can host their special day information, invite guests, have guests RSVP, and manage their responses. Showing placeholder images and text in folio, to hide details of wedding.",
     service: ["Design", "Development"],
     tech: [
       "SvelteKit",
@@ -26,7 +26,7 @@ export const accordionData: AccordionItems[] = [
   {
     title: "Effortless Interior Design",
     content:
-      "A website for an Interior Designer, showcasing her work, services, and new online shop for selling 'Off the Peg Design Schemes'",
+      "A website for an Interior Designer, showcasing her work, services, and new online shop for selling 'Off the Peg Design Schemes'.",
     service: ["Design", "Development"],
     tech: [
       "Next.js",
@@ -49,7 +49,7 @@ export const accordionData: AccordionItems[] = [
   {
     title: "EWM Bespoke Interiors",
     content:
-      "A website for a Bespoke Joinery company which transforms residential and commerical spaces",
+      "A website for a Bespoke Joinery company which transforms residential and commerical spaces.",
     service: ["Design", "Development"],
     tech: ["Next.js", "GSAP", "Lenis Scroll", "TailwindCSS", "CSS"],
     image: assetsConfig["ewm-bespoke-interiors"][0].src,
@@ -62,7 +62,7 @@ export const accordionData: AccordionItems[] = [
   {
     title: "France2k23",
     content:
-      "An immersive image gallery experience, telling the story of my trip to France during the Rugby World Cup in 2023",
+      "An immersive image gallery experience, telling the story of my trip to France during the Rugby World Cup in 2023.",
     service: ["Design", "Development"],
     tech: ["Next.js", "GSAP", "Lenis Scroll", "TailwindCSS", "CSS"],
     image: assetsConfig["france-2k23"][0].src,
